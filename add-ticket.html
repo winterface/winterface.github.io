@@ -116,6 +116,36 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Add A Ticket</h1>
+          <p>To add a new ticket to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to the ticket later.</p>
+
+          <section class="design-process-section" id="process-tab">
+			    <div class="row">
+			      <div class=""> 
+			        <!-- circle icons -->
+			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+			          <li role="presentation" class="active"><a href="#details" aria-controls="details" role="tab" data-toggle="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+			            <p>Details</p>
+			            </a></li>
+			          <li><a href="#activity_log" aria-controls="activity_log" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
+			            <p>Activity Log</p>
+			            </a></li>
+			          <li><a href="#attachments" aria-controls="attachments" role="tab" data-toggle="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+			            <p>Attachments</p>
+			            </a></li>
+			          <li><a href="#checklists" aria-controls="checklists" role="tab" data-toggle="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+			            <p>Check Lists</p>
+			            </a></li>
+			          <li><a href="#subtickets" aria-controls="subtickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+			            <p>Sub-Tickets</p>
+			            </a></li>
+			          <li><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab"><i class="far fa-money-bill-alt" aria-hidden="true"></i>
+			            <p>Billing</p>
+			            </a></li>
+			        </ul>
+			        <!-- end circle icons--> 
+			      </div>
+			  </div>
+			</section><!--TABS-->
 
           <form class="form-horizontal">
 
@@ -363,6 +393,20 @@
       $('.closeThem').click( function(e) {
         $('.collapse').collapse('hide');
       });
+    </script>
+
+    <script type="text/javascript">
+    	// script for tab steps
+		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+		        var href = $(e.target).attr('href');
+		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+		        $('.process-model li').removeClass();
+
+		        $curr.addClass("active");
+		        $curr.prevAll().addClass("visited");
+		    });
     </script>
 
     <script type="text/javascript">
