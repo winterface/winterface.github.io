@@ -10,6 +10,7 @@
     <title>WERX</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
+    <link href="css/datepicker.min.css" rel="stylesheet">
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -114,138 +115,193 @@
         </div><!-- end sidebar navigation -->
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Welcome to WERX</h1>
+          <h1 class="page-header">Tickets</h1>
+          <p>Use the table below to manage your tickets. To view more details or edit a ticket, click on the "View/Edit Ticket" link at the end of each row. You can also use the sort arrows in each column to sort the data.</p>
+          <br />
 
-          <div class="col-md-7 no-left-padding">
-            <h3>Notifications <span class="sub-text"><a href="">(View All)</a></span></h3>
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Customer <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Actions <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>5/24/2018</td>
-                    <td>Microsoft</td>
-                    <td><p class="status-button red-bg">On Hold</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                  <tr>
-                    <td>10/20/2010</td>
-                    <td>Electronic Arts</td>
-                    <td><p class="status-button green-bg">Closed</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                  <tr>
-                    <td>7/5/1901</td>
-                    <td>Paradox Publishing</td>
-                    <td><p class="status-button yellow-bg">Pending</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div><!-- Notifications Table -->
+          <a href="add-ticket.html"><div class="btn btn-primary"><i class="fas fa-ticket-alt btn-primary-icon"></i> Create New Ticket</div></a>
 
-          <hr />
+          <div class="clearfix"></div>
+          <br />
 
-          <h3>Tickets</h3>
-          <div class="table-responsive">
+          <!-- Start Customers Table -->
+          <div class="table-responsive col-md-12 no-left-padding">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Ticket ID <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Ticket Title <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Customer Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Ticket Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Assigned To <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Due Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>View <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Last Updated <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Attachments</th>
+                  <th>View Ticket</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>5/24/2018</td>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
                   <td>Microsoft</td>
-                  <td>OS Installations</td>
-                  <td>Frank Fontaine</td>
-                  <td>5/24/2018</td>
                   <td><p class="status-button red-bg">On Hold</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files" href="">View Attachments</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
                 </tr>
                 <tr>
-                  <td>10/20/2010</td>
-                  <td>Electronic Arts</td>
-                  <td>New Signage Requested for Headquarters</td>
-                  <td>Elizabeth</td>
-                  <td>5/24/2018</td>
-                  <td><p class="status-button green-bg">Closed</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
-                </tr>
-                <tr>
-                  <td>7/5/1901</td>
-                  <td>Paradox Publishing</td>
-                  <td>Need Print Equipment</td>
-                  <td>Zachary Comstock</td>
-                  <td>5/24/2018</td>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
                   <td><p class="status-button yellow-bg">Pending</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-2" href="">View Attachments</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+                <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button green-bg">Closed</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-3" href="">View Attachments</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
                 </tr>
               </tbody>
             </table>
-            <nav aria-label="...">
-              <ul class="pagination">
-                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-              </ul>
-            </nav>
-          </div><!-- Notifications Table -->
+          </div>
+          <!-- End Followers Table-->
 
-          <hr />
-
-          <h3>Site News <span class="sub-text"><a href="">(View All)</a></span></h3>
-          <div class="news-block">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Holiday Schedule Updated</a></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan congue aliquet. Proin sit amet purus vitae risus dignissim finibus ut ut dui. <a href="">View News Item</a></p>
-          </div><!--News Block-->
-
-          <hr />
-
-          <div class="news-block">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> New Map Feature</a></p>
-            <p>Vivamus vel ligula at mi rutrum placerat. Quisque molestie in massa ut porttitor. Praesent vestibulum mollis velit, ac placerat justo tincidunt et. In hac habitasse platea dictumst. <a href="">View News Item</a></p>
-          </div><!--News Block-->
-
-          <hr />
-
-          <div class="news-block">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Policy Change, Please Read</a></p>
-            <p>Nunc mattis porta nulla. Cras at aliquet magna. Vivamus faucibus rutrum velit, in lobortis sapien volutpat vel. Vivamus commodo mi magna, non pellentesque mauris condimentum non. Aenean sed sem eget magna pulvinar convallis. <a href="">View News Item</a></p>
-          </div><!--News Block-->
 
         </div><!-- end content area -->
       </div>
     </div>
 
+
+	<!-- Attachments Modal -->
+	<div class="modal fade" id="files" tabindex="-1" role="dialog" aria-labelledby="Files">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+	        <ul>
+	        	<li><a href="">Security Guidelines</a></li>
+	        	<li><a href="">Equipment Sheet</a></li>
+	        	<li><a href="">Emergency Contacts</a></li>
+	        	<li><a href="">Sign Off Order</a></li>
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Attachments Modal -->
+	<div class="modal fade" id="files-2" tabindex="-1" role="dialog" aria-labelledby="Files">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+	        <ul>
+	        	<li><a href="">Security Guidelines</a></li>
+	        	<li><a href="">Equipment Sheet</a></li>
+	        	<li><a href="">Emergency Contacts</a></li>
+	        	<li><a href="">Sign Off Order</a></li>
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- Attachments Modal -->
+	<div class="modal fade" id="files-3" tabindex="-1" role="dialog" aria-labelledby="Files">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+	        <ul>
+	        	<li><a href="">Security Guidelines</a></li>
+	        	<li><a href="">Equipment Sheet</a></li>
+	        	<li><a href="">Emergency Contacts</a></li>
+	        	<li><a href="">Sign Off Order</a></li>
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    <section class="drawer">
+      <header class="clickme">Action Menu</header>
+        <div class="drawer-content">
+          <div class="container drawer-wrapper">
+            <div class="btn btn-primary">Save and Add Ticket</div>
+          </div>  
+        </div>
+    </section><!-- Action Menu -->
+
     <!-- JavaScript -->
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/datepicker.min.js"></script>
+    <script src="scripts/slidedrawer.min.js"></script>
     <script type="text/javascript">
+      $('.datepicker').datepicker();
+
       $('.closeThem').click( function(e) {
         $('.collapse').collapse('hide');
+      });
+    </script>
+
+    <script type="text/javascript">
+    	// script for tab steps
+		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+		        var href = $(e.target).attr('href');
+		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+		        $('.process-model li').removeClass();
+
+		        $curr.addClass("active");
+		        $curr.prevAll().addClass("visited");
+		    });
+    </script>
+
+    <script type="text/javascript">
+      $(function(){
+          $('.drawer').slideDrawer({
+              showDrawer: false,
+              // slideTimeout: true,
+              slideSpeed: 600,
+              slideTimeoutCount: 3000,
+          });
       });
     </script>
   </body>

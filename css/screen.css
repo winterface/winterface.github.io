@@ -48,6 +48,10 @@ h3 {color:#32c2a6;}
 .sub-text {font-size:12px;}
 .news-headline {font-weight:bold;}
 
+/* -- Buttons and Call to Actions -- */
+.btn-primary {background-color:#3598db; border:0px;}
+    .btn-primary-icon {color:#004368;}
+
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 250ms ease-in;-moz-transition: background 250ms ease-in;-ms-transition: background 250ms ease-in;-o-transition: background 250ms ease-in;transition: background 300ms ease-in;}
 tr:hover {background-color:#f3facf !important;}
