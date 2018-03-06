@@ -149,7 +149,152 @@
 
           <form class="form-horizontal">
 
-            <h3></h3>
+          	<h3>Details</h3>
+
+          	<div class="col-md-6">
+          		<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Company</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Address</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <textarea class="form-control"></textarea> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">City</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">State</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Zip</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <select class="form-control">
+	                    	<option></option>
+	                    </select> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Country</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+          	</div><!--right column-->
+
+          	<div class="col-md-6">
+          		<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Type</label> 
+	                </div>
+	                <div class="col-md-9"> 
+	                    <label class="radio-inline">
+							<input type="radio" name="customer_type" id="inlineRadio1" value="Qualified"> Qualified
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="customer_type" id="inlineRadio2" value="Internal"> Internal
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Lead"> Lost Lead
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Customer"> Lost Customer
+						</label>
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Territory</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+
+            	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Timezone</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+            	</div>
+          	</div><!--left column-->
+
+          	<div class="clearfix"></div>
+
+          	<hr />
+
+          	<h3>Contacts <span class="sub-text"><a data-toggle="modal" data-target="#new_contact" href="">( <i class="fa fa-check-square"></i> Add New Contact)</a></span></h3>
+
+          	<div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Type <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Delete Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Augustus Sinclair</td>
+                    <td>a.sinclair@microsoft.com</td>
+                    <td>888-398-2809</td>
+                    <td>Client</td>
+                    <td><i class="fas fa-times delete-icon"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Sander Cohen</td>
+                    <td>SanderCohen@gmail.com</td>
+                    <td>802-810-2801</td>
+                    <td>Inspector</td>
+                    <td><i class="fas fa-times delete-icon"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Mariska Lutz</td>
+                    <td>marisk49@yahoo.com</td>
+                    <td>890-298-2981</td>
+                    <td>Manager
+                    <td><i class="fas fa-times delete-icon"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div><!-- Notifications Table -->
+
+          
+          </form>
             
 
 
@@ -165,6 +310,63 @@
           </div>  
         </div>
     </section><!-- Action Menu -->
+
+    <!-- Add Contact Modal -->
+	<div class="modal fade" id="new_contact" tabindex="-1" role="dialog" aria-labelledby="NewContact">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Add Contact</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>To add a new contact to this customer, please fill out the form below and use the save button.</p>
+	        <form class="form-horizontal">
+		        <div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Name</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+	        	</div>
+
+	        	 <div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Email</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+	        	</div>
+
+	        	 <div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Phone</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+	        	</div>
+
+        	 	<div class="form-group">
+	                <div class="col-md-3">
+	                    <label class="control-label" for="">Contact Type</label> 
+	                </div>
+	                <div class="col-md-6"> 
+	                    <input name="" type="text" id="" class="form-control" /> 
+	                </div>
+        		</div>
+        	</form>
+
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
     <!-- JavaScript -->
     <script src="scripts/jquery-3.3.1.min.js"></script>
