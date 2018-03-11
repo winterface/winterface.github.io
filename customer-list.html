@@ -50,7 +50,7 @@
           	</li>
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
-            <div class="input-group">
+            <div class="input-group header-search-bar">
               <input type="text" class="form-control" placeholder="Search...">
               <div class="input-group-btn">
                 <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
@@ -68,49 +68,45 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="closeThem" data-toggle="collapse" data-target="#customersDropdown"><a href="#"><i class="fas fa-users"></i> Customers</a></li>
-            <div id="customersDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href="add-customer.html"><i class="fa fa-angle-right"></i> Add New Customers</a></p>
-                <p><a href="customer-list.html"><i class="fa fa-angle-right"></i> View Customers</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Leads</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Qualified</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#vendorsDropdown"><a href="#"><i class="fas fa-truck"></i> Vendors</a></li>
-            <div id="vendorsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> Add New Vendors</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Vendors</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> New PO</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Open Orders</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#ticketsDropdown"><a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
-            <div id="ticketsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href="ticket-list.html"><i class="fa fa-angle-right"></i> View Tickets</a></p>
-                <p><a href="add-ticket.html"><i class="fa fa-angle-right"></i> Add New Ticket</a></p>
-                <p><a href="schedule.html"><i class="fa fa-angle-right"></i> Schedule Tickets</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#productsDropdown"><a href="#"><i class="fas fa-cubes"></i> Products</a></li>
-            <div id="productsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> View All</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Add New Product</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Low Stock Report</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#mapView"><a href="#"><i class="fas fa-map"></i> Map View</a></li>
-            <div id="mapView" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Customers</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Branches</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Suppliers</a></p>
-              </div>
-            </div>
+          <ul class="nav nav-sidebar main-menu">
+            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
+              <ul class="submenu-1">
+                <li><a href="add-customer.html">Add New Customers</a></li>
+                <li><a href="customer-list.html">View Customers</a></li>
+                <li><a href="">View Leads</a></li>
+                <li><a href="">View Qualified</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
+              <ul class="submenu-1">
+                <li><a href="">Add New Vendors</a></li>
+                <li><a href="">View Vendors</a></li>
+                <li><a href="">New PO</a></li>
+                <li><a href="">View Open Orders</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
+               <ul class="submenu-1">
+                <li><a href="ticket-list.html">View Tickets</a></li>
+                <li><a href="add-ticket.html">Add New Ticket</a></li>
+                <li><a href="schedule.html">Schedule Tickets</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
+               <ul class="submenu-1">
+                <li><a href="">View All</a></li>
+                <li><a href="">Add New Product</a></li>
+                <li><a href="">Low Stock Report</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
+               <ul class="submenu-1">
+                <li><a href="">Map Customers</a></li>
+                <li><a href="">Map Branches</a></li>
+                <li><a href="">Map Suppliers</a></li>
+              </ul>      
+            </li>
           </ul>
         </div><!-- end sidebar navigation -->
 
@@ -146,7 +142,7 @@
                   <td>800-383-8109</td>
                   <td>B.Gates@microsoft.com</td>
                   <td><a data-toggle="modal" data-target="#notes" href="">View Notes</a></td>
-                  <td><a data-toggle="modal" data-target="#files" href="">View Files</a></td>
+                  <td><a href="">View Files</a></td>
                   <td><a href="">Edit/View Customer</a></td>
                 </tr>
                 <tr>
@@ -156,7 +152,7 @@
                   <td>091-983-1098</td>
                   <td>info@cisco.com</td>
                   <td><a data-toggle="modal" data-target="#notes-2" href="">View Notes</a></td>
-                  <td><a data-toggle="modal" data-target="#files-2" href="">View Files</a></td>
+                  <td><a href="">View Files</a></td>
                   <td><a href="">Edit/View Customer</a></td>
                 </tr>
                 <tr>
@@ -166,7 +162,7 @@
                   <td>838-945-1800</td>
                   <td>A.Ryan@3M.com</td>
                   <td><a data-toggle="modal" data-target="#notes-3" href="">View Notes</a></td>
-                  <td><a data-toggle="modal" data-target="#files-3" href="">View Files</a></td>
+                  <td><a href="">View Files</a></td>
                   <td><a href="">Edit/View Customer</a></td>
                 </tr>
               </tbody>
@@ -199,30 +195,6 @@
 	  </div>
 	</div>
 
-	<!-- Attachments Modal -->
-	<div class="modal fade" id="files" tabindex="-1" role="dialog" aria-labelledby="Files">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Attachments for Customer #05830</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
-	        <ul>
-	        	<li><a href="">Security Guidelines</a></li>
-	        	<li><a href="">Equipment Sheet</a></li>
-	        	<li><a href="">Emergency Contacts</a></li>
-	        	<li><a href="">Sign Off Order</a></li>
-	        </ul>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
 	<!-- Notes Modal -->
 	<div class="modal fade" id="notes-2" tabindex="-1" role="dialog" aria-labelledby="Notes">
 	  <div class="modal-dialog" role="document">
@@ -235,30 +207,6 @@
 	        <p>Notes for the selected customer will be shown below. If notes have not been entered for this customer this area will be empty.</p>
 
 	        <p><strong>Note:</strong>This customer always qualifies for 30% discount on all services rendered.</p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-	<!-- Attachments Modal -->
-	<div class="modal fade" id="files-2" tabindex="-1" role="dialog" aria-labelledby="Files">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Attachments for Customer #05830</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
-	        <ul>
-	        	<li><a href="">Security Guidelines</a></li>
-	        	<li><a href="">Equipment Sheet</a></li>
-	        	<li><a href="">Emergency Contacts</a></li>
-	        	<li><a href="">Sign Off Order</a></li>
-	        </ul>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -287,29 +235,6 @@
 	  </div>
 	</div>
 
-	<!-- Attachments Modal -->
-	<div class="modal fade" id="files-3" tabindex="-1" role="dialog" aria-labelledby="Files">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Attachments for Customer #05830</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
-	        <ul>
-	        	<li><a href="">Security Guidelines</a></li>
-	        	<li><a href="">Equipment Sheet</a></li>
-	        	<li><a href="">Emergency Contacts</a></li>
-	        	<li><a href="">Sign Off Order</a></li>
-	        </ul>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
 
     <section class="drawer">
       <header class="clickme">Action Menu</header>

@@ -24,11 +24,11 @@ hr {clear:both;}
 	.sidebar li a {padding-top:20px; padding-bottom:20px; color:#2c3e50;}
 		.sidebar li a:hover {color:#333; background-position: left bottom;}
 .nav-sidebar {margin-right: -21px;margin-bottom: 20px;margin-left: -20px;}
-.nav-sidebar > li > a {text-align:center;}
+.nav-sidebar > li > a {}
 .nav-sidebar ul i {display:block;}
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {color: #428bca;background-color: #428bca;}
+.nav-sidebar > .active > a:focus {color: #428bca;background-color: #3498DB;}
 
 
 /* -- Left Column Navigation -- */
@@ -45,13 +45,29 @@ hr {clear:both;}
 .submenu {background-color:#2C3E50; padding:10px 0 10px 0;}
 	.submenu a {color:#fff; padding-left:20px;}
 
-    
+ul,li, nav,a{margin:0;padding:0;}
+a{text-decoration:none; font-family:helvetica; }
+
+#vertical-menu{margin-top:20px;display:inline-block;margin-left:20px;}
+.main-menu li{position:relative;box-shadow:0 -1px 0 0 #988d8c, 0 -1px 0 0 #988d8c;}
+.main-menu>li>a>i{color:#2C3E50;width:2em;height:100%;line-height:50px;text-align:left; }
+.main-menu>li:first-child, .submenu-1>li:first-child, .submenu-2>li:first-child, .submenu-3>li:first-child{box-shadow:none;}
+.main-menu>li>a, .submenu-1>li>a, .submenu-2>li>a,.submenu-3>li>a{color:#2c3e50;background:#D3E5E7;display:block;padding:15px;}
+ .submenu-1,.submenu-2, .submenu-3{position:absolute;white-space:nowrap;top:-9999px; border-left:2px solid #35C6A9;}
+.contain-submenu>a:first-child::after{padding-left:1em;}
+.main-menu>li:hover .submenu-1, .submenu-1>li:hover .submenu-2, .submenu-2>li:hover .submenu-3{top:0;  left:100%; list-style-type:none;}
+.main-menu>li:hover>a{color:#22af70;}
+.submenu-1 li:hover>a{color:#22a7f0;}
+.submenu-2 li:hover>a{color:#f6db7f;}
+.submenu-3 li:hover>a{color:#f2784b;}
+
 
 /* -- Text Styles -- */
 h1 {font-size:30px;}
 h3 {color:#32c2a6; font-size:20px;}
 .sub-text {font-size:12px;}
 .news-headline {font-weight:bold;}
+.center {text-align:center;}
 
 /* -- Buttons and Call to Actions -- */
 .btn-primary {background-color:#3598db; border:0px;}
@@ -213,7 +229,7 @@ tr:hover {background-color:#f3facf !important;}
 /* --  Media Queries -- */
 
 @media (min-width: 768px) {
-  .sidebar {position: fixed;top: 100px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;overflow-x: hidden;overflow-y: auto;background-color: #d3e5e7;border-right: 1px solid #eee;}
+  .sidebar {position: fixed;top: 100px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;background-color: #d3e5e7;border-right: 1px solid #eee;}
   .main {padding-right: 40px;padding-left: 40px;}
 }
 

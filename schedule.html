@@ -49,7 +49,7 @@
           	</li>
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
-            <div class="input-group">
+            <div class="input-group header-search-bar">
               <input type="text" class="form-control" placeholder="Search...">
               <div class="input-group-btn">
                 <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
@@ -64,54 +64,51 @@
 
     
 
+    <!-- begin sidebar navigation -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="closeThem" data-toggle="collapse" data-target="#customersDropdown"><a href="#"><i class="fas fa-users"></i> Customers</a></li>
-            <div id="customersDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> Add New Customers</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Customers</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Leads</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Qualified</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#vendorsDropdown"><a href="#"><i class="fas fa-truck"></i> Vendors</a></li>
-            <div id="vendorsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> Add New Vendors</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Vendors</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> New PO</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> View Open Orders</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#ticketsDropdown"><a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
-            <div id="ticketsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> View Tickets</a></p>
-                <p><a href="add-ticket.html"><i class="fa fa-angle-right"></i> Add New Ticket</a></p>
-                <p><a href="schedule.html"><i class="fa fa-angle-right"></i> Schedule Tickets</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#productsDropdown"><a href="#"><i class="fas fa-cubes"></i> Products</a></li>
-            <div id="productsDropdown" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> View All</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Add New Product</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Low Stock Report</a></p>
-              </div>
-            </div>
-            <li class="closeThem" data-toggle="collapse" data-target="#mapView"><a href="#"><i class="fas fa-map"></i> Map View</a></li>
-            <div id="mapView" class="collapse">
-              <div class="submenu">
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Customers</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Branches</a></p>
-                <p><a href=""><i class="fa fa-angle-right"></i> Map Suppliers</a></p>
-              </div>
-            </div>
+          <ul class="nav nav-sidebar main-menu">
+            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
+              <ul class="submenu-1">
+                <li><a href="add-customer.html">Add New Customers</a></li>
+                <li><a href="customer-list.html">View Customers</a></li>
+                <li><a href="">View Leads</a></li>
+                <li><a href="">View Qualified</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
+              <ul class="submenu-1">
+                <li><a href="">Add New Vendors</a></li>
+                <li><a href="">View Vendors</a></li>
+                <li><a href="">New PO</a></li>
+                <li><a href="">View Open Orders</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
+               <ul class="submenu-1">
+                <li><a href="ticket-list.html">View Tickets</a></li>
+                <li><a href="add-ticket.html">Add New Ticket</a></li>
+                <li><a href="schedule.html">Schedule Tickets</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
+               <ul class="submenu-1">
+                <li><a href="">View All</a></li>
+                <li><a href="">Add New Product</a></li>
+                <li><a href="">Low Stock Report</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
+               <ul class="submenu-1">
+                <li><a href="">Map Customers</a></li>
+                <li><a href="">Map Branches</a></li>
+                <li><a href="">Map Suppliers</a></li>
+              </ul>      
+            </li>
           </ul>
-        </div><!-- sidebar navigation -->
+        </div><!-- end sidebar navigation -->
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Schedule A Ticket</h1>

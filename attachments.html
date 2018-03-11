@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
+          <a id="logo" class="navbar-brand" href="index.html"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
@@ -119,13 +119,13 @@
 			      <div class=""> 
 			        <!-- circle icons -->
 			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-			          <li role="presentation" class="active"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+			          <li role="presentation"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
 			            <p>Details</p>
 			            </a></li>
 			          <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
 			            <p>Activity Log</p>
 			            </a></li>
-			          <li><a href="attachments.html" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+			          <li class="active"><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
 			            <p>Attachments</p>
 			            </a></li>
 			          <li><a href="#checklists" aria-controls="checklists" role="tab" data-toggle="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
@@ -145,167 +145,105 @@
 
           <form class="form-horizontal">
 
-          	<h3>Details</h3>
+            <h3>Add Attachment</h3>
 
-          	<div class="col-md-6">
-          		<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Company</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
+              <div class="form-group">
+                  <div class="col-md-2">
+                      <label class="control-label" for="">Upload Attachment</label> 
+                  </div>
+                  <div class="col-md-6"> 
+                      <input type="file" id="exampleInputFile">
+                  </div>
+              </div>
 
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Address</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <textarea class="form-control"></textarea> 
-	                </div>
-            	</div>
+              <div class="form-group">
+                  <div class="col-md-2">
+                      <label class="control-label" for="">Category</label> 
+                  </div>
+                  <div class="col-md-3"> 
+                      <select class="form-control">
+                        <option>Category 1</option>
+                        <option>Category 2</option>
+                      </select> 
+                  </div>
+              </div>
 
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">City</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
+              <div class="form-group">
+                  <div class="col-md-2">
+                      <label class="control-label" for="">Description</label> 
+                  </div>
+                  <div class="col-md-6"> 
+                      <input name="" type="text" id="" class="form-control" />
+                  </div>
+              </div>
 
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">State</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
+              <div class="form-group">
+                  <div class="col-md-2">
+                      <label class="control-label" for=""></label> 
+                  </div>
+                  <div class="col-md-6"> 
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </div>
 
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Zip</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <select class="form-control">
-	                    	<option></option>
-	                    </select> 
-	                </div>
-            	</div>
+              
 
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Country</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-          	</div><!--right column-->
+            <hr />
 
-          	<div class="col-md-6">
-          		<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Type</label> 
-	                </div>
-	                <div class="col-md-9"> 
-	                    <label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio1" value="Qualified"> Qualified
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio2" value="Internal"> Internal
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Lead"> Lost Lead
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Customer"> Lost Customer
-						</label>
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Territory</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Timezone</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-          	</div><!--left column-->
-
-          	<div class="clearfix"></div>
-
-          	<hr />
-
-          	<h3>Contacts <span class="sub-text"><a data-toggle="modal" data-target="#new_contact" href="">( <i class="fa fa-check-square"></i> Add New Contact)</a></span></h3>
+          	<h3>Attachments</h3>
 
           	<div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Type <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Delete Contact</th>
+                    <th>File Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Category <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Date Uploaded <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Description <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Uploaded By</th>
+                    <th>Download</th>
+                    <th class="center">Delete File</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Augustus Sinclair</td>
-                    <td>a.sinclair@microsoft.com</td>
-                    <td>888-398-2809</td>
-                    <td>Client</td>
-                    <td><i class="fas fa-times delete-icon"></i></td>
+                    <td>How-To-Install.pdf</td>
+                    <td>Instructions</td>
+                    <td>3/10/2018</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Frank Fontaine</td>
+                    <td><a href="">Download</a></td>
+                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
                   </tr>
-                  <tr>
+
+                   <tr>
+                    <td>Specs.docx</td>
+                    <td>Specs</td>
+                    <td>4/5/1998</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                     <td>Sander Cohen</td>
-                    <td>SanderCohen@gmail.com</td>
-                    <td>802-810-2801</td>
-                    <td>Inspector</td>
-                    <td><i class="fas fa-times delete-icon"></i></td>
+                    <td><a href="">Download</a></td>
+                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
                   </tr>
-                  <tr>
-                    <td>Mariska Lutz</td>
-                    <td>marisk49@yahoo.com</td>
-                    <td>890-298-2981</td>
-                    <td>Manager
-                    <td><i class="fas fa-times delete-icon"></i></td>
+
+                   <tr>
+                    <td>Equipment.xls</td>
+                    <td>List</td>
+                    <td>12/24/2005</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                    <td>Hattie Gerst</td>
+                    <td><a href="">Download</a></td>
+                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div><!-- Notifications Table -->
-
-          
-          </form>
+          </div><!-- Attachments Table -->
             
-
 
         </div><!-- end content area -->
       </div>
     </div>
-
-    <section class="drawer">
-      <header class="clickme">Action Menu</header>
-        <div class="drawer-content">
-          <div class="container drawer-wrapper">
-            <div class="btn btn-primary">Save and Add Ticket</div>
-          </div>  
-        </div>
-    </section><!-- Action Menu -->
 
     <!-- Add Contact Modal -->
 	<div class="modal fade" id="new_contact" tabindex="-1" role="dialog" aria-labelledby="NewContact">
