@@ -125,10 +125,10 @@
 			          <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
 			            <p>Activity Log</p>
 			            </a></li>
-			          <li class="active"><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+			          <li><a href="attachments.html" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
 			            <p>Attachments</p>
 			            </a></li>
-			          <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+			          <li class="active"><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
 			            <p>Ship-Tos</p>
 			            </a></li>
 			          <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
@@ -145,95 +145,48 @@
 
           <form class="form-horizontal">
 
-            <h3>Add Attachment</h3>
+          	<h3>Ship Tos</h3>
 
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Upload Attachment</label> 
-                  </div>
-                  <div class="col-md-6"> 
-                      <input type="file" id="exampleInputFile">
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Category</label> 
-                  </div>
-                  <div class="col-md-3"> 
-                      <select class="form-control">
-                        <option>Category 1</option>
-                        <option>Category 2</option>
-                      </select> 
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Description</label> 
-                  </div>
-                  <div class="col-md-6"> 
-                      <input name="" type="text" id="" class="form-control" />
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for=""></label> 
-                  </div>
-                  <div class="col-md-6"> 
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-              </div>
-            </form>
-              
-
-            <hr />
-
-          	<h3>Attachments</h3>
+            <a href=""><div class="btn btn-primary"><i class="far fa-list-alt btn-primary-icon" aria-hidden="true"></i> Add a Ship To</div></a>
 
           	<div class="table-responsive">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>File Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Category <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Date Uploaded <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Description <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Uploaded By</th>
-                    <th>Download</th>
-                    <th class="center">Delete File</th>
+                    <th>Company <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Contact <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                    <th>Notes</th>
+                    <th>Tickets</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>How-To-Install.pdf</td>
-                    <td>Instructions</td>
-                    <td>3/10/2018</td>
+                    <td>Microsoft</td>
+                    <td>Augustus Sinclair</td>
+                    <td>aug.sinclair@microsoft.com</td>
+                    <td>800-830-1808</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Frank Fontaine</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
+                    <td><a href="">View Tickets</a></td>
                   </tr>
 
                    <tr>
-                    <td>Specs.docx</td>
-                    <td>Specs</td>
-                    <td>4/5/1998</td>
+                    <td>SpaceX</td>
+                    <td>Elon Musk</td>
+                    <td>ceomusk@spacex.com</td>
+                    <td>900-209-2310</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Sander Cohen</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
+                    <td><a href="">View Tickets</a></td>
                   </tr>
 
                    <tr>
-                    <td>Equipment.xls</td>
-                    <td>List</td>
-                    <td>12/24/2005</td>
+                    <td>Lowes</td>
+                    <td>Brigid Tenenbaum</td>
+                    <td>Tenenbaum@lowes.com</td>
+                    <td>198-390-3901</td>
                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Hattie Gerst</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
+                    <td><a href="">View Tickets</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -245,7 +198,26 @@
       </div>
     </div>
 
-   
+    <section class="drawer">
+      <header class="clickme">Search For a Ship To</header>
+        <div class="drawer-content">
+          <div class="container drawer-wrapper">
+            <form class="form-horizontal">
+              <div class="col-md-4"></div>
+              <div class="col-md-6">
+                <div class="form-group">
+                    <div class="col-md-6"> 
+                        <input name="" type="text" id="" class="form-control" placeholder="Search for a Ship To" />
+                    </div>
+
+                    <div class="col-md-2"><div class="btn btn-primary">Search</div></div>
+                </div>
+              
+            </form>
+          </div>  
+        </div>
+    </section><!-- Action Menu -->
+
 
     <!-- JavaScript -->
     <script src="scripts/jquery-3.3.1.min.js"></script>
