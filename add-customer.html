@@ -1,20 +1,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
 
-    <title>WERX</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/screen.css" rel="stylesheet">
-    <link href="css/datepicker.min.css" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <title>WERX</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/screen.css" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -39,367 +39,532 @@
             <li><a href="#"><i class="fas fa-envelope"></i></a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
             <ul id="gear-dropdown" class="dropdown-menu">
-            	<li><a href="#">Maintain Custom Fields <span class="fas fa-cog pull-right"></span></a></li>
-            	<li class="divider"></li>
-            	<li><a href="#">Administration <span class="fa fa-id-card pull-right"></span></a></li>
-            	<li class="divider"></li>
-            	<li><a href="#">Add New Member <i class="fas fa-users pull-right"></i></a></li>
-            	<li class="divider"></li>
-            	<li><a href="#">Log Out <span class="fa fa-external-link-alt pull-right"></span></a></li>
-          	</ul>
-          	</li>
+              <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+            </ul>
+            </li>
           </ul>
-          <form class="navbar-form navbar-right navbar-right-pushdown">
-            <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
-              <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
-              </div>
+         <form class="navbar-form navbar-right navbar-right-pushdown">
+          <div class="input-group header-search-bar">
+            <input type="text" class="form-control" placeholder="Search...">
+            <div class="input-group-btn">
+              <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-      <div class="clearfix"></div>
-      <div class="container-fluid green-bar"></div>
-    </nav><!-- end header -->
-
-    
-    <!-- begin sidebar navigation -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar main-menu">
-            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
-              <ul class="submenu-1">
-                <li><a href="add-customer.html">Add New Customers</a></li>
-                <li><a href="customer-list.html">View Customers</a></li>
-                <li><a href="">View Leads</a></li>
-                <li><a href="">View Qualified</a></li>
-              </ul>
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
-              <ul class="submenu-1">
-                <li><a href="">Add New Vendors</a></li>
-                <li><a href="">View Vendors</a></li>
-                <li><a href="">New PO</a></li>
-                <li><a href="">View Open Orders</a></li>
-              </ul>
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
-               <ul class="submenu-1">
-                <li><a href="ticket-list.html">View Tickets</a></li>
-                <li><a href="add-ticket.html">Add New Ticket</a></li>
-                <li><a href="schedule.html">Schedule Tickets</a></li>
-              </ul>      
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
-               <ul class="submenu-1">
-                <li><a href="">View All</a></li>
-                <li><a href="">Add New Product</a></li>
-                <li><a href="">Low Stock Report</a></li>
-              </ul>      
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
-               <ul class="submenu-1">
-                <li><a href="">Map Customers</a></li>
-                <li><a href="">Map Branches</a></li>
-                <li><a href="">Map Suppliers</a></li>
-              </ul>      
-            </li>
-          </ul>
-        </div><!-- end sidebar navigation -->
-
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Add A Customer</h1>
-          <p>To add a new customer to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to this screen later.</p>
-
-          <section class="design-process-section" id="process-tab">
-			    <div class="row">
-			      <div class=""> 
-			        <!-- circle icons -->
-			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-			          <li role="presentation" class="active"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
-			            <p>Details</p>
-			            </a></li>
-			          <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
-			            <p>Activity Log</p>
-			            </a></li>
-			          <li><a href="attachments.html" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
-			            <p>Attachments</p>
-			            </a></li>
-			          <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
-			            <p>Ship-Tos</p>
-			            </a></li>
-			          <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
-			            <p>Tickets</p>
-			            </a></li>
-			          <li><a href="#inventory" aria-controls="inventory" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
-			            <p>Equipment</p>
-			            </a></li>
-			        </ul>
-			        <!-- end circle icons--> 
-			      </div>
-			  </div>
-			</section><!--TABS-->
-
-          <form class="form-horizontal">
-
-          	<h3>Details</h3>
-
-          	<div class="col-md-6">
-          		<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Company</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Address</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <textarea class="form-control"></textarea> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">City</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">State</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Zip</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <select class="form-control">
-	                    	<option></option>
-	                    </select> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Country</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-          	</div><!--right column-->
-
-          	<div class="col-md-6">
-          		<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Type</label> 
-	                </div>
-	                <div class="col-md-9"> 
-	                    <label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio1" value="Qualified"> Qualified
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio2" value="Internal"> Internal
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Lead"> Lost Lead
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Customer"> Lost Customer
-						</label>
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Territory</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-
-            	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Timezone</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-            	</div>
-          	</div><!--left column-->
-
-          	<div class="clearfix"></div>
-
-          	<hr />
-
-          	<h3>Contacts <span class="sub-text"><a data-toggle="modal" data-target="#new_contact" href="">( <i class="fa fa-check-square"></i> Add New Contact)</a></span></h3>
-
-          	<div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Type <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Delete Contact</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Augustus Sinclair</td>
-                    <td>a.sinclair@microsoft.com</td>
-                    <td>888-398-2809</td>
-                    <td>Client</td>
-                    <td><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Sander Cohen</td>
-                    <td>SanderCohen@gmail.com</td>
-                    <td>802-810-2801</td>
-                    <td>Inspector</td>
-                    <td><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-                  <tr>
-                    <td>Mariska Lutz</td>
-                    <td>marisk49@yahoo.com</td>
-                    <td>890-298-2981</td>
-                    <td>Manager
-                    <td><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div><!-- Notifications Table -->
-
-          
-          </form>
-            
+    </div>
+    <div class="clearfix"></div>
+    <div class="container-fluid green-bar"></div>
+  </nav><!-- end header -->
 
 
-        </div><!-- end content area -->
+  <!-- begin sidebar navigation -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar main-menu">
+          <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
+          <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
+            <ul class="submenu-1">
+              <li><a href="add-customer.html">Add New Customers</a></li>
+              <li><a href="customer-list.html">View Customers</a></li>
+              <li><a href="">View Leads</a></li>
+              <li><a href="">View Qualified</a></li>
+            </ul>
+          </li>
+          <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
+            <ul class="submenu-1">
+              <li><a href="">Add New Vendors</a></li>
+              <li><a href="">View Vendors</a></li>
+              <li><a href="">New PO</a></li>
+              <li><a href="">View Open Orders</a></li>
+            </ul>
+          </li>
+          <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
+           <ul class="submenu-1">
+            <li><a href="ticket-list.html">View Tickets</a></li>
+            <li><a href="add-ticket.html">Add New Ticket</a></li>
+            <li><a href="schedule.html">Schedule Tickets</a></li>
+          </ul>      
+        </li>
+        <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
+         <ul class="submenu-1">
+          <li><a href="">View All</a></li>
+          <li><a href="">Add New Product</a></li>
+          <li><a href="">Low Stock Report</a></li>
+        </ul>      
+      </li>
+      <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
+       <ul class="submenu-1">
+        <li><a href="">Map Customers</a></li>
+        <li><a href="">Map Branches</a></li>
+        <li><a href="">Map Suppliers</a></li>
+      </ul>      
+    </li>
+  </ul>
+</div><!-- end sidebar navigation -->
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h1 class="page-header">Add A Customer</h1>
+  <p>To add a new customer to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to this screen later.</p>
+
+  <section class="design-process-section" id="process-tab">
+   <div class="row">
+     <div class=""> 
+       <!-- circle icons -->
+       <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+         <li role="presentation" class="active"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+           <p>Details</p>
+         </a></li>
+         <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
+           <p>Activity Log</p>
+         </a></li>
+         <li><a href="attachments.html" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+           <p>Attachments</p>
+         </a></li>
+         <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+           <p>Ship-Tos</p>
+         </a></li>
+         <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+           <p>Tickets</p>
+         </a></li>
+         <li><a href="#inventory" aria-controls="inventory" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
+           <p>Equipment</p>
+         </a></li>
+       </ul>
+       <!-- end circle icons--> 
+     </div>
+   </div>
+ </section><!--TABS-->
+
+ <form class="form-horizontal">
+
+   <h3>Details</h3>
+
+   <div class="col-md-6">
+    <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">Company</label> 
+     </div>
+     <div class="col-md-6"> 
+       <input name="" type="text" id="" class="form-control" /> 
+     </div>
+   </div>
+
+   <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">Address</label> 
+     </div>
+     <div class="col-md-6"> 
+       <textarea class="form-control"></textarea> 
+     </div>
+   </div>
+
+   <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">City</label> 
+     </div>
+     <div class="col-md-6"> 
+       <input name="" type="text" id="" class="form-control" /> 
+     </div>
+   </div>
+
+   <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">State</label> 
+     </div>
+     <div class="col-md-6"> 
+       <input name="" type="text" id="" class="form-control" /> 
+     </div>
+   </div>
+
+   <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">Zip</label> 
+     </div>
+     <div class="col-md-6"> 
+       <select class="form-control">
+        <option></option>
+      </select> 
+    </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">Country</label> 
+   </div>
+   <div class="col-md-6"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+ </div>
+</div><!--right column-->
+
+<div class="col-md-6">
+  <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">Type</label> 
+   </div>
+   <div class="col-md-9"> 
+     <label class="radio-inline">
+      <input type="radio" name="customer_type" id="inlineRadio1" value="Qualified"> Qualified
+    </label>
+    <label class="radio-inline">
+     <input type="radio" name="customer_type" id="inlineRadio2" value="Internal"> Internal
+   </label>
+   <label class="radio-inline">
+     <input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Lead"> Lost Lead
+   </label>
+   <label class="radio-inline">
+     <input type="radio" name="customer_type" id="inlineRadio3" value="Lost_Customer"> Lost Customer
+   </label>
+ </div>
+</div>
+
+<div class="form-group">
+ <div class="col-md-3">
+   <label class="control-label" for="">Territory</label> 
+ </div>
+ <div class="col-md-6"> 
+   <input name="" type="text" id="" class="form-control" /> 
+ </div>
+</div>
+
+<div class="form-group">
+ <div class="col-md-3">
+   <label class="control-label" for="">Timezone</label> 
+ </div>
+ <div class="col-md-6"> 
+   <input name="" type="text" id="" class="form-control" /> 
+ </div>
+</div>
+</div><!--left column-->
+
+<div class="clearfix"></div>
+
+<hr />
+
+<h3>Contacts <span class="sub-text"><a data-toggle="modal" data-target="#new_contact" href="">( <i class="fa fa-check-square"></i> Add New Contact)</a></span></h3>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+        <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+        <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+        <th>Type <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+        <th class="center">Delete Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Augustus Sinclair</td>
+        <td>a.sinclair@microsoft.com</td>
+        <td>888-398-2809</td>
+        <td>Client</td>
+        <td class="center"><i class="fas fa-times delete-icon"></i></td>
+      </tr>
+      <tr>
+        <td>Sander Cohen</td>
+        <td>SanderCohen@gmail.com</td>
+        <td>802-810-2801</td>
+        <td>Inspector</td>
+        <td class="center"><i class="fas fa-times delete-icon"></i></td>
+      </tr>
+      <tr>
+        <td>Mariska Lutz</td>
+        <td>marisk49@yahoo.com</td>
+        <td>890-298-2981</td>
+        <td>Manager
+          <td class="center"><i class="fas fa-times delete-icon"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <hr />
+
+  <h3>Billing</h3>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label" for="">Account Manager</label> 
+      </div>
+      <div class="col-md-6"> 
+        <select class="form-control">
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
       </div>
     </div>
 
-    <section class="drawer">
-      <header class="clickme">Action Menu</header>
-        <div class="drawer-content">
-          <div class="container drawer-wrapper">
-            <div class="btn btn-primary">Save Information</div>
-          </div>  
-        </div>
-    </section><!-- Action Menu -->
+    <div class="form-group">
+     <div class="col-md-3">
+       <label class="control-label" for="">Bill To Name</label> 
+     </div>
+     <div class="col-md-6"> 
+       <input name="" type="text" id="" class="form-control" /> 
+     </div>
+   </div>
 
-    <!-- Add Contact Modal -->
-	<div class="modal fade" id="new_contact" tabindex="-1" role="dialog" aria-labelledby="NewContact">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Add Contact</h4>
-	      </div>
-	      <div class="modal-body">
-	        <p>To add a new contact to this customer, please fill out the form below and use the save button.</p>
-	        <form class="form-horizontal">
-		        <div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Name</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-	        	</div>
 
-	        	 <div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Email</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-	        	</div>
+   <div class="form-group">
+    <div class="col-md-3">
+      <label class="control-label" for="">Bill To</label> 
+    </div>
+    <div class="col-md-9"> 
+      <label class="radio-inline">
+       <input type="radio" name="billto" id="inlineRadio1" value="self"> Self
+     </label>
+     <label class="radio-inline">
+      <input type="radio" name="billto" id="inlineRadio2" value="parent"> Parent
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="billto" id="inlineRadio3" value="alt_billing_address"> Alternate Billing Address
+    </label>
+  </div>
+</div>
 
-	        	 <div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Phone</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-	        	</div>
+<div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">Address</label> 
+   </div>
+   <div class="col-md-6"> 
+     <textarea class="form-control" /> </textarea>
+   </div>
+ </div>
 
-        	 	<div class="form-group">
-	                <div class="col-md-3">
-	                    <label class="control-label" for="">Contact Type</label> 
-	                </div>
-	                <div class="col-md-6"> 
-	                    <input name="" type="text" id="" class="form-control" /> 
-	                </div>
-        		</div>
-        	</form>
+</div>
 
-	        
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+<div class="col-md-6">
 
-    <!-- JavaScript -->
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/datepicker.min.js"></script>
-    <script src="scripts/slidedrawer.min.js"></script>
-    <script type="text/javascript">
-      $('.datepicker').datepicker();
+ <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">City</label> 
+   </div>
+   <div class="col-md-6"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+ </div>
 
-      $('.closeThem').click( function(e) {
-        $('.collapse').collapse('hide');
-      });
-    </script>
+ <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">State</label> 
+   </div>
+   <div class="col-md-6"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+ </div>
 
-    <script type="text/javascript">
+ <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">Zip</label> 
+   </div>
+   <div class="col-md-6"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+ </div>
+
+ <div class="form-group">
+   <div class="col-md-3">
+     <label class="control-label" for="">Country</label> 
+   </div>
+   <div class="col-md-6"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+ </div>
+</div>
+
+<hr />
+
+<h3>Connections</h3>
+
+<div class="col-md-6">
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">VPN Type</label> 
+   </div>
+   <div class="col-md-5"> 
+     <select class="form-control">
+      <option></option>
+      <option></option>
+    </select>
+  </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">VPN Settings</label> 
+   </div>
+   <div class="col-md-5"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">VPN User</label> 
+   </div>
+   <div class="col-md-5"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">VPN Password</label> 
+   </div>
+   <div class="col-md-5"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">ERP Host</label> 
+   </div>
+   <div class="col-md-5"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="col-md-2">
+     <label class="control-label" for="">ERP User</label> 
+   </div>
+   <div class="col-md-5"> 
+     <input name="" type="text" id="" class="form-control" /> 
+   </div>
+  </div>
+</div>
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+</div><!-- end content area -->
+</div>
+</div>
+
+<section class="drawer">
+  <header class="clickme">Action Menu</header>
+  <div class="drawer-content">
+    <div class="container drawer-wrapper">
+      <div class="btn btn-primary">Save Information</div>
+    </div>  
+  </div>
+</section><!-- Action Menu -->
+
+<!-- Add Contact Modal -->
+<div class="modal fade" id="new_contact" tabindex="-1" role="dialog" aria-labelledby="NewContact">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Add Contact</h4>
+     </div>
+     <div class="modal-body">
+       <p>To add a new contact to this customer, please fill out the form below and use the save button.</p>
+       <form class="form-horizontal">
+        <div class="form-group">
+         <div class="col-md-3">
+           <label class="control-label" for="">Name</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-3">
+           <label class="control-label" for="">Email</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-3">
+           <label class="control-label" for="">Phone</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-3">
+           <label class="control-label" for="">Contact Type</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+     </form>
+
+
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+   </div>
+ </div>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/datepicker.min.js"></script>
+<script src="scripts/slidedrawer.min.js"></script>
+<script type="text/javascript">
+  $('.datepicker').datepicker();
+
+  $('.closeThem').click( function(e) {
+    $('.collapse').collapse('hide');
+  });
+</script>
+
+<script type="text/javascript">
     	// script for tab steps
-		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
-		        var href = $(e.target).attr('href');
-		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+        var href = $(e.target).attr('href');
+        var $curr = $(".process-model  a[href='" + href + "']").parent();
 
-		        $('.process-model li').removeClass();
+        $('.process-model li').removeClass();
 
-		        $curr.addClass("active");
-		        $curr.prevAll().addClass("visited");
-		    });
+        $curr.addClass("active");
+        $curr.prevAll().addClass("visited");
+      });
     </script>
 
     <script type="text/javascript">
       $(function(){
-          $('.drawer').slideDrawer({
-              showDrawer: false,
+        $('.drawer').slideDrawer({
+          showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
-          });
+            });
       });
     </script>
   </body>
-</html>
+  </html>
