@@ -2,10 +2,10 @@
  * Base structure
  */
 
-body {padding-top: 50px; font-family: 'Lato', sans-serif; font-size:14px; color:#8e8b8b;}
+body {padding-top: 50px; font-family: 'Montserrat', sans-serif; font-size:14px; color:#313131;}
 .sub-header {padding-bottom: 10px;border-bottom: 1px solid #eee;}
 .navbar-fixed-top {border: 0;}
-.dark-blue-bar {height:99px; background-color:#2c3e50;}
+.dark-blue-bar {height:99px; background-color:#313131;}
 #logo {margin-top:0px;}
     #logo img {width:75%;}
 .main {padding: 20px 20px 150px 20px; margin-top:80px;}
@@ -28,7 +28,7 @@ hr {clear:both;}
 .nav-sidebar ul i {display:block;}
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {color: #428bca;background-color: #3498DB;}
+.nav-sidebar > .active > a:focus {color: #428bca;background-color: #eee;}
 
 
 /* -- Left Column Navigation -- */
@@ -42,29 +42,29 @@ hr {clear:both;}
 .dropdown ul.dropdown-menu:before {content: "";border-bottom: 10px solid #fff;border-right: 10px solid transparent;border-left: 10px solid transparent;position: absolute;top: -10px;right: 16px;z-index: 10;}
 .dropdown ul.dropdown-menu:after {content: "";border-bottom: 12px solid #ccc;border-right: 12px solid transparent;border-left: 12px solid transparent;position: absolute;top: -12px;right: 14px;z-index: 9;}
 
-.submenu {background-color:#2C3E50; padding:10px 0 10px 0;}
+.submenu {background-color:#eee; padding:10px 0 10px 0;}
 	.submenu a {color:#fff; padding-left:20px;}
 
 ul,li, nav,a{margin:0;padding:0;}
 a{text-decoration:none; font-family:helvetica; }
 
 #vertical-menu{margin-top:20px;display:inline-block;margin-left:20px;}
-.main-menu li{position:relative;box-shadow:0 -1px 0 0 #988d8c, 0 -1px 0 0 #988d8c;}
-.main-menu>li>a>i{color:#2C3E50;width:2em;height:100%;line-height:50px;text-align:left; }
+.main-menu li{position:relative;box-shadow:0 -1px 0 0 #173b5c, 0 -1px 0 0 #173b5c;}
+.main-menu>li>a>i{color:#173b5c;width:2em;height:100%;line-height:50px;text-align:left; }
 .main-menu>li:first-child, .submenu-1>li:first-child, .submenu-2>li:first-child, .submenu-3>li:first-child{box-shadow:none;}
-.main-menu>li>a, .submenu-1>li>a, .submenu-2>li>a,.submenu-3>li>a{color:#2c3e50;background:#D3E5E7;display:block;padding:15px;}
- .submenu-1,.submenu-2, .submenu-3{position:absolute;white-space:nowrap;top:-9999px; border-left:2px solid #35C6A9;}
+.main-menu>li>a, .submenu-1>li>a, .submenu-2>li>a,.submenu-3>li>a{color:#173b5c;background:#eee;display:block;padding:15px;}
+ .submenu-1,.submenu-2, .submenu-3{position:absolute;white-space:nowrap;top:-9999px; border-left:2px solid #44af69;}
 .contain-submenu>a:first-child::after{padding-left:1em;}
 .main-menu>li:hover .submenu-1, .submenu-1>li:hover .submenu-2, .submenu-2>li:hover .submenu-3{top:0;  left:100%; list-style-type:none;}
-.main-menu>li:hover>a{color:#22af70;}
-.submenu-1 li:hover>a{color:#22a7f0;}
-.submenu-2 li:hover>a{color:#f6db7f;}
-.submenu-3 li:hover>a{color:#f2784b;}
+.main-menu>li:hover>a{color:#44af69;}
+.submenu-1 li:hover>a{color:#44af69;}
+.submenu-2 li:hover>a{color:#44af69;}
+.submenu-3 li:hover>a{color:#44af69;}
 
 
 /* -- Text Styles -- */
-h1 {font-size:30px;}
-h3 {color:#32c2a6; font-size:20px;}
+h1 {font-size:30px; color:#173b5c;}
+h3 {color:#173b5c; font-size:20px;}
 .sub-text {font-size:12px;}
 .news-headline {font-weight:bold;}
 .center {text-align:center;}
@@ -105,6 +105,9 @@ tr:hover {background-color:#f3facf !important;}
 /* -- Form Elements -- */
 .header-search-bar {width:105%; margin-right:25px;}
 
+/* -- Equipment Section -- */
+.equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}
+.bom-link {background-color:#173b5c; position:absolute; bottom:0px; left:0px; width:100%; padding:10px 0; font-size:16px; color:#fff;}
 
 /* -- Circle Tabs -- */
 
@@ -229,7 +232,7 @@ tr:hover {background-color:#f3facf !important;}
 /* --  Media Queries -- */
 
 @media (min-width: 768px) {
-  .sidebar {position: fixed;top: 100px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;background-color: #d3e5e7;border-right: 1px solid #eee;}
+  .sidebar {position: fixed;top: 100px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;background-color: #eee;border-right: 1px solid #eee;}
   .main {padding-right: 40px;padding-left: 40px;}
 }
 
