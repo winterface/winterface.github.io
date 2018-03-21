@@ -45,8 +45,7 @@ hr {clear:both;}
 .submenu {background-color:#eee; padding:10px 0 10px 0;}
 	.submenu a {color:#fff; padding-left:20px;}
 
-ul,li, nav,a{margin:0;padding:0;}
-a{text-decoration:none; font-family:helvetica; }
+.main-menu ul,li, nav,a{margin:0;padding:0;}
 
 #vertical-menu{margin-top:20px;display:inline-block;margin-left:20px;}
 .main-menu li{position:relative;box-shadow:0 -1px 0 0 #173b5c, 0 -1px 0 0 #173b5c;}
@@ -91,7 +90,7 @@ tr:hover {background-color:#f3facf !important;}
 /* -- Slide Out Drawer -- */
 .drawer-wrapper {text-align:center; padding-top:10px;}
 .drawer-icons {}
-.drawer {bottom: -10px;height: 140px;overflow: hidden;position: fixed;width: 100%;z-index: 5;margin-left:-40px;}
+.drawer {bottom: -10px;height: 140px;overflow: hidden;position: fixed;width: 100%;z-index: 5;}
 .drawer > header {background: #000000;color: #ffffff;display: block;height: 25px;line-height: 25px;margin: auto;overflow: hidden;padding: 5px;text-align: center;width: 250px;-moz-border-radius-topleft: 25px 40px;-moz-border-radius-topright: 25px 40px;border-top-left-radius: 25px 40px;border-top-right-radius: 25px 40px;}
 .drawer-content {background: #333;border-collapse: collapse;border-top: 5px solid #000000;height: 110px;width: 100%;}
 .clickme {cursor: pointer;}
