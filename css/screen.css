@@ -14,6 +14,7 @@ body {padding-top: 50px; font-family: 'Montserrat', sans-serif; font-size:14px; 
 .col-md-offset-2 {margin-left:10%;}
 a {color:#3498DB;}
 a:hover {color:#7BBCE8;}
+a:focus, a:hover {color:#7BBCE8;}
 .no-left-padding {padding-left:0px;}
 hr {clear:both;}
 .spacer {margin:40px 0; clear:both;}
@@ -67,6 +68,7 @@ h3 {color:#173b5c; font-size:20px;}
 .sub-text {font-size:12px;}
 .news-headline {font-weight:bold;}
 .center {text-align:center;}
+.green {color:#3498DB;}
 
 /* -- Buttons and Call to Actions -- */
 .btn-primary {background-color:#3598db; border:0px;}
@@ -77,6 +79,7 @@ h3 {color:#173b5c; font-size:20px;}
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 250ms ease-in;-moz-transition: background 250ms ease-in;-ms-transition: background 250ms ease-in;-o-transition: background 250ms ease-in;transition: background 300ms ease-in;}
 tr:hover {background-color:#f3facf !important;}
+.bom-table {margin-top:10px;}
 
 /* -- Status Buttons -- */
 .status-button {color:#fff; font-size:11px; padding:3px 10px; text-align:center;}
@@ -107,6 +110,12 @@ tr:hover {background-color:#f3facf !important;}
 /* -- Equipment Section -- */
 .equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}
 .bom-link {background-color:#173b5c; position:absolute; bottom:0px; left:0px; width:100%; padding:10px 0; font-size:16px; color:#fff;}
+.view-image-modal {text-align:center;}
+
+/* -- Schedule Ticket Section -- */
+.find-first-avail {background-color:#3699dc; width:100px; text-align:center; color:#fff; border-radius:5px; padding:15px 0; font-size:12px; margin:0 15px 0 0;}
+    .first-avail-icon {font-size:34px;}
+    .find-first-avail p {margin-top:10px;}
 
 /* -- Circle Tabs -- */
 

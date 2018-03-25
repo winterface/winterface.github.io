@@ -1,178 +1,242 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="../../favicon.ico">
 
-    <title>WERX</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/screen.css" rel="stylesheet">
-    <link href="css/datepicker.min.css" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<title>WERX</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/screen.css" rel="stylesheet">
+	<link href="css/datepicker.min.css" rel="stylesheet">
+	<link href="css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+  <![endif]-->
+</head>
 
-  <body>
-    <!-- begin header -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid dark-blue-bar">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.jpg" alt="WERX Logo" title="WERX Logo" /></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
-            <ul id="gear-dropdown" class="dropdown-menu">
-              <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
-            </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right navbar-right-pushdown">
-            <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
-              <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-      <div class="container-fluid green-bar"></div>
-    </nav><!-- end header -->
+<body>
+	<!-- begin header -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid dark-blue-bar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="logo" class="navbar-brand" href="#"><img src="images/logo.jpg" alt="WERX Logo" title="WERX Logo" /></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
+					<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+						<ul id="gear-dropdown" class="dropdown-menu">
+							<li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right navbar-right-pushdown">
+					<div class="input-group header-search-bar">
+						<input type="text" class="form-control" placeholder="Search...">
+						<div class="input-group-btn">
+							<button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="container-fluid green-bar"></div>
+	</nav><!-- end header -->
 
-    
-    <!-- begin sidebar navigation -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar main-menu">
-            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
-              <ul class="submenu-1">
-                <li><a href="add-customer.html">Add New Customers</a></li>
-                <li><a href="customer-list.html">View Customers</a></li>
-                <li><a href="">View Leads</a></li>
-                <li><a href="">View Qualified</a></li>
-              </ul>
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
-              <ul class="submenu-1">
-                <li><a href="">Add New Vendors</a></li>
-                <li><a href="">View Vendors</a></li>
-                <li><a href="">New PO</a></li>
-                <li><a href="">View Open Orders</a></li>
-              </ul>
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
-               <ul class="submenu-1">
-                <li><a href="ticket-list.html">View Tickets</a></li>
-                <li><a href="add-ticket.html">Add New Ticket</a></li>
-                <li><a href="schedule.html">Schedule Tickets</a></li>
-              </ul>      
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
-               <ul class="submenu-1">
-                <li><a href="">View All</a></li>
-                <li><a href="">Add New Product</a></li>
-                <li><a href="">Low Stock Report</a></li>
-              </ul>      
-            </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
-               <ul class="submenu-1">
-                <li><a href="">Map Customers</a></li>
-                <li><a href="">Map Branches</a></li>
-                <li><a href="">Map Suppliers</a></li>
-              </ul>      
-            </li>
-          </ul>
-        </div><!-- end sidebar navigation -->
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Add A Customer</h1>
-          <p>To add a new customer to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to this screen later.</p>
+	<!-- begin sidebar navigation -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar main-menu">
+					<li><a href="#"><i class="fas fa-home"></i>Company</a></li>
+					<li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
+						<ul class="submenu-1">
+							<li><a href="add-customer.html">Add New Customers</a></li>
+							<li><a href="customer-list.html">View Customers</a></li>
+							<li><a href="">View Leads</a></li>
+							<li><a href="">View Qualified</a></li>
+						</ul>
+					</li>
+					<li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
+						<ul class="submenu-1">
+							<li><a href="">Add New Vendors</a></li>
+							<li><a href="">View Vendors</a></li>
+							<li><a href="">New PO</a></li>
+							<li><a href="">View Open Orders</a></li>
+						</ul>
+					</li>
+					<li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
+						<ul class="submenu-1">
+							<li><a href="ticket-list.html">View Tickets</a></li>
+							<li><a href="add-ticket.html">Add New Ticket</a></li>
+							<li><a href="schedule.html">Schedule Tickets</a></li>
+						</ul>      
+					</li>
+					<li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
+						<ul class="submenu-1">
+							<li><a href="">View All</a></li>
+							<li><a href="">Add New Product</a></li>
+							<li><a href="">Low Stock Report</a></li>
+						</ul>      
+					</li>
+					<li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
+						<ul class="submenu-1">
+							<li><a href="">Map Customers</a></li>
+							<li><a href="">Map Branches</a></li>
+							<li><a href="">Map Suppliers</a></li>
+						</ul>      
+					</li>
+				</ul>
+			</div><!-- end sidebar navigation -->
 
-          <section class="design-process-section" id="process-tab">
-			    <div class="row">
-			      <div class=""> 
-			        <!-- circle icons -->
-			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-			          <li role="presentation"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
-			            <p>Details</p>
-			            </a></li>
-			          <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
-			            <p>Activity Log</p>
-			            </a></li>
-			          <li><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
-			            <p>Attachments</p>
-			            </a></li>
-			          <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
-			            <p>Ship-Tos</p>
-			            </a></li>
-			          <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
-			            <p>Tickets</p>
-			            </a></li>
-			          <li class="active"><a href="equipment.html" aria-controls="equipment" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
-			            <p>Equipment</p>
-			            </a></li>
-			        </ul>
-			        <!-- end circle icons--> 
-			      </div>
-			  </div>
-			</section><!--TABS-->
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">Add A Customer</h1>
+				<p>To add a new customer to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to this screen later.</p>
 
-            <h3>Equipment</h3>
-            
-            <div class="col-md-2 equipment-card">
-              <img src="images/placeholder.jpg" />
-              <a class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
-            </div><!--equipment image-->
+				<section class="design-process-section" id="process-tab">
+					<div class="row">
+						<div class=""> 
+							<!-- circle icons -->
+							<ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+								<li role="presentation"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+									<p>Details</p>
+								</a></li>
+								<li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
+									<p>Activity Log</p>
+								</a></li>
+								<li><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+									<p>Attachments</p>
+								</a></li>
+								<li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+									<p>Ship-Tos</p>
+								</a></li>
+								<li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+									<p>Tickets</p>
+								</a></li>
+								<li class="active"><a href="equipment.html" aria-controls="equipment" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
+									<p>Equipment</p>
+								</a></li>
+							</ul>
+							<!-- end circle icons--> 
+						</div>
+					</div>
+				</section><!--TABS-->
 
-            <div class="col-md-9">
-              <h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
+				<h3>Equipment</h3>
 
-              <p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a data-toggle="modal" data-target="#servicehistory" href="">View Service History</a></p>
-              <p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
+				<div class="col-md-2 equipment-card">
+					<img src="images/placeholder.jpg" />
+					<a data-toggle="collapse" href="#showbom1" class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
+				</div><!--equipment image-->
 
-              <!-- service history modal -->
-				<div class="modal fade" id="servicehistory" tabindex="-1" role="dialog" aria-labelledby="Files">
+				<div class="col-md-9">
+					<h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
+
+					<p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a data-toggle="modal" data-target="#servicehistory" href="">View Service History</a></p>
+					<p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
+
+					<!-- service history modal -->
+					<div class="modal fade" id="servicehistory" tabindex="-1" role="dialog" aria-labelledby="Files">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Service History for Generac Diesel Generator</h4>
+								</div>
+								<div class="modal-body">
+									<p>Below you will find the service history for the equipment. </p>
+									<ul>
+										<li>3/25/2012 - Routine Service</li>
+										<li>2/1/2010 - CPU Upgraded</li>
+										<li>5/15/2017 - Routine Service</li>
+										<li>3/21/2014 - Fuel Line Replaced</li>
+									</ul>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--equipment text and links-->
+
+				<div class="clearfix"></div>
+
+				<div class="collapse" id="showbom1">
+					<div class="table-responsive bom-table">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Part</th>
+									<th>Image </th>
+									<th>Qty Used</th>
+									<th>UOM</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td><a data-toggle="modal" data-target="#imageModal" href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!--end bom table-->
+
+				<!-- View Image Modal -->
+				<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				  <div class="modal-dialog" role="document">
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        <h4 class="modal-title" id="myModalLabel">Service History for Generac Diesel Generator</h4>
+				        <h4 class="modal-title" id="myModalLabel">Image for Part #0930901</h4>
 				      </div>
-				      <div class="modal-body">
-				        <p>Below you will find the service history for the equipment. </p>
-				        <ul>
-				        	<li>3/25/2012 - Routine Service</li>
-				        	<li>2/1/2010 - CPU Upgraded</li>
-				        	<li>5/15/2017 - Routine Service</li>
-				        	<li>3/21/2014 - Fuel Line Replaced</li>
-				        </ul>
+				      <div class="modal-body view-image-modal">
+				        <img src="images/placeholder.jpg" />
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -180,86 +244,176 @@
 				    </div>
 				  </div>
 				</div>
-            </div><!--equipment text and links-->
 
-            <div class="clearfix"></div>
-            <hr />
+				<div class="clearfix"></div>
+				<hr />
 
-            <div class="col-md-2 equipment-card">
-              <img src="images/placeholder.jpg" />
-              <a class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
-            </div><!--equipment image-->
+				<div class="col-md-2 equipment-card">
+					<img src="images/placeholder.jpg" />
+					<a data-toggle="collapse" href="#showbom2" class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
+				</div><!--equipment image-->
 
-            <div class="col-md-9">
-              <h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
+				<div class="col-md-9">
+					<h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
 
-              <p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a href="">View Service History</a></p>
-              <p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
-            </div><!--equipment text and links-->
+					<p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a href="">View Service History</a></p>
+					<p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
+				</div><!--equipment text and links-->
 
-            <div class="clearfix"></div>
-            <hr />
+				<div class="clearfix"></div>
 
-            <div class="col-md-2 equipment-card">
-              <img src="images/placeholder.jpg" />
-              <a class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
-            </div><!--equipment image-->
+				<div class="collapse" id="showbom2">
+					<div class="table-responsive bom-table">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Part</th>
+									<th>Image </th>
+									<th>Qty Used</th>
+									<th>UOM</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!--end bom table-->
 
-            <div class="col-md-9">
-              <h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
+				<div class="clearfix"></div>
+				<hr />
 
-              <p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a href="">View Service History</a></p>
-              <p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
-            </div><!--equipment text and links-->
+				<div class="col-md-2 equipment-card">
+					<img src="images/placeholder.jpg" />
+					<a data-toggle="collapse" href="#showbom3" class="bom-link" href="">Bill of Materials <i class="fas fa-angle-right"></i></a>
+				</div><!--equipment image-->
 
-            <div class="clearfix"></div>
-            <hr />
-            
+				<div class="col-md-9">
+					<h4>Generac Diesel Generator | Serial #: 309801-A3E</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="attachments.html">View Diagrams, Spec Sheets, Manuals.</a></p>
 
-        </div><!-- end content area -->
-      </div>
-    </div>
+					<p><i class="far fa-calendar-alt"></i> Last Serviced on: 3/26/2012 | <a href="">View Service History</a></p>
+					<p><i class="fas fa-ticket-alt"></i> <a href="">View Open Tickets</a></p>
+				</div><!--equipment text and links-->
 
-   
+				<div class="clearfix"></div>
 
-    <!-- JavaScript -->
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/datepicker.min.js"></script>
-    <script src="scripts/slidedrawer.min.js"></script>
-    <script type="text/javascript">
-      $('.datepicker').datepicker();
+				<div class="collapse" id="showbom3">
+					<div class="table-responsive bom-table">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Part</th>
+									<th>Image </th>
+									<th>Qty Used</th>
+									<th>UOM</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><a href="">View Image</a></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="green" href="">+ Add</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!--end bom table-->
 
-      $('.closeThem').click( function(e) {
-        $('.collapse').collapse('hide');
-      });
-    </script>
 
-    <script type="text/javascript">
+				<div class="clearfix"></div>
+				<hr />
+
+
+			</div><!-- end content area -->
+		</div>
+	</div>
+
+
+
+	<!-- JavaScript -->
+	<script src="scripts/jquery-3.3.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/datepicker.min.js"></script>
+	<script src="scripts/slidedrawer.min.js"></script>
+	<script type="text/javascript">
+		$('.datepicker').datepicker();
+
+		$('.closeThem').click( function(e) {
+			$('.collapse').collapse('hide');
+		});
+	</script>
+
+	<script type="text/javascript">
     	// script for tab steps
-		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
-		        var href = $(e.target).attr('href');
-		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+    		var href = $(e.target).attr('href');
+    		var $curr = $(".process-model  a[href='" + href + "']").parent();
 
-		        $('.process-model li').removeClass();
+    		$('.process-model li').removeClass();
 
-		        $curr.addClass("active");
-		        $curr.prevAll().addClass("visited");
-		    });
+    		$curr.addClass("active");
+    		$curr.prevAll().addClass("visited");
+    	});
     </script>
 
     <script type="text/javascript">
-      $(function(){
-          $('.drawer').slideDrawer({
-              showDrawer: false,
+    	$(function(){
+    		$('.drawer').slideDrawer({
+    			showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
           });
-      });
+    	});
     </script>
-  </body>
+</body>
 </html>
