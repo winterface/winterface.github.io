@@ -75,6 +75,19 @@ h3 {color:#173b5c; font-size:20px;}
     .btn-primary-icon {color:#004368;}
 .delete-icon {color:#E74C3C;}
 
+/* -- Pagination -- */
+.page-counter {float:left; width:50px;}
+.pagination-previous {background-color:#eee; float:left; width:10px; padding:7px 10px; margin-right:5px;}
+    .pagination-previous:hover {background-color:#ccc;}
+.pagination-next {background-color:#eee; float:left; width:10px; padding:7px 10px; margin:0 5px;}
+    .pagination-next:hover {background-color:#ccc;}
+#pagination p {float:left;}
+#pagination select {display:inline; width:80px;}
+#pagination .fas {margin-left:-4px;}
+#pagination a {color:#333;}
+    #pagination a:hover {color:#000;}
+.pagination-divider {margin:5px 5px 0 5px;}
+.page-of {margin-top:7px;}
 
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 250ms ease-in;-moz-transition: background 250ms ease-in;-ms-transition: background 250ms ease-in;-o-transition: background 250ms ease-in;transition: background 300ms ease-in;}
