@@ -116,9 +116,11 @@ tr:hover {background-color:#f3facf !important;}
 .drawer-items li a {color: #fff;display: block;height: 86px;padding: 12px;text-decoration: none;width: 176px;}
 .drawer-items li a:hover {background: #0078c0;}
 .drawer-items .title {color: #c4c4c4;font-size: 20px;line-height: 1.1;}
+.drawer p {color:#fff;}
 
 /* -- Form Elements -- */
 .header-search-bar {width:105%; margin-right:25px;}
+.filter-wrapper {margin-left:250px;}
 
 /* -- Equipment Section -- */
 .equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}
