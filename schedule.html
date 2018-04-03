@@ -139,41 +139,84 @@
             <p><strong>Requirements:</strong></p>
           </div>
 
+          <br />
+
+          <h3>View Availability and Assign Resources</h3>
+
           <div class="table-responsive bom-table">
-            <table class="table table-striped">
+            <div id="day-chooser" class="pull-left">
+              <label>Choose Day of the Week</label>
+              <select>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+              </select>
+            </div><!--day chooser-->
+
+            <div id="view-chooser" class="pull-right">
+              <p>Change View: <a href="">Day</a> | <a href="">Week</a> | <a href="">Working Day</a></p>
+            </div><!--view chooser-->
+
+            <table class="table table-striped schedule-table">
               <thead>
                 <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
+                  <th>Time (<a href="">12hr</a>)</th>
+                  <th>Andrew Ryan</th>
+                  <th>Frank Fontaine</th>
+                  <th>Sander Cohen</th>
+                  <th>Augustus Sinclair</th>
+                  <th>Brigid Tenenbaum</th>
+                  <th><a href="">+ Add Additional Resource</a></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>8AM EST</td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
                   <td></td>
                 </tr>
                 <tr>
+                  <td>9AM EST</td>
+                  <td class="assigned"><span class="yellow">Assigned</span></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td class="assigned"><span class="yellow">Assigned</span></td>
                   <td></td>
+                </tr>
+                <tr>
+                  <td>10AM EST</td>
+                  <td class="assigned"><span class="yellow">Assigned</span></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td class="assigned"><span class="yellow">Assigned</span></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
                   <td></td>
+                </tr>
+                 <tr>
+                  <td>11AM EST</td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
+                </tr>
+                 <tr>
+                  <td>12PM EST</td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td><a href="">Click To Assign</a></td>
+                  <td class="not-avail"><span class="red">Not Available</span></td>
+                  <td class="assigned"><span class="yellow">Assigned</td>
                   <td></td>
                 </tr>
               </tbody>
