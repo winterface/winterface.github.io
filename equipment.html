@@ -143,7 +143,7 @@
 					</div>
 				</section><!--TABS-->
 
-				<h3>Equipment</h3>
+				<h3>Equipment <span class="sub-text"><a data-toggle="modal" data-target="#new-equip" href="">( <i class="fa fa-check-square"></i> Add equipment for this customer)</a></span></h3>
 
 				<div class="col-md-2 equipment-card">
 					<img src="images/placeholder.jpg" />
@@ -375,6 +375,139 @@
 			</div><!-- end content area -->
 		</div>
 	</div>
+
+
+	<!-- Add Contact Modal -->
+<div class="modal fade" id="new-equip" tabindex="-1" role="dialog" aria-labelledby="NewEquipment">
+ <div class="modal-dialog modal-lg" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Add Equipment</h4>
+     </div>
+     <div class="modal-body">
+       <p>Add equipment for this customer.</p>
+       <form class="form-horizontal">
+       	<div class="col-md-6">
+        <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Upload Image</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+        <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Or Image URL</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Product Name</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Serial Number</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+   	</div><!--column 1-->
+
+   	<div class="col-md-6">
+   	<div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Location</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Install Date</label> 
+         </div>
+         <div class="col-md-6"> 
+           <div class="input-group">
+		      <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
+		      <input type="text" class="form-control datepicker" id="" placeholder="">
+		    </div>
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-4">
+           <label class="control-label" for="">Service Date</label> 
+         </div>
+         <div class="col-md-6"> 
+           <div class="input-group">
+		      <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
+		      <input type="text" class="form-control datepicker" id="" placeholder="">
+		    </div>
+         </div>
+       </div>
+   		</div><!--column 2-->
+
+   		<div class="clearfix"></div>
+   		<div class="col-md-12">
+       <div class="form-group">
+         <div class="col-md-12">
+           <label class="control-label" for="">Description</label> 
+         </div>
+         <div class="col-md-12"> 
+           <textarea class="form-control"></textarea>
+         </div>
+       </div>
+   </div>
+
+       <h4>Bill of Materials</h4>
+
+       <div class="table-responsive">
+		  <table class="table table-striped">
+		    <thead>
+		      <tr>
+		        <th>Item</th>
+		        <th>Description</th>
+		        <th>Qty</th>
+		        <th>Delete</th>
+		        <th>Add Another</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td></td>
+		        <td></td>
+		        <td></td>
+		        <td><a href=""><i class="fas fa-times delete-icon"></i> Remove Item</a></td>
+		        <td><a href="">+ Add Another Item</a></td>
+		      </tr>
+		      </tbody>
+		    </table>
+		  </div>
+
+       
+     </form>
+     <div class="clearfix"></div>
+
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+   </div>
+ </div><!--end new equipment modal-->
 
 
 
