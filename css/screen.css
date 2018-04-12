@@ -18,6 +18,7 @@ a:focus, a:hover {color:#389358;}
 .no-left-padding {padding-left:0px;}
 hr {clear:both;}
 .spacer {margin:40px 0; clear:both;}
+.panel-heading {background-color:#313131 !important; color:#fff !important;}
 
 /* -- Header Navigation -- */
 .sidebar {display: none; width:10% !important;}
