@@ -149,12 +149,14 @@
 
               <div class="form-group">
                   <div class="col-md-2">
-                      <label class="control-label" for="">Upload Attachment</label> 
+                      <label class="control-label" for="">Drag Files to Upload</label> 
                   </div>
-                  <div class="col-md-6"> 
-                      <input type="file" id="exampleInputFile">
+                  <div class="col-md-6 dropzone-wrapper"> 
+                      <div class="dropzone">-- Drag files into this box to upload -- <br /><br /><div class="btn btn-primary">Or choose files to upload</div>
                   </div>
               </div>
+
+              <div class="clearfix"></div>
 
               <div class="form-group">
                   <div class="col-md-2">
@@ -190,7 +192,7 @@
 
             <hr />
 
-          	<h3>Attachments</h3>
+          	<h3>Attachments <span class="sub-text">(<a data-toggle="modal" data-target="#filter-attachments" href=""><i class="fas fa-filter"></i> Filter by...</a>)</span></h3>
 
           	<div class="table-responsive">
               <table class="table table-striped">
@@ -245,7 +247,37 @@
       </div>
     </div>
 
-   
+   <!-- Add Contact Modal -->
+<div class="modal fade" id="filter-attachments" tabindex="-1" role="dialog" aria-labelledby="NewContact">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Filter Attachments</h4>
+     </div>
+     <div class="modal-body">
+       <p>To filter the list of uploaded attachments, use the checkboxes to mark how you would like to filter the list of attachments.</p>
+       <div class="col-md-12">
+	       <form class="form-horizontal">
+		        <div class="form-group">
+		         <input type="checkbox"> Name <br />
+		         <input type="checkbox"> Category <br />
+		         <input type="checkbox"> Date Uploaded <br />
+		         <input type="checkbox"> Description <br />
+		         <input type="checkbox"> Uploaded By <br />
+		       	</div>
+	     	</form>
+ 		</div>
+
+ 		<div class="clearfix"></div>
+
+
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-primary" data-dismiss="modal">Filter Attachments</button>
+   </div>
+ </div>
+</div>
 
     <!-- JavaScript -->
     <script src="scripts/jquery-3.3.1.min.js"></script>

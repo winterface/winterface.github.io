@@ -90,6 +90,13 @@ h3 {color:#173b5c; font-size:20px;}
 .pagination-divider {margin:5px 5px 0 5px;}
 .page-of {margin-top:7px;}
 
+/* -- Animation --*/
+.spinEffect{
+   transform: rotate(90deg);
+   -webkit-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+}
+
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 350ms ease-in;-moz-transition: background 350ms ease-in;-ms-transition: background 350ms ease-in;-o-transition: background 350ms ease-in;transition: background 300ms ease-in;}
 tr:hover {background-color:#fffee9 !important;}
@@ -128,6 +135,8 @@ tr:hover {background-color:#fffee9 !important;}
 .header-search-bar {width:105%; margin-right:25px;}
 .filter-wrapper {margin-left:250px;}
 label {font-weight:normal;}
+.dropzone-wrapper {padding-left:5px;}
+    .dropzone {height:200px; width:50%; background-color:#cffedf; text-align:center; color:#60c583; padding-top:60px; margin-bottom:15px; border:5px dashed #ccc; }
 
 /* -- Equipment Section -- */
 .equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}

@@ -112,42 +112,6 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome to WERX</h1>
 
-          <div class="col-md-7 no-left-padding">
-            <h3>Notifications <span class="sub-text"><a href="">(View All)</a></span></h3>
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Customer <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Actions <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>5/24/2018</td>
-                    <td>Microsoft</td>
-                    <td><p class="status-button red-bg">On Hold</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                  <tr>
-                    <td>10/20/2010</td>
-                    <td>Electronic Arts</td>
-                    <td><p class="status-button green-bg">Closed</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                  <tr>
-                    <td>7/5/1901</td>
-                    <td>Paradox Publishing</td>
-                    <td><p class="status-button yellow-bg">Pending</p></td>
-                    <td><a href="">View</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div><!-- Notifications Table -->
-
           <hr />
 
           <h3>Tickets</h3>
@@ -155,7 +119,7 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Date <img src="images/sort-icons.png" class="sort-icons" alt="Click To Sort Column" /></th>
                   <th>Ticket ID <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Ticket Title <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
                   <th>Customer Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
@@ -243,6 +207,12 @@
       $('.closeThem').click( function(e) {
         $('.collapse').collapse('hide');
       });
+
+      $(function(){
+  $(".sort-icons").click(function(){
+    $(".sort-icons").toggleClass("spinEffect");
+  });
+});
     </script>
   </body>
 </html>
