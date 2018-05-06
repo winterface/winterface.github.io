@@ -119,13 +119,13 @@
        <div class=""> 
          <!-- circle icons -->
          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-           <li role="presentation" class="active"><a href="account-admin.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+           <li role="presentation"><a href="account-admin.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
              <p>Accounts</p>
            </a></li>
            <li role="presentation"><a href="teams.html" aria-controls="details" role="tab"><i class="fas fa-users" aria-hidden="true"></i>
              <p>Teams</p>
            </a></li>
-           <li role="presentation"><a href="notifications.html" aria-controls="details" role="tab"><i class="fas fa-bell" aria-hidden="true"></i>
+           <li role="presentation" class="active"><a href="notifications.html" aria-controls="details" role="tab"><i class="fas fa-bell" aria-hidden="true"></i>
              <p>Notifications</p>
            </a></li>
            <li><a href="billing.html" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
@@ -143,40 +143,24 @@
      </div>
    </section><!--TABS-->
 
-   
 
-     <h3>Account Members <span class="sub-text">(<a data-toggle="modal" data-target="#new_account" href=""><i class="fas fa-user"></i> Add New Account Member</a>)</span></h3>
+     <h3>Notification Center <span class="sub-text">(<a data-toggle="modal" data-target="#new_notification" href=""><i class="fas fa-bell"></i> Add a New Notification</a>)</span></h3>
      <div class="table-responsive">
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email Address</th>
-              <th>Permissions</th>
-              <th>Status</th>
-              <th>Save Changes</th>
-              <th>Delete Account</th>
+              <th class="select-all-column"><input type="checkbox"> Select All</th>
+              <th>Posted</th>
+              <th>Title</th>
+              <th>Expires</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>John Doe</td>
-              <td>john.doe@microsoft.com</td>
-              <td>
-              	<select class="form-control">
-              		<option>Administrator</option>
-              		<option>Scheduler</option>
-              		<option>Manager</option>
-              	</select>
-              </td>
-              <td>
-              	<select class="form-control">
-              		<option>Active</option>
-              		<option>Disable</option>
-              	</select>
-              </td>
-              <td><div class="btn btn-primary">Save Changes</div></td>	
-              <td><div class="btn btn-danger">Delete Account</div></td>
+              <td><input type="checkbox"></td>
+              <td>8/9/2017</td>
+              <td>Service Disruption</td>
+              <td>8/10/2017</td>
             </tr>
           </tbody>
         </table>
@@ -189,26 +173,42 @@
           </div>
       </div>
 
+     <div class="clearfix"></div>
+
+
+
+</div>
 
 
 </div><!-- end content area -->
 </div>
 </div>
 
-<!-- Add Account Modal -->
-<div class="modal fade" id="new_account" tabindex="-1" role="dialog" aria-labelledby="NewContact">
+
+
+<!-- Add Notification Modal -->
+<div class="modal fade" id="new_notification" tabindex="-1" role="dialog" aria-labelledby="NewContact">
  <div class="modal-dialog" role="document">
    <div class="modal-content">
      <div class="modal-header">
        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <h4 class="modal-title" id="myModalLabel">Add Account Member</h4>
+       <h4 class="modal-title" id="myModalLabel">Add Notification</h4>
      </div>
      <div class="modal-body">
-       <p>To add a new account, please fill out the form below and use the save button.</p>
+       <p>To add a notification, please fill out the form below and use the save button.</p>
        <form class="form-horizontal">
         <div class="form-group">
          <div class="col-md-3">
-           <label class="control-label" for="">Name</label> 
+           <label class="control-label" for="">When you want the notification posted</label> 
+         </div>
+         <div class="col-md-6"> 
+           <input name="" type="text" id="" class="form-control datepicker" /> 
+         </div>
+       </div>
+
+       <div class="form-group">
+         <div class="col-md-3">
+           <label class="control-label" for="">Title</label> 
          </div>
          <div class="col-md-6"> 
            <input name="" type="text" id="" class="form-control" /> 
@@ -217,34 +217,10 @@
 
        <div class="form-group">
          <div class="col-md-3">
-           <label class="control-label" for="">Email</label> 
+           <label class="control-label" for="">Expiration Date</label> 
          </div>
          <div class="col-md-6"> 
-           <input name="" type="text" id="" class="form-control" /> 
-         </div>
-       </div>
-
-       <div class="form-group">
-         <div class="col-md-3">
-           <label class="control-label" for="">Permissions</label> 
-         </div>
-         <div class="col-md-6"> 
-           <select class="form-control">
-           		<option>Administrator</option>
-           		<option>Scheduler</option>
-           </select>
-         </div>
-       </div>
-
-       <div class="form-group">
-         <div class="col-md-3">
-           <label class="control-label" for="">Status</label> 
-         </div>
-         <div class="col-md-6"> 
-           <select class="form-control">
-           	<option>Active</option>
-           	<option>Disabled</option>
-           </select> 
+           <input name="" type="text" id="" class="form-control datepicker" /> 
          </div>
        </div>
      </form>
@@ -257,56 +233,6 @@
  </div>
 </div>
 </div>
-
-<!-- Add Team Modal -->
-<div class="modal fade" id="new_team" tabindex="-1" role="dialog" aria-labelledby="NewContact">
- <div class="modal-dialog" role="document">
-   <div class="modal-content">
-     <div class="modal-header">
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       <h4 class="modal-title" id="myModalLabel">Add New Team</h4>
-     </div>
-     <div class="modal-body">
-       <p>To add a new team, please fill out the form below and use the save button.</p>
-       <form class="form-horizontal">
-        <div class="form-group">
-         <div class="col-md-3">
-           <label class="control-label" for="">Team Name</label> 
-         </div>
-         <div class="col-md-6"> 
-           <input name="" type="text" id="" class="form-control" /> 
-         </div>
-       </div>
-
-       <div class="form-group">
-         <div class="col-md-3">
-           <label class="control-label" for="">Purpose</label> 
-         </div>
-         <div class="col-md-6"> 
-           <input name="" type="text" id="" class="form-control" /> 
-         </div>
-       </div>
-
-       <div class="form-group">
-         <div class="col-md-3">
-           <label class="control-label" for="">Status</label> 
-         </div>
-         <div class="col-md-6"> 
-           <input name="" type="text" id="" class="form-control" /> 
-         </div>
-       </div>
-     </form>
-
-
-   </div>
-   <div class="modal-footer">
-     <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-   </div>
- </div>
-</div>
-</div>
-
-
 
 <!-- JavaScript -->
 <script src="scripts/jquery-3.3.1.min.js"></script>

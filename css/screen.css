@@ -90,6 +90,16 @@ h3 {color:#173b5c; font-size:20px;}
 .pagination-divider {margin:5px 5px 0 5px;}
 .page-of {margin-top:7px;}
 
+/* -- Teams --*/
+.team-box {text-align:center; border:1px solid #ccc; background-color:#eee; padding-top:15px; padding-bottom:15px; margin-right:15px; margin-top:15px;}
+.team-box-icon {font-size:36px;}
+.team-name {font-size:24px;}
+.account-box {text-align:center; border-radius:20%; border:1px solid #ccc; background-color:#fff; padding-top:15px; padding-bottom:15px; margin-right:15px; margin-top:15px; cursor:pointer;}
+    .account-box:hover {background-color:#eee;}
+    .account-box p {margin-bottom:0px;}
+.account-box-icon {font-size:36px;}
+.account-name {font-size:24px;}
+
 /* -- Animation --*/
 .spinEffect{
    transform: rotate(90deg);
@@ -105,7 +115,7 @@ tr:hover {background-color:#fffee9 !important;}
 .assigned {border-left:3px solid #f49d12;}
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {border-left:1px solid #eee;}
 .schedule-table th {border-top:1px solid #eee; background-color:#eee;}
-
+.select-all-column {width:10%;}
 
 /* -- Status Buttons -- */
 .status-button {color:#fff; font-size:11px; padding:3px 10px; text-align:center;}
