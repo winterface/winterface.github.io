@@ -158,6 +158,13 @@ label {font-weight:normal;}
     .first-avail-icon {font-size:34px;}
     .find-first-avail p {margin-top:10px;}
 
+/* -- News Page -- */
+.article-summary-wrapper {margin-bottom:25px; border-bottom:1px solid #eee; padding-bottom:15px;}
+.article-summary h3 {text-transform:uppercase; margin-bottom:0px; margin-top:0px;}
+.article-thumbnail {margin-right:25px;}
+.article-date {margin-top:0px;}
+.full-article-image {width:25%; margin:25px;}
+
 /* -- Circle Tabs -- */
 
 .design-process-section {margin:25px 0;}
