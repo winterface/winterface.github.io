@@ -18,6 +18,7 @@ a:focus, a:hover {color:#389358;}
 .no-left-padding {padding-left:0px;}
 hr {clear:both;}
 .spacer {margin:40px 0; clear:both;}
+.panel-footer {background-color:#fff !important; border-top:0px !important;}
 .panel-heading {background-color:#313131 !important; color:#fff !important;}
 
 /* -- Header Navigation -- */
@@ -31,6 +32,7 @@ hr {clear:both;}
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {color: #428bca;background-color: #eee;}
+.search-icon {height:34px;}
 
 
 /* -- Left Column Navigation -- */
@@ -44,7 +46,7 @@ hr {clear:both;}
 .dropdown ul.dropdown-menu:before {content: "";border-bottom: 10px solid #fff;border-right: 10px solid transparent;border-left: 10px solid transparent;position: absolute;top: -10px;right: 16px;z-index: 10;}
 .dropdown ul.dropdown-menu:after {content: "";border-bottom: 12px solid #ccc;border-right: 12px solid transparent;border-left: 12px solid transparent;position: absolute;top: -12px;right: 14px;z-index: 9;}
 .submenu {background-color:#eee; padding:10px 0 10px 0;}
-	.submenu a {color:#fff; padding-left:20px;}
+    .submenu a {color:#fff; padding-left:20px;}
 .main-menu ul,li, nav,a{margin:0;padding:0;}
 #vertical-menu{margin-top:20px;display:inline-block;margin-left:20px;}
 .main-menu li{position:relative;box-shadow:0 -1px 0 0 #173b5c, 0 -1px 0 0 #173b5c;}
@@ -69,6 +71,7 @@ h3 {color:#173b5c; font-size:20px;}
 .green {color:#3498DB;}
 .red {color:#e74b3c;}
 .yellow {color:#f49d12;}
+.or-divider {margin:0 15px;}
 
 /* -- Buttons and Call to Actions -- */
 .btn-primary {background-color:#44af69; border:0px;}
@@ -101,11 +104,9 @@ h3 {color:#173b5c; font-size:20px;}
 .account-name {font-size:24px;}
 
 /* -- Animation --*/
-.spinEffect{
-   transform: rotate(90deg);
-   -webkit-transform: rotate(90deg);
-   -ms-transform: rotate(90deg);
-}
+.spinEffect{transform: rotate(90deg);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);}
+.rotate { -moz-transition: all .5s linear;-webkit-transition: all .5s linear;transition: all .5s linear;}
+.rotate.down {-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
 
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 350ms ease-in;-moz-transition: background 350ms ease-in;-ms-transition: background 350ms ease-in;-o-transition: background 350ms ease-in;transition: background 300ms ease-in;}
@@ -116,6 +117,7 @@ tr:hover {background-color:#fffee9 !important;}
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {border-left:1px solid #eee;}
 .schedule-table th {border-top:1px solid #eee; background-color:#eee;}
 .select-all-column {width:10%;}
+.schedule-table th {border-top:1px solid #eee; background-color:#eee;}
 
 /* -- Status Buttons -- */
 .status-button {color:#fff; font-size:11px; padding:3px 10px; text-align:center;}

@@ -124,9 +124,9 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Customer ID <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Company <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Contact Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Customer ID <a href="#"><div class="fa fa-angle-up rotate"></div></a></th>
+                  <th>Company <a href="#"><div class="fa fa-angle-up rotate"></div></a></th>
+                  <th>Contact Name <a href="#"><div class="fa fa-angle-up rotate"></div></a></th>
                   <th>Phone</th>
                   <th>Email Address</th>
                   <th>Notes</th>
@@ -251,6 +251,11 @@
     <script src="scripts/datepicker.min.js"></script>
     <script src="scripts/slidedrawer.min.js"></script>
     <script type="text/javascript">
+
+      $(".rotate").click(function () {
+        $(this).toggleClass("down");
+      })
+
       $('.datepicker').datepicker();
 
       $('.closeThem').click( function(e) {
