@@ -1,0 +1,47 @@
+/* -- STRUCTURE -- */
+body {font-size:14px; font-family: 'Titillium Web', sans-serif;}
+.jumbotron {background:url(../images/header.jpg) no-repeat;}
+.panel-default > .panel-heading {background-color:#41b77c; color:#fff;}
+
+/* -- FORM FIELDS -- */
+.control-label {text-align:left !important;}
+
+/* -- TEXT AND BUTTONS -- */
+.btn-default {background-color:#ebedef;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+a:focus {text-decoration:none;}
+.jumbotron h1 {color:#fff; margin-top:50px;}
+.jumbotron p {color:#fff;}
+.server-select {margin-top:7px;}
+.disclaimer {color:#cf4a4a;}
+.tools-icon {margin-top:-7px;}
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: left;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* -- MEDIA QUERIES -- */
