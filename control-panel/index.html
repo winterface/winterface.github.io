@@ -165,7 +165,109 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                	<div data-toggle="modal" data-target="#addWorker" class="btn btn-primary">Add a Worker</div>
+                	<br /><br />
+
+                  	<table class="table table-striped">
+					  <tr>
+					  	<th>Port #</th>
+					  	<th>Persistant?</th>
+					  	<th>Status</th>
+					  	<th>Started?</th>
+					  	<th>Msg. Count Since Last Start</th>
+					  	<th>Seconds of Work</th>
+					  	<th>Last Msg. Req.</th>
+					  	<th>Auto-Start</th>
+					  	<th>Tools</th>
+					  	<th>Edit Worker</th>
+					  </tr>
+
+					  <tr>
+					  	<td>10</td>
+					  	<td>Yes</td>
+					  	<td>Active</td>
+					  	<td>Yes</td>
+					  	<td>25</td>
+					  	<td>360</td>
+					  	<td>Message 2</td>
+					  	<td>Yes</td>
+					  	<td>
+					  		<select class="toolSelect">
+					  			<option>Choose Option</option>
+					  			<option data-toggle="modal" data-target="#blockWorker">Block Worker</option>
+					  			<option data-toggle="modal" data-target="#killWorker">Kill Worker</option>
+					  			<option data-toggle="modal" data-target="#resetWorker">Reset Worker</option>
+					  			<option data-toggle="modal" data-target="#startWorker">Start Worker</option>
+					  			<option data-toggle="modal" data-target="#viewLog">View Full Log</option>
+					  		</select>
+					  	</td>
+					  	<td><div data-toggle="modal" data-target="#editWorker" class="btn btn-primary">Edit this Worker</div></td>
+					  </tr>
+
+					  <tr>
+					  	<td>50</td>
+					  	<td>Yes</td>
+					  	<td>Active</td>
+					  	<td></td>
+					  	<td>25</td>
+					  	<td>360</td>
+					  	<td>Message 2</td>
+					  	<td>Yes</td>
+					  	<td>
+					  		<select class="">
+					  			<option>Block Worker</option>
+					  			<option>Kill Worker</option>
+					  			<option>Reset Worker</option>
+					  			<option>Start Worker</option>
+					  			<option>View Full Log</option>
+					  		</select>
+					  	</td>
+					  	<td><div class="btn btn-primary">Edit this Worker</div></td>
+					  </tr>
+
+					  <tr>
+					  	<td>12</td>
+					  	<td>No</td>
+					  	<td>Inactive</td>
+					  	<td></td>
+					  	<td>65</td>
+					  	<td>120</td>
+					  	<td>Message 3</td>
+					  	<td>No</td>
+					  	<td>
+					  		<select class="">
+					  			<option>Block Worker</option>
+					  			<option>Kill Worker</option>
+					  			<option>Reset Worker</option>
+					  			<option>Start Worker</option>
+					  			<option>View Full Log</option>
+					  		</select>
+					  	</td>
+					  	<td><div class="btn btn-primary">Edit this Worker</div></td>
+					  </tr>
+
+					  <tr>
+					  	<td>10</td>
+					  	<td>Yes</td>
+					  	<td>Active</td>
+					  	<td></td>
+					  	<td>25</td>
+					  	<td>360</td>
+					  	<td>Message 2</td>
+					  	<td>Yes</td>
+					  	<td>
+					  		<select class="">
+					  			<option>Block Worker</option>
+					  			<option>Kill Worker</option>
+					  			<option>Reset Worker</option>
+					  			<option>Start Worker</option>
+					  			<option>View Full Log</option>
+					  		</select>
+					  	</td>
+					  	<td><div class="btn btn-primary">Edit this Worker</div></td>
+					  </tr>
+					</table>
                 </div>
               </div>
             </div>
@@ -186,7 +288,7 @@
                       <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 control-label">API Restart Required</label>
                         <div class="col-sm-7">
-                          <input type="email" class="form-control" id="portNumber" placeholder="Port Number">
+                          <input type="email" class="form-control" id="portNumber" placeholder="API Restart Required">
                         </div>
                       </div>
                     </div>
@@ -195,7 +297,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Max Startup Retries</label>
                         <div class="col-sm-7">
-                          <input type="password" class="form-control" id="scheduledStartTime" placeholder="Scheduled Start Time">
+                          <input type="password" class="form-control" id="scheduledStartTime" placeholder="Max Startup Retries">
                         </div>
                       </div>
                     </div>
@@ -204,7 +306,7 @@
                       <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 control-label">Connection Timeout</label>
                         <div class="col-sm-7">
-                          <input type="email" class="form-control" id="flushMemorytoDisc" placeholder="Flush Memory to Disc">
+                          <input type="email" class="form-control" id="flushMemorytoDisc" placeholder="Connection Timeout">
                         </div>
                       </div>
                     </div>
@@ -213,7 +315,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Read Timeout</label>
                         <div class="col-sm-7">
-                          <input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Message Count Since Startup">
+                          <input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
                         </div>
                       </div>
                     </div>
@@ -222,7 +324,7 @@
                       <div class="form-group">
                         <label for="inputEmail3" class="col-sm-5 control-label">Write Timeout</label>
                         <div class="col-sm-7">
-                          <input type="email" disabled class="form-control" id="lastRequestDateTime" placeholder="Last Request Date and Time">
+                          <input type="email" disabled class="form-control" id="lastRequestDateTime" placeholder="Write Timeout">
                         </div>
                       </div>
                     </div>
@@ -231,7 +333,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Max Queue Wait</label>
                         <div class="col-sm-7">
-                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Last Response Date and Time">
+                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Max Queue Wait">
                         </div>
                       </div>
                     </div>
@@ -240,7 +342,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Show in Eclipse Phantom Log</label>
                         <div class="col-sm-7">
-                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Last Response Date and Time">
+                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Show in Eclipse Phantom Log">
                         </div>
                       </div>
                     </div>
@@ -249,7 +351,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Enable Universe Logging?</label>
                         <div class="col-sm-7">
-                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Last Response Date and Time">
+                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Enable Universe Logging">
                         </div>
                       </div>
                     </div>
@@ -258,7 +360,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-5 control-label">Max Number of Log Entries</label>
                         <div class="col-sm-7">
-                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Last Response Date and Time">
+                          <input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Max Number of Log Entries">
                         </div>
                       </div>
                     </div>
@@ -296,12 +398,130 @@
     </div> <!-- /container -->
 
 
+    <!--MODALS-->
+    <!-- Block Worker Modal -->
+	<div class="modal fade" id="blockWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Block Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Please use the "Confirm" button to block this worker or use the "Close" button to close this window and leave the worker as-is.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Confirm</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Kill Worker Modal -->
+	<div class="modal fade" id="killWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Kill Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Please use the "Confirm" button to kill this worker or use the "Close" button to close this window and leave the worker as-is.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Confirm</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Reset Worker Modal -->
+	<div class="modal fade" id="resetWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Reset Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Please use the "Confirm" button to reset this worker or use the "Close" button to close this window and leave the worker as-is.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Confirm</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Start Worker Modal -->
+	<div class="modal fade" id="startWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Start Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Please use the "Confirm" button to start this worker or use the "Close" button to close this window and leave the worker as-is.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Confirm</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Edit Worker Modal -->
+	<div class="modal fade" id="editWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Edit Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	        <button type="button" class="btn btn-primary">Save</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Add Worker Modal -->
+	<div class="modal fade" id="addWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Add New Worker</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	        <button type="button" class="btn btn-primary">Save and Add Worker</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/bootstrap-select.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+
+      	
 
         $(".toggle-accordion").on("click", function() {
           var accordionId = $(this).attr("accordion-id"),
