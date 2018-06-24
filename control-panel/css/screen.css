@@ -32,6 +32,7 @@ a:focus {text-decoration:none;}
   transition: transform .25s linear;
   -webkit-transition: -webkit-transform .25s linear;
 }
+.sub-link {font-size:16px;}
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
   content: "\2212";
