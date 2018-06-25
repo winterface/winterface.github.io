@@ -61,53 +61,57 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1>View Log for Session #30102</h1>
-			<p>Use the table below to view the log for session #30102. The port button will display a window where you can view port trace data.</p>
+			<p>Use the table below to view the log for session #30102. <br />The port button will display a window where you can view port trace data.</p>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Session #30102 - <span class="sub-link"><a href="">Back to View All Active Sessions</a></span></h2>
-					<div class="col-md-6">
-						<p>
-							<strong>Ship-To ID:</strong> #503
-						</p>
-					</div>
+				<h2>Session #30102 - <span class="sub-link"><a href="active-sessions.html">Back to View All Active Sessions</a></span></h2>
 
-					<div class="col-md-6">
-						<p>
-							<strong>Bill-To ID:</strong> #500292
-						</p>
-					</div>
+					<div class="data-wrapper">
+						<div class="col-md-2 no-left-padding">
+							<p>
+								<strong>Ship-To ID:</strong><br />#503
+							</p>
+						</div>
 
-					<div class="col-md-6">
-						<p>
-							<strong>Ship-Via Codes Allowed:</strong> Yes
-						</p>
-					</div>
+						<div class="col-md-2">
+							<p>
+								<strong>Bill-To ID:</strong><br />#500292
+							</p>
+						</div>
 
-					<div class="col-md-6">
-						<p>
-							<strong>Last Activity Date/Time:</strong> 5/21/1908, 11:40 AM PST
-						</p>
-					</div>
+						<div class="col-md-2 no-left-padding">
+							<p>
+								<strong>Ship-Via Codes Allowed:</strong><br />Yes
+							</p>
+						</div>
 
-					<div class="col-md-6">
-						<p>
-							<strong>User ID:</strong> #50191
-						</p>
-					</div>
+						<div class="col-md-2">
+							<p>
+								<strong>Last Activity Date/Time:</strong><br />5/21/1908, 11:40 AM PST
+							</p>
+						</div>
 
-					<div class="col-md-6">
-						<p>
-							<strong>Contact ID:</strong> #90209-11A
-						</p>
+						<div class="col-md-2 no-left-padding">
+							<p>
+								<strong>User ID:</strong><br />#50191
+							</p>
+						</div>
+
+						<div class="col-md-2">
+							<p>
+								<strong>Contact ID:</strong><br />#90209-11A
+							</p>
+						</div>
+						<div class="clearfix"></div>
 					</div>
 
 					<div class="clearfix"></div>
 
-					<h4>Details</h4>
+					<h4>Details -  <a class="sub-link" href=""><i class="fa fa-refresh"></i> Refresh Data</a></h4>
 
 					<table class="table table-striped">
 					<tr>
@@ -131,13 +135,89 @@
 						<td>2:32am</td>
 						<td>5min</td>
 						<td>30sec</td>
-						<td><div data-toggle="modal" data-target="#viewLog" class="btn btn-primary">View Log</div></td>
+						<td><div data-toggle="modal" data-target="#viewPortTrace" class="btn btn-primary">View Port Trace Data</div></td>
+					</tr>
+
+					<tr>
+						<td>#302</td>
+						<td>FL</td>
+						<td>11:01pm</td>
+						<td>3:54am</td>			
+						<td>Yes</td>
+						<td>2:32am</td>
+						<td>5min</td>
+						<td>30sec</td>
+						<td><div data-toggle="modal" data-target="" class="btn btn-primary">View Port Trace Data</div></td>
+					</tr>
+
+					<tr>
+						<td>#302</td>
+						<td>FL</td>
+						<td>11:01pm</td>
+						<td>3:54am</td>			
+						<td>Yes</td>
+						<td>2:32am</td>
+						<td>5min</td>
+						<td>30sec</td>
+						<td><div data-toggle="modal" data-target="" class="btn btn-primary">View Port Trace Data</div></td>
 					</tr>
 
 					
 				</table>
 
 				
+			</div>
+		</div>
+	</div>
+
+	<!--MODALS-->
+	<!-- View Port Trace Modal -->
+	<div class="modal fade" id="viewPortTrace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">View Port Trace Data</h4>
+				</div>
+				<div class="modal-body">
+					<p>View the port trace data below. Use the "Close" button to close the window.</p>
+
+					<table class="table table-striped">
+					<tr>
+						<th>Port #</th>
+						<th>Request</th>
+						<th>Data Stream</th>
+						<th>Response Message</th>
+					</tr>
+
+					<tr>
+						<td>500</td>
+						<td>FL</td>
+						<td>11:01pm</td>
+						<td>3:54am</td>			
+					</tr>
+
+					<tr>
+						<td>61</td>
+						<td>FL</td>
+						<td>11:01pm</td>
+						<td>3:54am</td>			
+					</tr>
+
+					<tr>
+						<td>21</td>
+						<td>FL</td>
+						<td>11:01pm</td>
+						<td>3:54am</td>			
+					</tr>
+
+					
+				</table>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>

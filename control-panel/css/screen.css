@@ -3,6 +3,8 @@ body {font-size:14px; font-family: 'Titillium Web', sans-serif;}
 .jumbotron {background:url(../images/header.jpg) no-repeat;}
 .panel-default > .panel-heading {background-color:#41b77c; color:#fff;}
 .stripe {background-color:#eee; padding-top:10px;}
+.no-left-padding {padding-left:0px;}
+.data-wrapper {background-color:#eee; padding:5px; border:1px solid #ccc; margin-bottom:15px;}
 
 /* -- FORM FIELDS -- */
 .control-label {text-align:left !important;}

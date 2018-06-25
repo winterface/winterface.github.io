@@ -52,7 +52,7 @@
 				</ul>
 
 				<ul class="nav navbar-nav pull-right">
-					<li><a href="">View Active Sessions</a></li>
+					<li><a href="active-sessions.html">View Active Sessions</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -432,7 +432,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Customer Class Fields to Include in Authentication</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<div data-toggle="modal" data-target="#customerClass" class="btn btn-primary">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -668,7 +668,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Cash Session IDs</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<div class="btn btn-primary">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -686,16 +686,16 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Virtual Warehouse Settings</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<div class="btn btn-primary">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
-											<label for="inputPassword3" class="col-sm-5 control-label">Ship VIa Override Settings</label>
+											<label for="inputPassword3" class="col-sm-5 control-label">Ship Via Override Settings</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<div class="btn btn-primary">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -704,7 +704,41 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Enable UET Checks</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> Weight <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="Weight">
+												    </label>
+												</div>
+
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> Order Amount <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="Order Amount">
+												    </label>
+												</div>
+
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> Shipping Instructions
+												    </label>
+												</div>
+
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> PIL
+												    </label>
+												</div>
+
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> OP
+												    </label>
+												</div>
+
+												<div class="checkbox">
+												    <label>
+												      <input type="checkbox"> Hard to Handle
+												    </label>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -775,6 +809,26 @@
 
 
 	<!--MODALS-->
+	<!-- Customer Class Modal -->
+	<div class="modal fade" id="blockWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Customer Class Fields to Include in Authentication</h4>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- Block Worker Modal -->
 	<div class="modal fade" id="blockWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
