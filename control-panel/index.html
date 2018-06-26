@@ -76,17 +76,6 @@
 								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 									&nbsp; API Manager Settings
 								</a>
-								<div class="dropdown pull-right">
-									<button class="btn btn-default dropdown-toggle tools-icon" type="button" id="tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-										<span class="glyphicon glyphicon-cog"></span> Tools
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" aria-labelledby="tools">
-										<li><a href="#">Restart API</a></li>
-										<li><a href="#">Refresh Manager Settings</a></li>
-										<li><a href="#">Export Log</a></li>
-									</ul>
-								</div>
 							</h4>
 						</div>
 						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -96,9 +85,25 @@
 
 									<div class="col-md-6">
 										<div class="form-group">
+											<label for="inputEmail3" class="col-sm-5 control-label">Tools</label>
+											<div class="col-sm-5">
+												<select class="form-control selectpicker">
+													<option>Restart API</option>
+													<option>Refresh Manager Settings</option>
+													<option>Export Log</option>
+												</select>
+											</div>
+											<div class="btn btn-default mobile-btn">Use Tool</div>
+										</div>
+									</div>
+
+									<div class="clearfix"></div>
+
+									<div class="col-md-6">
+										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">Port Number</label>
 											<div class="col-sm-7">
-												<input type="number" class="form-control" id="portNumber" placeholder="Port Number">
+												<input type="number" class="form-control" id="portNumber" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -107,7 +112,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Scheduled Start Time</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="scheduledStartTime" placeholder="Scheduled Start Time">
+												<input type="text" class="form-control" id="scheduledStartTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -116,7 +121,7 @@
 										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">Flush Memory to Disc</label>
 											<div class="col-sm-7">
-												<input type="email" class="form-control" id="flushMemorytoDisc" placeholder="Flush Memory to Disc">
+												<input type="text" class="form-control" id="flushMemorytoDisc" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -125,10 +130,9 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Message Count Since Startup</label>
 											<div class="col-sm-4">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Message Count Since Startup">
-
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
-											<div class="btn btn-default">Reset</div>
+											<div class="btn btn-default mobile-btn">Reset</div>
 										</div>
 									</div>
 
@@ -136,7 +140,7 @@
 										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">Last Request Date and Time</label>
 											<div class="col-sm-7">
-												<input type="email" disabled class="form-control" id="lastRequestDateTime" placeholder="Last Request Date and Time">
+												<input type="text" disabled class="form-control" id="lastRequestDateTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -145,7 +149,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Last Response Date and Time</label>
 											<div class="col-sm-7">
-												<input type="password" disabled class="form-control" id="lastResponseDateTime" placeholder="Last Response Date and Time">
+												<input type="text" disabled class="form-control" id="lastResponseDateTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -168,106 +172,110 @@
 
 								<div data-toggle="modal" data-target="#addWorker" class="btn btn-primary">Add a Worker</div>
 								<br /><br />
+								<div class="table-responsive">
+									<table class="table table-striped table-hover">
+										<tr>
+											<th>Port #</th>
+											<th>Persistant?</th>
+											<th>Status</th>
+											<th>Started?</th>
+											<th>Msg. Count Since Last Start</th>
+											<th>Seconds of Work</th>
+											<th>Last Msg. Req.</th>
+											<th>Auto-Start</th>
+											<th>Tools</th>
+											<th>Edit Worker</th>
+										</tr>
 
-								<table class="table table-striped">
-									<tr>
-										<th>Port #</th>
-										<th>Persistant?</th>
-										<th>Status</th>
-										<th>Started?</th>
-										<th>Msg. Count Since Last Start</th>
-										<th>Seconds of Work</th>
-										<th>Last Msg. Req.</th>
-										<th>Auto-Start</th>
-										<th>Tools</th>
-										<th>Edit Worker</th>
-									</tr>
+										<tr>
+											<td>10</td>
+											<td>Yes</td>
+											<td>Active</td>
+											<td>Yes</td>
+											<td>25</td>
+											<td>360</td>
+											<td>Message 2</td>
+											<td>Yes</td>
+											<td>
+												<select class="toolSelect">
+													<option>Choose Option</option>
+													<option data-toggle="modal" data-target="#blockWorker">Block Worker</option>
+													<option data-toggle="modal" data-target="#killWorker">Kill Worker</option>
+													<option data-toggle="modal" data-target="#resetWorker">Reset Worker</option>
+													<option data-toggle="modal" data-target="#startWorker">Start Worker</option>
+													<option data-toggle="modal" data-target="#viewLog">View Full Log</option>
+												</select>
+											</td>
+											<td><div data-toggle="modal" data-target="#editWorker" class="btn btn-primary">Edit this Worker</div></td>
+										</tr>
 
-									<tr>
-										<td>10</td>
-										<td>Yes</td>
-										<td>Active</td>
-										<td>Yes</td>
-										<td>25</td>
-										<td>360</td>
-										<td>Message 2</td>
-										<td>Yes</td>
-										<td>
-											<select class="toolSelect">
-												<option>Choose Option</option>
-												<option data-toggle="modal" data-target="#blockWorker">Block Worker</option>
-												<option data-toggle="modal" data-target="#killWorker">Kill Worker</option>
-												<option data-toggle="modal" data-target="#resetWorker">Reset Worker</option>
-												<option data-toggle="modal" data-target="#startWorker">Start Worker</option>
-												<option data-toggle="modal" data-target="#viewLog">View Full Log</option>
-											</select>
-										</td>
-										<td><div data-toggle="modal" data-target="#editWorker" class="btn btn-primary">Edit this Worker</div></td>
-									</tr>
+										<tr>
+											<td>50</td>
+											<td>Yes</td>
+											<td>Active</td>
+											<td></td>
+											<td>25</td>
+											<td>360</td>
+											<td>Message 2</td>
+											<td>Yes</td>
+											<td>
+												<select class="">
+													<option>Choose Option</option>
+													<option>Block Worker</option>
+													<option>Kill Worker</option>
+													<option>Reset Worker</option>
+													<option>Start Worker</option>
+													<option>View Full Log</option>
+												</select>
+											</td>
+											<td><div class="btn btn-primary">Edit this Worker</div></td>
+										</tr>
 
-									<tr>
-										<td>50</td>
-										<td>Yes</td>
-										<td>Active</td>
-										<td></td>
-										<td>25</td>
-										<td>360</td>
-										<td>Message 2</td>
-										<td>Yes</td>
-										<td>
-											<select class="">
-												<option>Block Worker</option>
-												<option>Kill Worker</option>
-												<option>Reset Worker</option>
-												<option>Start Worker</option>
-												<option>View Full Log</option>
-											</select>
-										</td>
-										<td><div class="btn btn-primary">Edit this Worker</div></td>
-									</tr>
+										<tr>
+											<td>12</td>
+											<td>No</td>
+											<td>Inactive</td>
+											<td></td>
+											<td>65</td>
+											<td>120</td>
+											<td>Message 3</td>
+											<td>No</td>
+											<td>
+												<select class="">
+													<option>Choose Option</option>
+													<option>Block Worker</option>
+													<option>Kill Worker</option>
+													<option>Reset Worker</option>
+													<option>Start Worker</option>
+													<option>View Full Log</option>
+												</select>
+											</td>
+											<td><div class="btn btn-primary">Edit this Worker</div></td>
+										</tr>
 
-									<tr>
-										<td>12</td>
-										<td>No</td>
-										<td>Inactive</td>
-										<td></td>
-										<td>65</td>
-										<td>120</td>
-										<td>Message 3</td>
-										<td>No</td>
-										<td>
-											<select class="">
-												<option>Block Worker</option>
-												<option>Kill Worker</option>
-												<option>Reset Worker</option>
-												<option>Start Worker</option>
-												<option>View Full Log</option>
-											</select>
-										</td>
-										<td><div class="btn btn-primary">Edit this Worker</div></td>
-									</tr>
-
-									<tr>
-										<td>10</td>
-										<td>Yes</td>
-										<td>Active</td>
-										<td></td>
-										<td>25</td>
-										<td>360</td>
-										<td>Message 2</td>
-										<td>Yes</td>
-										<td>
-											<select class="">
-												<option>Block Worker</option>
-												<option>Kill Worker</option>
-												<option>Reset Worker</option>
-												<option>Start Worker</option>
-												<option>View Full Log</option>
-											</select>
-										</td>
-										<td><div class="btn btn-primary">Edit this Worker</div></td>
-									</tr>
-								</table>
+										<tr>
+											<td>10</td>
+											<td>Yes</td>
+											<td>Active</td>
+											<td></td>
+											<td>25</td>
+											<td>360</td>
+											<td>Message 2</td>
+											<td>Yes</td>
+											<td>
+												<select class="">
+													<option>Choose Option</option>
+													<option>Block Worker</option>
+													<option>Kill Worker</option>
+													<option>Reset Worker</option>
+													<option>Start Worker</option>
+													<option>View Full Log</option>
+												</select>
+											</td>
+											<td><div class="btn btn-primary">Edit this Worker</div></td>
+										</tr>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -288,7 +296,7 @@
 										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">API Restart Required</label>
 											<div class="col-sm-7">
-												<div class="btn btn-primary">Restart API</div>
+												<div class="btn btn-warning">Restart API</div>
 											</div>
 										</div>
 									</div>
@@ -297,7 +305,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Max Startup Retries</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="scheduledStartTime" placeholder="Max Startup Retries">
+												<input type="text" class="form-control" id="scheduledStartTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -306,7 +314,7 @@
 										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">Connection Timeout</label>
 											<div class="col-sm-7">
-												<input type="email" class="form-control" id="flushMemorytoDisc" placeholder="Connection Timeout">
+												<input type="text" class="form-control" id="flushMemorytoDisc" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -315,7 +323,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Read Timeout</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -324,7 +332,7 @@
 										<div class="form-group">
 											<label for="inputEmail3" class="col-sm-5 control-label">Write Timeout</label>
 											<div class="col-sm-7">
-												<input type="email" class="form-control" id="lastRequestDateTime" placeholder="Write Timeout">
+												<input type="text" class="form-control" id="lastRequestDateTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -333,7 +341,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Max Queue Wait</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="lastResponseDateTime" placeholder="Max Queue Wait">
+												<input type="text" class="form-control" id="lastResponseDateTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -342,7 +350,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Show in Eclipse Phantom Log</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Yes or No</option>
 													<option>Yes</option>
 													<option>No</option>
@@ -355,7 +363,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Enable Universe Logging?</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Yes or No</option>
 													<option>Yes</option>
 													<option>No</option>
@@ -368,7 +376,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Max Number of Log Entries</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="lastResponseDateTime" placeholder="Max Number of Log Entries">
+												<input type="text" class="form-control" id="lastResponseDateTime" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -396,7 +404,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Release Version</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" disabled placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" disabled placeholder="">
 											</div>
 										</div>
 									</div>
@@ -405,7 +413,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Install Date</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" disabled placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" disabled placeholder="">
 											</div>
 										</div>
 									</div>
@@ -414,7 +422,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Install Time</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" disabled placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" disabled placeholder="">
 											</div>
 										</div>
 									</div>
@@ -423,7 +431,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">EDI Destination</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -432,7 +440,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Customer Class Fields to Include in Authentication</label>
 											<div class="col-sm-7">
-												<div data-toggle="modal" data-target="#customerClass" class="btn btn-primary">Add/Edit/Delete</div>
+												<div data-toggle="modal" data-target="#customerClass" class="btn btn-default">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -441,7 +449,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Include “No Order Entry” ShipTo’s</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Yes or No</option>
 													<option>Yes</option>
 													<option>No</option>
@@ -458,7 +466,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Log Routines</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -467,7 +475,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Test Session ID</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -476,7 +484,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Include Prod Desc. with Avail.</label>
 												<div class="col-sm-7">
-													<select class="form-control">
+													<select class="form-control selectpicker">
 														<option>Choose Yes or No</option>
 														<option>Yes</option>
 														<option>No</option>
@@ -489,7 +497,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Post EDI Order Create Routine</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -498,7 +506,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Post Order Routine</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -507,7 +515,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Message User ID on Create</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -521,7 +529,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Override Matrix Pricing</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Yes or No</option>
 													<option>Yes</option>
 													<option>No</option>
@@ -534,7 +542,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Remote Review Queue Order Source</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -543,7 +551,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Default Order Status</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Order Status</option>
 													<option>Option 1</option>
 													<option>Option 2</option>
@@ -556,7 +564,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Alternate Order Source</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -565,7 +573,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Default Order Writer</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -574,7 +582,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Session Life</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -587,7 +595,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Use Login Index</label>
 												<div class="col-sm-7">
-													<select class="form-control">
+													<select class="form-control selectpicker">
 														<option>Choose Yes or No</option>
 														<option>Yes</option>
 														<option>No</option>
@@ -600,7 +608,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Customer CLass Suppress Ship Field</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -609,7 +617,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Default Ship Via for Bids</label>
 												<div class="col-sm-7">
-													<select class="form-control">
+													<select class="form-control selectpicker">
 														<option>Choose One</option>
 														<option>Option 1</option>
 														<option>Option 2</option>
@@ -622,7 +630,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Production Class Branch Designator</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -631,7 +639,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Default Ship Branch</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -640,7 +648,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Default Price Branch</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -654,7 +662,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Include Suffix on Orders</label>
 											<div class="col-sm-7">
-												<select class="form-control">
+												<select class="form-control selectpicker">
 													<option>Choose Suffix</option>
 													<option>Always</option>
 													<option>Never</option>
@@ -668,7 +676,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Cash Session IDs</label>
 											<div class="col-sm-7">
-												<div class="btn btn-primary">Add/Edit/Delete</div>
+												<div data-toggle="modal" data-target="#cashSession" class="btn btn-default">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -677,7 +685,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Bid Default PO #</label>
 											<div class="col-sm-7">
-												<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+												<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 											</div>
 										</div>
 									</div>
@@ -686,7 +694,7 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Virtual Warehouse Settings</label>
 											<div class="col-sm-7">
-												<div class="btn btn-primary">Add/Edit/Delete</div>
+												<div data-toggle="modal" data-target="#virtualWarehouse" class="btn btn-default">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
@@ -695,51 +703,64 @@
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-5 control-label">Ship Via Override Settings</label>
 											<div class="col-sm-7">
-												<div class="btn btn-primary">Add/Edit/Delete</div>
+												<div data-toggle="modal" data-target="#shipVia" class="btn btn-default">Add/Edit/Delete</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="col-md-6">
+									<div class="clearfix"></div>
+
+									<div class="col-md-12">
 										<div class="form-group">
-											<label for="inputPassword3" class="col-sm-5 control-label">Enable UET Checks</label>
-											<div class="col-sm-7">
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> Weight <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="Weight">
-												    </label>
+											<label for="inputPassword3" class="col-md-3 control-label">Enable UET Checks</label>
+											<div class="clearfix"></div>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Weight <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="">
+														</label>
+													</div>
 												</div>
 
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> Order Amount <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="Order Amount">
-												    </label>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Order Amt <input type="text" class="form-control checkbox-input" id="messageCountSinceStartup" placeholder="">
+														</label>
+													</div>
 												</div>
 
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> Shipping Instructions
-												    </label>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Shipping Instructions
+														</label>
+													</div>
 												</div>
 
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> PIL
-												    </label>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> PIL
+														</label>
+													</div>
 												</div>
 
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> OP
-												    </label>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> OP
+														</label>
+													</div>
 												</div>
 
-												<div class="checkbox">
-												    <label>
-												      <input type="checkbox"> Hard to Handle
-												    </label>
+												<div class="col-md-2">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox"> Hard to Handle
+														</label>
+													</div>
 												</div>
-											</div>
 										</div>
 									</div>
 
@@ -751,7 +772,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Convert Bid to Order Default</label>
 												<div class="col-sm-7">
-													<select class="form-control">
+													<select class="form-control selectpicker">
 														<option>Choose Option</option>
 														<option>Option 1</option>
 														<option>Option 2</option>
@@ -764,7 +785,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Email Order Confirmation</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -773,7 +794,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">From Email Address</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -782,7 +803,7 @@
 											<div class="form-group">
 												<label for="inputPassword3" class="col-sm-5 control-label">Email On Print Status Change</label>
 												<div class="col-sm-7">
-													<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Read Timeout">
+													<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 												</div>
 											</div>
 										</div>
@@ -809,8 +830,179 @@
 
 
 	<!--MODALS-->
+
+
+	<!-- Cash Session IDs Modal -->
+	<div class="modal fade" id="cashSession" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Cash Session IDs</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table table-striped table-hover">
+						<tr>
+							<th>Session ID</th>
+							<th>Logging Enabled</th>
+							<th>Delete</th>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td>
+								<select>
+									<option>Choose Yes or No</option>
+									<option>Yes</option>
+									<option>No</option>
+								</select>
+							</td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td>
+								<select>
+									<option>Choose Yes or No</option>
+									<option>Yes</option>
+									<option>No</option>
+								</select>
+							</td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td>
+								<select>
+									<option>Choose Yes or No</option>
+									<option>Yes</option>
+									<option>No</option>
+								</select>
+							</td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><a href="">+ Add Another Row</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ship Via Override Settings Modal -->
+	<div class="modal fade" id="shipVia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Ship Via Override Settings</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table table-striped table-hover">
+						<tr>
+							<th>Branch Number</th>
+							<th>Override Branch</th>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><a href="">+ Add Another Row</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Virtual Warehouse Modal -->
+	<div class="modal fade" id="virtualWarehouse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Virtual Warehouse Settings</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table table-striped table-hover">
+						<tr>
+							<th>Branch #</th>
+							<th>Use this Branch</th>
+							<th>Use Alternate Branch</th>
+							<th>Delete</th>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><input type="radio" class="form-control" name="branch" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><a href="">+ Add Another Row</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- Customer Class Modal -->
-	<div class="modal fade" id="blockWorker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="customerClass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -818,11 +1010,45 @@
 					<h4 class="modal-title" id="myModalLabel">Customer Class Fields to Include in Authentication</h4>
 				</div>
 				<div class="modal-body">
-					<p></p>
+					<table class="table table-striped table-hover">
+						<tr>
+							<th>ID Name</th>
+							<th>Field Number</th>
+							<th>Description</th>
+							<th>Delete</th>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="number" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="number" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><input type="number" class="form-control" id="" placeholder=""></td>
+							<td><input type="text" class="form-control" id="" placeholder=""></td>
+							<td><div class="btn btn-danger">Delete</div></td>
+						</tr>
+
+						<tr>
+							<td><a href="">+ Add Another Row</a></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Confirm</button>
+					<button type="button" class="btn btn-primary">Save</button>
 				</div>
 			</div>
 		</div>
@@ -922,7 +1148,7 @@
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-5 control-label">Port #</label>
 								<div class="col-sm-7">
-									<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Port #">
+									<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
 								</div>
 							</div>
 						</div>
@@ -931,11 +1157,11 @@
 							<div class="form-group">
 								<label for="inputPassword3" class="col-sm-5 control-label">Persistant?</label>
 								<div class="col-sm-7">
-										<select class="form-control">
-											<option>Choose Yes or No</option>
-											<option>Yes</option>
-											<option>No</option>
-										</select>
+									<select class="form-control">
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -945,10 +1171,10 @@
 								<label for="inputPassword3" class="col-sm-5 control-label">Status</label>
 								<div class="col-sm-7">
 									<select class="form-control">
-											<option>Choose Status</option>
-											<option>Status 1</option>
-											<option>Status 2</option>
-										</select>
+										<option>Choose Status</option>
+										<option>Status 1</option>
+										<option>Status 2</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -958,10 +1184,10 @@
 								<label for="inputPassword3" class="col-sm-5 control-label">Started?</label>
 								<div class="col-sm-7">
 									<select class="form-control">
-											<option>Choose Yes or No</option>
-											<option>Yes</option>
-											<option>No</option>
-										</select>
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -971,10 +1197,10 @@
 								<label for="inputPassword3" class="col-sm-5 control-label">Auto-Start</label>
 								<div class="col-sm-7">
 									<select class="form-control">
-											<option>Choose Yes or No</option>
-											<option>Yes</option>
-											<option>No</option>
-										</select>
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
 								</div>
 							</div>
 						</div>
@@ -1002,68 +1228,68 @@
 					<p>Fill out the fields below, then use the "Save.." button to add a new worker and close this window.</p>
 
 					<form class="form-horizontal">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-5 control-label">Port #</label>
-							<div class="col-sm-7">
-								<input type="password" class="form-control" id="messageCountSinceStartup" placeholder="Port #">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-5 control-label">Port #</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="messageCountSinceStartup" placeholder="">
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-5 control-label">Persistant</label>
-							<div class="col-sm-7">
-								<select class="form-control">
-									<option>Choose Yes or No</option>
-									<option>Yes</option>
-									<option>No</option>
-								</select>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-5 control-label">Persistant</label>
+								<div class="col-sm-7">
+									<select class="form-control">
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-5 control-label">Status</label>
-							<div class="col-sm-7">
-								<select class="form-control">
-									<option>Choose a Status</option>
-									<option>Active</option>
-									<option>Inactive</option>
-								</select>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-5 control-label">Status</label>
+								<div class="col-sm-7">
+									<select class="form-control">
+										<option>Choose a Status</option>
+										<option>Active</option>
+										<option>Inactive</option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-5 control-label">Started?</label>
-							<div class="col-sm-7">
-								<select class="form-control">
-									<option>Choose Yes or No</option>
-									<option>Yes</option>
-									<option>No</option>
-								</select>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-5 control-label">Started?</label>
+								<div class="col-sm-7">
+									<select class="form-control">
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="inputPassword3" class="col-sm-5 control-label">Auto Start?</label>
-							<div class="col-sm-7">
-								<select class="form-control">
-									<option>Choose Yes or No</option>
-									<option>Yes</option>
-									<option>No</option>
-								</select>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-5 control-label">Auto Start?</label>
+								<div class="col-sm-7">
+									<select class="form-control">
+										<option>Choose Yes or No</option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="clearfix"></div>
-				</form>
+						<div class="clearfix"></div>
+					</form>
 
 
 

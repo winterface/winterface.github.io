@@ -10,7 +10,7 @@ body {font-size:14px; font-family: 'Titillium Web', sans-serif;}
 .control-label {text-align:left !important;}
 
 /* -- TEXT AND BUTTONS -- */
-.btn-default {background-color:#ebedef;}
+.btn-default {background-color:#fff;}
 a:hover {text-decoration:none;}
 a:active {text-decoration:none;}
 a:focus {text-decoration:none;}
@@ -49,3 +49,13 @@ a:focus {text-decoration:none;}
 }
 
 /* -- MEDIA QUERIES -- */
+@media screen and (max-width: 768px) {
+  .jumbotron p {display:none;}
+  .mobile-btn {margin-top:10px; margin-left:15px;}
+  .navbar-nav {text-align:center;}
+  .navbar-nav select {margin-top:10px;}
+  .navbar-nav .btn-primary {margin-top:10px;}
+  .pull-right {float:none !important;}
+  .server-select {width:75%; margin:0 auto;}
+  h2 {font-size:24px;}
+}
