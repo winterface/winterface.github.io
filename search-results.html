@@ -77,7 +77,7 @@
         </div>
       </div><!--production enviro-->
 
-      <div class="container-fluid red-bar">
+      <div style="display:none;" class="container-fluid red-bar">
         <div class="enviro-version">
           <p>You are in the Testing Environment.</p>
         </div>
@@ -132,96 +132,84 @@
   </div><!-- end sidebar navigation -->
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">Activity Log</h1>
-    <p>View the activity log to see current and past user activities.</p>
-
-    <div id="activity-log-filters">
-      <div class="col-md-2 no-left-padding">
-        <label>Filter by User</label>
-        <select class="form-control">
-          <option>All Users</option>
-          <option>John Doe</option>
-          <option>Jane Doe</option>
-        </select>
-      </div>
-      <div class="col-md-2">
-        <label>Filter by Team</label>
-        <select class="form-control">
-          <option>All Teams</option>
-          <option>Consultants</option>
-          <option>Customer Support</option>
-        </select>
-      </div>
-      <div class="col-md-2">
-        <label>Filter by Date</label>
-        <select class="form-control">
-          <option>All Dates</option>
-          <option>Last Week</option>
-          <option>Last 2 Weeks</option>
-          <option>Last Month</option>
-          <option>1st Quarter</option>
-          <option>2nd Quarter</option>
-          <option>3rd Quarter</option>
-          <option>4th Quarter</option>
-        </select>
-      </div>
-      <div class="clearfix"></div>
-    </div><!--Activity Log Filters-->
-
-    <br />
-
-     <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Member</th>
-              <th>Team</th>
-              <th>Action</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>7/4/2018 - 8:30AM EST</td>
-              <td>John Doe</td>
-              <td>Consultants</td>
-              <td>Closed Ticket</td>
-              <td>Work completed and customer signed off.</td>
-            </tr>
-
-            <tr>
-              <td>3/21/2017 - 12:15PM EST</td>
-              <td>Jane Doe</td>
-              <td>Customer Support</td>
-              <td>Created Ticket</td>
-              <td>New compressor needed at jobsite.</td>
-            </tr>
-
-            <tr>
-              <td>12/5/2012 - 3:47PM EST</td>
-              <td>John Doe</td>
-              <td>Consultants</td>
-              <td>New Product Add</td>
-              <td>3M Velcro added</td>
-            </tr>
-          </tbody>
-        </table>
-        <div id="pagination">
-            <div class="col-md-6 no-left-padding">
-              <a href=""><div class="pagination-previous"><i class="fas fa-angle-left"></i></div></a>
-              <div class="page-counter"><input class="form-control" placeholder="1" type="text"></div>
-              <a href=""><div class="pagination-next"><i class="fas fa-angle-right"></i></div></a>
-            </div>
+    <h1 class="page-header">Search Results</h1>
+    <p>Results were found in the following areas. The number of results in each area is to the right of the area name. Click on each area to expand to see the results.</p>
+    <div class="panel-group col-md-8" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#contacts" aria-expanded="true" aria-controls="contacts">
+              <span class="step">0</span> Contacts
+            </a>
+          </h4>
+        </div>
+        <div id="contacts" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="contacts">
+          <div class="panel-body">
+            <p>No results were found in this area.</p>
           </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#customers" aria-expanded="false" aria-controls="customers">
+              <span class="step">25</span> Customers
+            </a>
+          </h4>
+        </div>
+        <div id="customers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="customers">
+          <div class="panel-body">
+            <p>25 results were found:</p>
+            <ul>
+              <li><a href="">Microsoft</a></li>
+              <li><a href="">Tesla</a></li>
+              <li><a href="">Duke Energy</a></li>
+              <li><a href="">City of Charleston</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#tickets" aria-expanded="false" aria-controls="tickets">
+             <span class="step">5</span> Tickets
+            </a>
+          </h4>
+        </div>
+        <div id="tickets" class="panel-collapse collapse" role="tabpanel" aria-labelledby="tickets">
+          <div class="panel-body">
+            <ul>
+              <li><a href="">Ticket #01901</a></li>
+              <li><a href="">Ticket #015901</a></li>
+              <li><a href="">Ticket #5531</a></li>
+              <li><a href="">Ticket #091091</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#equipment" aria-expanded="false" aria-controls="Equipment">
+             <span class="step">1</span> Equipment
+            </a>
+          </h4>
+        </div>
+        <div id="equipment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <ul>
+              <li><a href="">Large Van</a></li>
+              <li><a href="">Generator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
      <div class="clearfix"></div>
-
-
-
-</div>
-
+  </div>
 
 </div><!-- end content area -->
 

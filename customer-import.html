@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>WERX</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+    <link href="css/datepicker.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- begin header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid dark-blue-bar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="logo" class="navbar-brand" href="#"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
+            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+            <ul id="gear-dropdown" class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+            </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right navbar-right-pushdown">
+            <div class="input-group header-search-bar">
+              <input type="text" class="form-control" placeholder="Search...">
+              <div class="input-group-btn">
+                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="container-fluid green-bar"></div>
+    </nav><!-- end header -->
+
+    
+    <!-- begin sidebar navigation -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar main-menu">
+            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
+              <ul class="submenu-1">
+                <li><a href="add-customer.html">Add New Customers</a></li>
+                <li><a href="customer-list.html">View Customers</a></li>
+                <li><a href="">View Leads</a></li>
+                <li><a href="">View Qualified</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
+              <ul class="submenu-1">
+                <li><a href="">Add New Vendors</a></li>
+                <li><a href="">View Vendors</a></li>
+                <li><a href="">New PO</a></li>
+                <li><a href="">View Open Orders</a></li>
+              </ul>
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
+               <ul class="submenu-1">
+                <li><a href="ticket-list.html">View Tickets</a></li>
+                <li><a href="add-ticket.html">Add New Ticket</a></li>
+                <li><a href="schedule.html">Schedule Tickets</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
+               <ul class="submenu-1">
+                <li><a href="">View All</a></li>
+                <li><a href="">Add New Product</a></li>
+                <li><a href="">Low Stock Report</a></li>
+              </ul>      
+            </li>
+            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
+               <ul class="submenu-1">
+                <li><a href="">Map Customers</a></li>
+                <li><a href="">Map Branches</a></li>
+                <li><a href="">Map Suppliers</a></li>
+              </ul>      
+            </li>
+          </ul>
+        </div><!-- end sidebar navigation -->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Customer Records Import</h1>
+          <p>Please use the following form to specify which customer records will be imported into Werx</p>
+          <br />
+          <!--For future use-->
+          <!--<p><strong>To begin, please select which system the data you want to import will be coming from.</strong></p>
+          <select class="form-control">
+          	<option>-- Choose Source --</option>
+          	<option>Eclipse</option>
+          </select>-->
+
+          <form class="form-horizontal">
+          	<div class="col-md-12">
+          		<div class="form-group">
+
+          			<div class="col-md-6">
+          				<label class="control-label">Customer API Endpoint</label>
+          			</div>
+                <div class="clearfix"></div>
+          			<div class="col-md-8">
+          				<input type="text" id="test-connection" class="form-control">
+          				<div class="btn btn-default test-connection-button" data-toggle="modal" data-target="#test-endpoint">Test Connection</div>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="clearfix"></div>
+
+          	<div class="col-md-12">
+          		<div class="form-group">
+          			<div class="col-md-6">
+          				<label class="control-label">Import All Customers?</label>
+          			</div>
+
+                <div class="clearfix"></div>
+
+          			<div class="col-md-6">
+          				<select class="form-control">
+          					<option>-- Choose --</option>
+          					<option>Yes</option>
+          					<option>No</option>
+          				</select>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="clearfix"></div>
+
+          	<div class="col-md-12">
+          		<div class="form-group">
+          			<div class="col-md-6">
+          				<label class="control-label">Import only Customers that allow Order Entry</label>
+          			</div>
+
+                <div class="clearfix"></div>
+
+          			<div class="col-md-6">
+          				<select class="form-control">
+          					<option>-- Choose --</option>
+          					<option>Yes</option>
+          					<option>No</option>
+          				</select>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="clearfix"></div>
+
+          	<div class="col-md-12">
+          		<div class="form-group">
+          			<div class="col-md-6">
+          				<label class="control-label">Exclude Customers that are on Credit Hold</label>
+          			</div>
+
+                <div class="clearfix"></div>
+
+          			<div class="col-md-6">
+          				<select class="form-control">
+          					<option>-- Choose --</option>
+          					<option>Yes</option>
+          					<option>No</option>
+          				</select>
+          			</div>
+          		</div>
+          	</div>
+
+          	<div class="clearfix"></div>
+
+
+          	<h3>Include/Exclude Conditions</h3>
+          	<div class="col-md-12">
+          		<div class="form-group">
+          			<div class="col-md-2">
+          				<label class="control-label">Include/Exclude</label>
+                  <select class="form-control">
+                    <option>-- Choose --</option>
+                    <option>Include</option>
+                    <option>Exclude</option>
+                  </select>
+          			</div>
+
+                <div class="col-md-3">
+                  <label class="control-label">Customers where</label>
+          				<input class="form-control">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="control-label">Is</label>
+                  <select class="form-control">
+                    <option>-- Choose --</option>
+                    <option>Equal To</option>
+                    <option>Not Equal To</option>
+                    <option>Greater Than</option>
+                    <option>Less Than</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label class="control-label">Custom Value</label>
+                  <input class="form-control">
+                </div>
+          		</div>
+          	</div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-2 search-op">
+              <label class="control-label">And/Or Selector</label>
+              <select class="form-control">
+                <option>-- Choose --</option>
+                <option>And</option>
+                <option>Or</option>
+              </select>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Customers where</label>
+                  <input class="form-control">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="control-label">Is</label>
+                  <select class="form-control">
+                    <option>-- Choose --</option>
+                    <option>Equal To</option>
+                    <option>Not Equal To</option>
+                    <option>Greater Than</option>
+                    <option>Less Than</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label class="control-label">Custom Value</label>
+                  <input class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+             <div class="collapse" id="add-conditions">
+              <hr />
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="col-md-3">
+                    <label class="control-label">Customers where</label>
+                    <input class="form-control">
+                  </div>
+
+                  <div class="col-md-2">
+                    <label class="control-label">Is</label>
+                    <select class="form-control">
+                      <option>-- Choose Operator --</option>
+                      <option>Equal To</option>
+                      <option>Not Equal To</option>
+                      <option>Greater Than</option>
+                      <option>Less Than</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="control-label">Custom Value</label>
+                    <input class="form-control">
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-2 search-op">
+                <label class="control-label">And/Or Selector</label>
+                <select class="form-control">
+                  <option>-- Choose --</option>
+                  <option>And</option>
+                  <option>Or</option>
+                </select>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="col-md-2">
+                    <label class="control-label">Include/Exclude</label>
+                    <select class="form-control">n>
+                      <option>-- Choose --</option>
+                      <option>Include</option>
+                      <option>Exclude</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="control-label">Customers where</label>
+                    <input class="form-control">
+                  </div>
+
+                  <div class="col-md-2">
+                    <label class="control-label">Is</label>
+                    <select class="form-control">
+                      <option>-- Choose Operator --</option>
+                      <option>Equal To</option>
+                      <option>Not Equal To</option>
+                      <option>Greater Than</option>
+                      <option>Less Than</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="control-label">Custom Value</label>
+                    <input class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div><!--Additional Conditions show/hide-->
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-3">
+              <a role="button" data-toggle="collapse" href="#add-conditions" aria-expanded="false" aria-controls="addConditions"><i class="fas fa-plus-circle green-icon"></i> Add Additional Conditions</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+          </form>
+
+          <div class="clearfix"></div>
+
+          <br />
+          <br />
+
+          <div class="btn btn-primary">Import Customer Records</div>
+          &nbsp;&nbsp;
+          <div class="btn btn-danger">Clear settings and Cancel Import</div>
+
+
+        </div><!-- end content area -->
+      </div>
+    </div>
+
+    <!-- Customer Endpoint API Success or Fail Message -->
+    <div class="modal fade" id="test-endpoint" tabindex="-1" role="dialog" aria-labelledby="TestEndpoint">
+    	<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    				<h4 class="modal-title" id="myModalLabel">Customer Endpoint Connection Test</h4>
+    			</div>
+    			<div class="modal-body">
+    				<p>Connection to the Customer Endpoint API <span class="green">is successful.</span></p>
+    				<p>Connection to the Customer Endpoint API <span class="red">has failed.</span></p>
+    			</div>
+    			<div class="modal-footer">
+    				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/datepicker.min.js"></script>
+    <script src="scripts/slidedrawer.min.js"></script>
+  </body>
+</html>

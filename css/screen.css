@@ -11,6 +11,7 @@ body {padding-top: 50px; font-family: 'Montserrat', sans-serif; font-size:12px; 
 .main {padding: 20px 20px 150px 20px; margin-top:80px;}
 .main .page-header {margin-top: 0;}
 .green-bar {height:20px; background:url(../images/header-bar.jpg) repeat-x;}
+.red-bar {height:20px; background:url(../images/red-header-bar.jpg) repeat-x;}
 .col-md-offset-2 {margin-left:10%;}
 a {color:#44af69;}
 a:hover {color:#389358;}
@@ -19,7 +20,8 @@ a:focus, a:hover {color:#389358;}
 hr {clear:both;}
 .spacer {margin:40px 0; clear:both;}
 .panel-footer {background-color:#fff !important; border-top:0px !important;}
-.panel-heading {background-color:#313131 !important; color:#fff !important;}
+.panel-heading {background-color:#eee !important; color:#173b5c !important;}
+.header-search {width:50% !important;}
 
 /* -- Header Navigation -- */
 .sidebar {display: none; width:10% !important;}
@@ -68,16 +70,21 @@ h3 {color:#173b5c; font-size:20px;}
 .sub-text {font-size:12px;}
 .news-headline {font-weight:bold;}
 .center {text-align:center;}
-.green {color:#3498DB;}
+.green {color:#44af69;}
 .red {color:#e74b3c;}
 .yellow {color:#f49d12;}
 .or-divider {margin:0 15px;}
+.white {color:#fff;}
+.enviro-version {color:#fff;}
 
 /* -- Buttons and Call to Actions -- */
 .btn-primary {background-color:#44af69; border:0px;}
     .btn-primary:hover {background-color:#389358;}
     .btn-primary-icon {color:#296c40;}
 .delete-icon {color:#E74C3C;}
+.green-icon {color:#4eb371;}
+span.step {background: #44af69;border-radius: 0.8em;-moz-border-radius: 0.8em;-webkit-border-radius: 0.8em;color: #ffffff;display: inline-block;font-weight: bold;line-height: 1.6em;margin-right: 5px;text-align: center;width: 1.6em; }
+
 
 /* -- Pagination -- */
 .page-counter {float:left; width:50px;}
@@ -149,7 +156,11 @@ tr:hover {background-color:#fffee9 !important;}
 label {font-weight:normal;}
 .dropzone-wrapper {padding-left:5px;}
     .dropzone {height:200px; width:50%; background-color:#cffedf; text-align:center; color:#60c583; padding-top:60px; margin-bottom:15px; border:5px dashed #ccc; }
-
+.search-op {margin-bottom:14px;}
+#test-connection {display:inline; width:50%;}
+    .test-connection-button {margin-top:-3px;}
+.form-horizontal .control-label {text-align:left;}
+    
 /* -- Equipment Section -- */
 .equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}
 .bom-link {background-color:#173b5c; position:absolute; bottom:0px; left:0px; width:100%; padding:10px 0; font-size:16px; color:#fff;}
