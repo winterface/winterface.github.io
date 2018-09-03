@@ -83,7 +83,7 @@ h3 {color:#173b5c; font-size:20px;}
     .btn-primary-icon {color:#296c40;}
 .delete-icon {color:#E74C3C;}
 .green-icon {color:#4eb371;}
-span.step {background: #44af69;border-radius: 0.8em;-moz-border-radius: 0.8em;-webkit-border-radius: 0.8em;color: #ffffff;display: inline-block;font-weight: bold;line-height: 1.6em;margin-right: 5px;text-align: center;width: 1.6em; }
+span.step {background: #44af69; margin-top:-3px; border-radius: 0.8em;-moz-border-radius: 0.8em;-webkit-border-radius: 0.8em;color: #ffffff;display: inline-block;font-weight: bold;line-height: 1.6em;margin-right: 5px;text-align: center;width: 2.6em; }
 
 
 /* -- Pagination -- */
@@ -134,6 +134,13 @@ tr:hover {background-color:#fffee9 !important;}
 	.red-text {background-color:#e74b3c;}
  	.yellow-text {background-color: #f39c11;}
 	.green-text {background-color:#18BC9C;}
+
+
+/* -- Search Page -- */
+.search-results-column {margin-top:15px;}
+.results-btn {margin-left:15px; margin-right:15px;}
+.search-results li a {font-size:14px;}
+.solo-search-results a {font-size:14px;}
 
 /* -- Slide Out Drawer -- */
 .drawer-wrapper {text-align:center; padding-top:10px;}

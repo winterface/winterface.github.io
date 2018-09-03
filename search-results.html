@@ -134,12 +134,12 @@
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h1 class="page-header">Search Results</h1>
     <p>Results were found in the following areas. The number of results in each area is to the right of the area name. Click on each area to expand to see the results.</p>
-    <div class="panel-group col-md-8" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel-group col-md-8 search-results" id="accordion" role="tablist" aria-multiselectable="true">
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
           <h4 class="panel-title">
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#contacts" aria-expanded="true" aria-controls="contacts">
-              <span class="step">0</span> Contacts
+              <span class="step pull-right">0</span><i class="fas fa-address-book"></i> &nbsp;Contacts
             </a>
           </h4>
         </div>
@@ -153,19 +153,33 @@
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#customers" aria-expanded="false" aria-controls="customers">
-              <span class="step">25</span> Customers
+              <span class="step pull-right">25+</span><i class="fas fa-users"></i> Customers
             </a>
           </h4>
         </div>
         <div id="customers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="customers">
           <div class="panel-body">
-            <p>25 results were found:</p>
+            <p>The first 25 results are displayed below. To view all the results, use the "View All Results" link at the bottom of the results list.</p>
             <ul>
-              <li><a href="">Microsoft</a></li>
-              <li><a href="">Tesla</a></li>
-              <li><a href="">Duke Energy</a></li>
-              <li><a href="">City of Charleston</a></li>
+              <li>
+              	<a href=""><strong>Microsoft - View Customer</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Tesla - View Customer</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Duke Energy - View Customer</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>City of Charleston - View Customer</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
             </ul>
+            <br />
+            <p><a class="btn btn-primary results-btn" href="results-page.html">View All Results</a>  -- OR -- <a class="btn btn-default results-btn" href="">Go Back to the Search Page to refine your search.</a></p>
           </div>
         </div>
       </div>
@@ -174,17 +188,29 @@
         <div class="panel-heading" role="tab" id="headingThree">
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#tickets" aria-expanded="false" aria-controls="tickets">
-             <span class="step">5</span> Tickets
+             <span class="step pull-right">5</span> <i class="fas fa-ticket-alt"></i> Tickets
             </a>
           </h4>
         </div>
         <div id="tickets" class="panel-collapse collapse" role="tabpanel" aria-labelledby="tickets">
           <div class="panel-body">
             <ul>
-              <li><a href="">Ticket #01901</a></li>
-              <li><a href="">Ticket #015901</a></li>
-              <li><a href="">Ticket #5531</a></li>
-              <li><a href="">Ticket #091091</a></li>
+              <li>
+              	<a href=""><strong>Ticket #01901 - View Ticket</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Ticket #015901 - View Ticket</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Ticket #5531 - View Ticket</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Ticket #091091 - View Ticket</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -194,15 +220,21 @@
         <div class="panel-heading" role="tab" id="headingThree">
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#equipment" aria-expanded="false" aria-controls="Equipment">
-             <span class="step">1</span> Equipment
+             <span class="step pull-right">1</span> <i class="fas fa-cubes"></i> Equipment
             </a>
           </h4>
         </div>
         <div id="equipment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
             <ul>
-              <li><a href="">Large Van</a></li>
-              <li><a href="">Generator</a></li>
+              <li>
+              	<a href=""><strong>Large Van - View Equipment</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+              	<a href=""><strong>Generator - View Equipment</strong></a>
+              	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -210,6 +242,31 @@
     
      <div class="clearfix"></div>
   </div>
+
+
+  <!-- search in progress -->
+
+  <div class="clearfix"></div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#searchProgress" data-backdrop="static" data-keyboard="false">
+  Trigger search progress modal
+</button><!--  button only for display purposes, this would be triggered programmatically-->
+
+<!-- Modal -->
+<div class="modal fade" id="searchProgress" tabindex="-1" role="dialog" aria-labelledby="Search Progress">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Now searching</h4>
+      </div>
+      <div class="modal-body">
+        <p>Please stand by, we are retrieving your search results</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </div><!-- end content area -->
 
