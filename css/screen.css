@@ -5,7 +5,7 @@
 body {padding-top: 50px; font-family: 'Montserrat', sans-serif; font-size:12px; color:#313131;}
 .sub-header {padding-bottom: 10px;border-bottom: 1px solid #eee;}
 .navbar-fixed-top {border: 0;}
-.dark-blue-bar {height:99px; background-color:#313131;}
+.dark-blue-bar {height:99px; background-color:#f6f6f6;}
 #logo {margin-top:0px;}
     #logo img {width:75%;}
 .main {padding: 20px 20px 150px 20px; margin-top:80px;}
