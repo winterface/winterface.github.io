@@ -111,15 +111,15 @@
   </div><!-- end sidebar navigation -->
 
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">Section Settings - General</h1>
-    <p>Modify General settings using the fields below. Use the "Action Menu" at the bottom of your screen to save and apply the settings.</p>
+    <h1 class="page-header">Section Settings - ERP Integration</h1>
+    <p>Modify ERP Integration settings using the fields below. Use the "Action Menu" at the bottom of your screen to save and apply the settings.</p>
 
     <section class="design-process-section" id="process-tab">
      <div class="row">
        <div class=""> 
          <!-- circle icons -->
          <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-           <li role="presentation" class="active"><a href="account-settings.html" aria-controls="details" role="tab"><i class="fas fa-cogs"></i>
+           <li role="presentation"><a href="account-settings.html" aria-controls="details" role="tab"><i class="fas fa-cogs"></i>
              <p>General</p>
            </a></li>
            <li role="presentation"><a href="service-module.html" aria-controls="details" role="tab"><i class="fas fa-briefcase"></i>
@@ -128,7 +128,7 @@
            <li role="presentation"><a href="rentals-module.html" aria-controls="details" role="tab"><i class="far fa-money-bill-alt"></i>
              <p>Rentals</p>
            </a></li>
-           <li role="presentation"><a href="erp-integration.html" aria-controls="details" role="tab"><i class="fas fa-cubes"></i></i>
+           <li role="presentation" class="active"><a href="erp-integration.html" aria-controls="details" role="tab"><i class="fas fa-cubes"></i></i>
              <p>ERP Integration</p>
            </a></li>
          </ul>
@@ -139,87 +139,141 @@
 
    
 
-   <h3>General</h3>
-   <form class="form-horizontal">
-    <div class="col-md-6 no-left-padding">
-      <div class="form-group">
-        <div class="col-md-3">
-          <label class="control-label" for="">Customers to be known as:</label> 
-        </div>
-        <div class="col-md-6"> 
-          <select class="form-control">
-          	<option>Custom</option>
-            <option>Clients</option>
-            <option>Customers</option>
-          </select>
-        </div>
-      </div>
+   <h3>ERP Integration Module</h3>
+   <p>Use the toggle switches to activate the individual settings.</p>
+   <br />
+   <div class="col-md-6 no-left-padding">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" name="erp-extracts" value="erpExtracts" class="switch" id="switch-normal">
+        <label for="switch-normal">Allow ERP Extracts</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" value="customerExtracts" name="customer-extracts" value="CustomerExtracts" class="switch" id="switch-normal2">
+        <label for="switch-normal2">Allow Customer Extract</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-md-6 no-left-padding">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" value="vendorExtracts" name="vendor-extracts" class="switch" id="switch-normal3">
+        <label for="switch-normal3">Allow Vendor Extract</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" value="BranchExtracts" name="branch-extracts" class="switch" id="switch-normal4">
+        <label for="switch-normal4">Allow Branch Extract</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-md-6  no-left-padding">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" value="CreationNonERPCustomers" name="non-erp-creation-customers" class="switch" id="switch-normal6">
+        <label for="switch-normal5">Allow Creation of Non-ERP Customers</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" value="CreationNonERPContacts" name="non-erp-creation-contacts" class="switch" id="switch-normal7">
+        <label for="switch-normal7">Allow Creation of Non-ERP Contacts</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="col-md-6 no-left-padding">
+    <div class="form-group">
+      <span class="switch">
+        <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch erp-updates" id="switch-normal8">
+        <label for="switch-normal8">Allow ERP Updates</label>
+      </span>
     </div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="col-md-3">
-          <label class="control-label" for="">Ship-to accounts to be known as:</label> 
-        </div>
-        <div class="col-md-6"> 
-          <select class="form-control">
-          	<option>Custom</option>
-          	<option>Locations</option>
-            <option>Ship-To's</option>
-            <option>Sites</option>
-          </select>
-        </div>
-      </div>
-    </div>
+    <div class="erp-update-options" style="display:none;">
 
-    <div class="col-md-6 no-left-padding">
-      <div class="form-group">
-        <div class="col-md-3">
-          <label class="control-label" for="">Tickets to be known as:</label> 
+      <div class="col-md-4 no-left-padding">
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal9">
+            <label for="switch-normal9">Allow Customer Create</label>
+          </span>
         </div>
-        <div class="col-md-6"> 
-          <select class="form-control">
-            <option>Custom</option>
-            <option>Calls</option>
-            <option>Orders</option>
-            <option>Tickets</option>
-            <option>Work Orders</option>
-          </select>
+
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal10">
+            <label for="switch-normal10">Allow Customer Update</label>
+          </span>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="col-md-3">
-          <label class="control-label" for="">Allow spreadsheet imports</label> 
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal11">
+            <label for="switch-normal11">Allow Contact Create</label>
+          </span>
         </div>
-        <div class="col-md-6"> 
-          <select class="form-control">
-            <option>Yes</option>
-            <option>No</option>
-          </select>
+      </div><!--left column-->
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal12">
+            <label for="switch-normal12">Allow Contact Update</label>
+          </span>
         </div>
-      </div>
-    </div>
-    </form>
+
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal13">
+            <label for="switch-normal13">Allow Vendor Create</label>
+          </span>
+        </div>
+
+        <div class="form-group">
+          <span class="switch">
+            <input type="checkbox" name="allow-erp-updates" value="allowERPUpdates" class="switch" id="switch-normal14">
+            <label for="switch-normal14">Allow Vendor Update</label>
+          </span>
+        </div>
+      </div><!--right column-->
+    </div><!-- Additional fields hidden by the allow erp updates toggle-->
+
+  </div>
 
 
 
-  </div><!-- end content area -->
+
+</div><!-- end content area -->
 </div>
 </div>
+
 
 
 <section class="drawer">
   <header class="clickme">Action Menu</header>
   <div class="drawer-content">
     <div class="container drawer-wrapper">
-      <div class="btn btn-primary slide">Save Information</div>
+      <div class="btn btn-primary">Save Information</div>
     </div>  
   </div>
 </section><!-- Action Menu -->
-
 
 <!-- JavaScript -->
 <script src="scripts/jquery-3.3.1.min.js"></script>
@@ -227,15 +281,23 @@
 <script src="scripts/datepicker.min.js"></script>
 <script src="scripts/slidedrawer.min.js"></script>
 
-    <script type="text/javascript">
-      $(function(){
-        $('.drawer').slideDrawer({
-          showDrawer: false,
+<script type="text/javascript">
+  $(function(){
+    $('.drawer').slideDrawer({
+      showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
             });
-      });
-    </script>
-  </body>
-  </html>
+  });
+
+  $(".erp-updates").change(function() {
+    if ( $(this).is(':checked') ) {
+      $(".erp-update-options").show();
+    } else {
+      $(".erp-update-options").hide();
+    }
+  });
+</script>
+</body>
+</html>

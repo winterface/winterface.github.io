@@ -95,13 +95,20 @@ h3 {color:#173b5c; font-size:20px;}
 .enviro-version {color:#fff;}
 
 /* -- Buttons and Call to Actions -- */
-.btn-primary {background-color:#2894a0; border:0px;}
-    .btn-primary:hover {background-color:#3dab65;}
+.btn-primary {background-color:transparent; border:2px solid #3caa67; transition: 0.78s;}
+    .btn-primary:hover {background: #3dab64;
+background: -moz-linear-gradient(-45deg, #3dab64 0%, #0c75f0 100%);
+background: -webkit-linear-gradient(-45deg, #3dab64 0%,#0c75f0 100%);
+background: linear-gradient(135deg, #3dab64 0%,#0c75f0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dab64', endColorstr='#0c75f0',GradientType=1 );}
     .btn-primary-icon {color:#296c40;}
 .delete-icon {color:#E74C3C;}
 .green-icon {color:#4eb371;}
 span.step {background: #44af69; margin-top:-3px; border-radius: 0.8em;-moz-border-radius: 0.8em;-webkit-border-radius: 0.8em;color: #ffffff;display: inline-block;font-weight: bold;line-height: 1.6em;margin-right: 5px;text-align: center;width: 2.6em; }
-
+.slide:hover,.slide:focus {box-shadow: inset 9.9em 0 0 0 var(--hover);}
+.slide {--color: #8fc866;--hover: #3caa67;}
+button {color: var(--color);transition: 0.25s;}
+button:hover, button:focus {border-color: var(--hover);color: #fff;}
 
 /* -- Pagination -- */
 .page-counter {float:left; width:50px;}
@@ -184,6 +191,7 @@ label {font-weight:normal;}
 #test-connection {display:inline; width:50%;}
     .test-connection-button {margin-top:-3px;}
 .form-horizontal .control-label {text-align:left;}
+
 
 /*-- Toggle option 1 -- */
 .btn-toggle {
