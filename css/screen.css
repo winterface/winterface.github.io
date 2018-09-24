@@ -7,7 +7,7 @@
  Green - #3caa67
  Blue - #0e77eb
  Light Grey - #f6f6f6
- Text - #373542
+ Text/Black - #373542
 */
 
 body {padding-top: 50px; font-family: 'Montserrat', sans-serif; font-size:12px; color:#373542;}
@@ -72,7 +72,7 @@ hr {clear:both;}
 .main-menu>li>a>i{color:#373542;width:20px;height:100%;line-height:50px;text-align:left; }
 .main-menu>li:first-child, .submenu-1>li:first-child, .submenu-2>li:first-child, .submenu-3>li:first-child{box-shadow:none;}
 .main-menu>li>a, .submenu-1>li>a, .submenu-2>li>a,.submenu-3>li>a{color:#373542;background:#eee;display:block;padding:15px;}
- .submenu-1,.submenu-2, .submenu-3{position:absolute;white-space:nowrap;top:-9999px; border-left:2px solid #44af69;}
+ .submenu-1,.submenu-2, .submenu-3{position:absolute;white-space:nowrap;top:-9999px; border-right:2px solid #44af69;  border-bottom:2px solid #44af69;}
 .contain-submenu>a:first-child::after{padding-left:1em;}
 .main-menu>li:hover .submenu-1, .submenu-1>li:hover .submenu-2, .submenu-2>li:hover .submenu-3{top:0;  left:100%; list-style-type:none;}
 .main-menu>li:hover>a{color:#3dab65;}
@@ -92,16 +92,18 @@ h3 {color:#173b5c; font-size:20px;}
 .yellow {color:#f49d12;}
 .or-divider {margin:0 15px;}
 .white {color:#fff;}
+  .white:hover {color:#fff;}
 .enviro-version {color:#fff;}
 
 /* -- Buttons and Call to Actions -- */
-.btn-primary {background-color:transparent; border:2px solid #3caa67; transition: 0.78s;}
+.btn-primary {background-color:transparent; border:2px solid #3caa67; color:#373542; transition: 0.78s;}
     .btn-primary:hover {background: #3dab64;
 background: -moz-linear-gradient(-45deg, #3dab64 0%, #0c75f0 100%);
 background: -webkit-linear-gradient(-45deg, #3dab64 0%,#0c75f0 100%);
 background: linear-gradient(135deg, #3dab64 0%,#0c75f0 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dab64', endColorstr='#0c75f0',GradientType=1 );}
     .btn-primary-icon {color:#296c40;}
+.drawer .btn-primary {color:#fff;}
 .delete-icon {color:#E74C3C;}
 .green-icon {color:#4eb371;}
 span.step {background: #44af69; margin-top:-3px; border-radius: 0.8em;-moz-border-radius: 0.8em;-webkit-border-radius: 0.8em;color: #ffffff;display: inline-block;font-weight: bold;line-height: 1.6em;margin-right: 5px;text-align: center;width: 2.6em; }
@@ -133,6 +135,69 @@ button:hover, button:focus {border-color: var(--hover);color: #fff;}
     .account-box p {margin-bottom:0px;}
 .account-box-icon {font-size:36px;}
 .account-name {font-size:24px;}
+
+ #nestable h4 {margin-bottom:10px; border-bottom:0px;}
+.dd { position: relative; display: block; margin: 0; padding: 0; max-width: 600px; list-style: none; font-size: 13px; line-height: 20px; }
+.dd-list { display: block; position: relative; margin: 0; padding: 0; list-style: none; }
+.dd-list .dd-list { padding-left: 30px; }
+.dd-collapsed .dd-list { display: none; }
+.dd-item,
+.dd-empty,
+.dd-placeholder { display: block; position: relative; margin: 0; padding: 0; min-height: 20px; font-size: 13px; line-height: 20px; }
+.dd-handle { display: block; height: 30px; margin: 5px 0; padding: 5px 10px; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ccc;
+    background: #fafafa;
+    background: -webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
+    background:    -moz-linear-gradient(top, #fafafa 0%, #eee 100%);
+    background:         linear-gradient(top, #fafafa 0%, #eee 100%);
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.dd-handle:hover { color: #2ea8e5; background: #fff; }
+.dd-item > button { display: block; position: relative; cursor: pointer; float: left; width: 25px; height: 20px; margin: 5px 0; padding: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; border: 0; background: transparent; font-size: 12px; line-height: 1; text-align: center; font-weight: bold; }
+.dd-item > button:before { content: '+'; display: block; position: absolute; width: 100%; text-align: center; text-indent: 0; }
+.dd-item > button[data-action="collapse"]:before { content: '-'; }
+.dd-placeholder,
+.dd-empty { margin: 5px 0; padding: 0; min-height: 30px; background: #f2fbff; border: 1px dashed #b6bcbf; box-sizing: border-box; -moz-box-sizing: border-box; }
+.dd-empty { border: 1px dashed #bbb; min-height: 100px; background-color: #e5e5e5;
+    background-image: -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+                      -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-image:    -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+                         -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-image:         linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+                              linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+.dd-dragel { position: absolute; pointer-events: none; z-index: 9999; }
+.dd-dragel > .dd-item .dd-handle { margin-top: 0; }
+.dd-dragel .dd-handle {
+    -webkit-box-shadow: 2px 4px 6px 0 rgba(0,0,0,.1);
+            box-shadow: 2px 4px 6px 0 rgba(0,0,0,.1);
+}
+/**
+ * Nestable Extras
+ */
+.nestable-lists { display: block; clear: both; padding: 30px 0; width: 100%; border: 0; }
+#nestable-menu { padding: 0; margin: 20px 0; }
+#nestable-output,
+#nestable2-output { width: 100%; height: 7em; font-size: 0.75em; line-height: 1.333333em; font-family: Consolas, monospace; padding: 5px; box-sizing: border-box; -moz-box-sizing: border-box; }
+#nestable2 .dd-handle {
+    color: #fff;
+    border: 1px solid #999;
+    background: #bbb;
+    background: -webkit-linear-gradient(top, #bbb 0%, #999 100%);
+    background:    -moz-linear-gradient(top, #bbb 0%, #999 100%);
+    background:         linear-gradient(top, #bbb 0%, #999 100%);
+}
+#nestable2 .dd-handle:hover { background: #bbb; }
+#nestable2 .dd-item > button:before { color: #fff; }
+@media only screen and (min-width: 700px) {
+    .dd { float: left; width: 48%; }
+    .dd + .dd { margin-left: 2%; }
+}
+.dd-hover > .dd-handle { background: #2ea8e5 !important; }
+
 
 /* -- Animation --*/
 .spinEffect{transform: rotate(90deg);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);}
@@ -191,6 +256,7 @@ label {font-weight:normal;}
 #test-connection {display:inline; width:50%;}
     .test-connection-button {margin-top:-3px;}
 .form-horizontal .control-label {text-align:left;}
+.checkbox-space {margin-right:20px;}
 
 
 /*-- Toggle option 1 -- */

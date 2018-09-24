@@ -24,7 +24,7 @@
   <body>
     <!-- begin header -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid dark-blue-bar">
+      <div class="container-fluid logo-bar">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -32,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
+          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
@@ -53,7 +53,7 @@
             <div class="input-group header-search-bar">
               <input type="text" class="form-control" placeholder="Search...">
               <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default btn-default" type="submit"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </form>
@@ -143,84 +143,62 @@
    </section><!--TABS-->
 
    
-     <h3>Team Management <span class="sub-text">(<a data-toggle="modal" data-target="#new_team" href=""><i class="fas fa-users"></i> Add a New Team</a>)</span></h3>
-     <p>On the left, you will see your available teams. If you need to add a new team, use the link above. On the right you will see individual members. To assign a member to a team, click and drag their avatar to to the team you want to assign the member to.</p>
+     <h3>Team Management</h3>
+     <p>On the left, you will see your available teams. To add a new team, use the "Add Team" link. On the right you will see individual members. To assign a member to a team, click and drag their name to the team.</p>
 
-     <div class="col-md-6">
-      <h4>Available Teams</h4>
+    <div class="cf nestable-lists">
 
-      <div class="col-md-4 team-box">
-        <i class="fas fa-users team-box-icon"></i>
-        <p class="team-name">Consultants</p>
-        <p><strong>Purpose:</strong> Consulting Users</p>
-        <p><strong>Status:</strong> Active</p>
-        <p><a data-toggle="modal" data-target="#manage_team" href="">Manage Assigned Users</a></p>
-      </div>
+        <div class="dd" id="nestable">
+          <h4>Available Teams <span class="sub-text">(<a data-toggle="modal" data-target="#new_team" href=""><i class="fas fa-users"></i> Add a New Team</a>)</span></h4>
+            <ol class="dd-list">
+                <li class="dd-item" data-id="1">
+                    <div class="dd-handle">Consultants</div>
+                </li>
+                <li class="dd-item" data-id="2">
+                    <div class="dd-handle">Offshore Consultants</div>
+                </li>
+                <li class="dd-item" data-id="11">
+                    <div class="dd-handle">Sales Agents</div>
+                </li>
+                <li class="dd-item" data-id="12">
+                    <div class="dd-handle">Developers</div>
+                </li>
+            </ol>
+        </div><!-- TEAMS -->
 
-      <div class="col-md-4 team-box">
-        <i class="fas fa-users team-box-icon"></i>
-        <p class="team-name">Developers</p>
-        <p><strong>Purpose:</strong> Developing</p>
-        <p><strong>Status:</strong> Active</p>
-        <p><a href="">Manage Assigned Users</a></p>
-      </div>
+        <div class="dd" id="nestable2">
+          <h4>Members <span class="sub-text">(Click and drag members to the team you want to assign them to.)</span></h4>
+            <ol class="dd-list">
+                <li class="dd-item" data-id="13">
+                    <div class="dd-handle">
+                      John Doe - Administrator - Active
+                      <span class="pull-right"><a class="white" href="mailto:test@test.com"><i class="fas fa-envelope white"></i> Email User</a></span>
+                    </div>
+                </li>
+                <li class="dd-item" data-id="14">
+                    <div class="dd-handle">
+                      Jane Doe - Consultant - Active
+                      <span class="pull-right"><a class="white" href="mailto:test@test.com"><i class="fas fa-envelope white"></i> Email User</a></span>
+                    </div>
+                </li>
 
-      <div class="col-md-4 team-box">
-        <i class="fas fa-users team-box-icon"></i>
-        <p class="team-name">Service Agents</p>
-        <p><strong>Purpose:</strong> Support</p>
-        <p><strong>Status:</strong> Active</p>
-        <p><a href="">Manage Assigned Users</a></p>
-      </div>
+                <li class="dd-item" data-id="15">
+                    <div class="dd-handle">
+                      Trish Merrigold - Sales - Active
+                      <span class="pull-right"><a class="white" href="mailto:test@test.com"><i class="fas fa-envelope white"></i> Email User</a></span>
+                    </div>
+                </li>
 
-      <div class="col-md-4 team-box">
-        <i class="fas fa-users team-box-icon"></i>
-        <p class="team-name">Sales Agents</p>
-        <p><strong>Purpose:</strong> Sales</p>
-        <p><strong>Status:</strong> Active</p>
-        <p><a href="">Manage Assigned Users</a></p>
-      </div>
+                <li class="dd-item" data-id="16">
+                    <div class="dd-handle">
+                      Frank Fontaine - Service Agent - Active
+                      <span class="pull-right"><a class="white" href="mailto:test@test.com"><i class="fas fa-envelope white"></i> Email User</a></span>
+                    </div>
+                </li>
+            </ol>
+        </div><!--MEMBERS-->
 
-     </div><!--teams column-->
-
-     <div class="col-md-6">
-      <h4>Members <span class="sub-text">(Click and drag members to the team you want to assign them to.)</span></h4>
-
-      <div class="col-md-4 account-box">
-        <i class="fas fa-user account-box-icon"></i>
-        <p class="account-box-name">John Doe</p>
-        <p><a href="">john.doe@gmail.com</a>
-        <p>Administrator</p>
-        <p>Active</p>
-      </div>
-
-       <div class="col-md-4 account-box">
-        <i class="fas fa-user account-box-icon"></i>
-        <p class="account-box-name">Jane Doe</p>
-        <p><a href="">jane.doe@gmail.com</a>
-        <p>Consultant</p>
-        <p>Active</p>
-      </div>
-
-       <div class="col-md-4 account-box">
-        <i class="fas fa-user account-box-icon"></i>
-        <p class="account-box-name">Trish Merrigold</p>
-        <p><a href="">trish.merrigold@gmail.com</a>
-        <p>Sales</p>
-        <p>Active</p>
-      </div>
-
-       <div class="col-md-4 account-box">
-        <i class="fas fa-user account-box-icon"></i>
-        <p class="account-box-name">Frank Fontaine</p>
-        <p><a href="">frank.fontaine@rapture.com</a>
-        <p>Service Agent</p>
-        <p>Active</p>
-      </div>
-
-     </div><!--accounts column-->
-
-
+    </div>
 
 </div>
 
@@ -318,6 +296,47 @@
 
 <!-- JavaScript -->
 <script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/jquery.nestable.js"></script>
+<script>
+$(document).ready(function()
+{
+    var updateOutput = function(e)
+    {
+        var list   = e.length ? e : $(e.target),
+            output = list.data('output');
+        if (window.JSON) {
+            output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+        } else {
+            output.val('JSON browser support required for this demo.');
+        }
+    };
+    // activate Nestable for list 1
+    $('#nestable').nestable({
+        group: 1
+    })
+    .on('change', updateOutput);
+    // activate Nestable for list 2
+    $('#nestable2').nestable({
+        group: 1
+    })
+    .on('change', updateOutput);
+    // output initial serialised data
+    updateOutput($('#nestable').data('output', $('#nestable-output')));
+    updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+    $('#nestable-menu').on('click', function(e)
+    {
+        var target = $(e.target),
+            action = target.data('action');
+        if (action === 'expand-all') {
+            $('.dd').nestable('expandAll');
+        }
+        if (action === 'collapse-all') {
+            $('.dd').nestable('collapseAll');
+        }
+    });
+    $('#nestable3').nestable();
+});
+</script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/datepicker.min.js"></script>
 <script src="scripts/slidedrawer.min.js"></script>
@@ -357,5 +376,7 @@
             });
       });
     </script>
+
+    
   </body>
   </html>

@@ -141,72 +141,144 @@
 
    <h3>General</h3>
    <form class="form-horizontal">
-    <div class="col-md-6 no-left-padding">
+    <div class="col-md-6  no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Customers to be known as:</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-          	<option>Custom</option>
-            <option>Clients</option>
-            <option>Customers</option>
+          <select id="customersKnownAs" class="form-control">
+            <option>-- Select One --</option>
+            <option value="custom">Custom</option>
+            <option value="customerClients">Clients</option>
+            <option value="customers">Customers</option>
           </select>
         </div>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div id="custom" style="display:none;" class="customCustomer">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for="">Enter a custom name</label> 
+          </div>
+          <div class="col-md-6"> 
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div><!--text field that appears when custom is chosen-->
+
+    <div class="clearfix"></div>
+
+    <div class="col-md-6  no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Ship-to accounts to be known as:</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-          	<option>Custom</option>
-          	<option>Locations</option>
-            <option>Ship-To's</option>
-            <option>Sites</option>
+          <select id="shipToKnownAs" class="form-control">
+            <option>-- Select One --</option>
+            <option value="customShipTo">Custom</option>
+            <option value="locations">Locations</option>
+            <option value="shipTo">Ship-To's</option>
+            <option value="sites">Sites</option>
           </select>
         </div>
       </div>
     </div>
+
+    <div id="customShipTo" style="display:none;" class="customShipTo">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for="">Enter a custom name</label> 
+          </div>
+          <div class="col-md-6"> 
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div><!--text field that appears when custom is chosen-->
+
+    <div class="clearfix"></div>
 
     <div class="col-md-6 no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Tickets to be known as:</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-            <option>Custom</option>
-            <option>Calls</option>
-            <option>Orders</option>
-            <option>Tickets</option>
-            <option>Work Orders</option>
+          <select id="ticketsKnownAs" class="form-control">
+            <option>-- Select One --</option>
+            <option value="customTicket">Custom</option>
+            <option value=ticketCalls">Calls</option>
+            <option value="orders">Orders</option>
+            <option value="tickets">Tickets</option>
+            <option value="workOrders">Work Orders</option>
           </select>
         </div>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div id="customTicket" style="display:none;" class="customTicket">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for="">Enter a custom name</label> 
+          </div>
+          <div class="col-md-6"> 
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div><!--text field that appears when custom is chosen-->
+
+    <div class="clearfix"></div>
+
+    <div class="col-md-6 no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Allow spreadsheet imports</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-            <option>Yes</option>
-            <option>No</option>
+          <select id="allowSpreadsheetImports" class="form-control">
+            <option>-- Select One --</option>
+            <option value="allowImport">Yes</option>
+            <option value="no">No</option>
           </select>
         </div>
       </div>
     </div>
-    </form>
+
+    <div class="clearfix"></div>
+
+    <div id="allowImport" style="display:none;" class="allowImport">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for=""></label> 
+          </div>
+          <div class="col-md-6"> 
+            <span class="switch checkbox-space">
+          <input type="checkbox" class="switch" id="importCustomers">
+          <label for="importCustomers">Import Customers</label>
+        </span>
+
+         <span class="switch">
+          <input type="checkbox" class="switch" id="importTickets">
+          <label for="importTickets">Import Tickets</label>
+        </span>
+          </div>
+        </div>
+  </div><!--text field that appears when custom is chosen-->
+
+</form>
 
 
 
-  </div><!-- end content area -->
+</div><!-- end content area -->
 </div>
 </div>
 
@@ -227,15 +299,45 @@
 <script src="scripts/datepicker.min.js"></script>
 <script src="scripts/slidedrawer.min.js"></script>
 
-    <script type="text/javascript">
-      $(function(){
-        $('.drawer').slideDrawer({
-          showDrawer: false,
+<script type="text/javascript">
+  $(function(){
+    $('.drawer').slideDrawer({
+      showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
             });
-      });
-    </script>
-  </body>
-  </html>
+  });
+</script>
+
+<script type="text/JavaScript">
+  $(function() {
+    $('#customersKnownAs').change(function(){
+      $('.customCustomer').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+
+  $(function() {
+    $('#shipToKnownAs').change(function(){
+      $('.customShipTo').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+
+  $(function() {
+    $('#ticketsKnownAs').change(function(){
+      $('.customTicket').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+
+  $(function() {
+    $('#allowSpreadsheetImports').change(function(){
+      $('.allowImport').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+</script>
+</body>
+</html>

@@ -141,40 +141,80 @@
 
    <h3>Service Module</h3>
    <form class="form-horizontal">
-    <div class="col-md-6">
+    <div class="col-md-6 no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Equipment to be serviced known as:</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-          	<option>Custom</option>
-            <option>Equipment</option>
-            <option>Material</option>
-            <option>Hardware</option>
+          <select id="equipKnownAs" class="form-control">
+            <option>-- Select One --</option>
+          	<option value="customEquip">Custom</option>
+            <option value="equipment">Equipment</option>
+            <option value="material">Material</option>
+            <option value="hardware">Hardware</option>
           </select>
         </div>
       </div>
     </div>
 
-    <div class="col-md-6">
+    <div id="customEquip" style="display:none;" class="customEquip">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for="">Enter a custom name</label> 
+          </div>
+          <div class="col-md-6"> 
+            <input class="form-control">
+          </div>
+        </div>
+      </div>
+    </div><!--text field that appears when custom is chosen-->
+
+    <div class="clearfix"></div>
+
+    <div class="col-md-6 no-left-padding">
       <div class="form-group">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label class="control-label" for="">Allow spreadsheet imports</label> 
         </div>
         <div class="col-md-6"> 
-          <select class="form-control">
-            <option>Yes</option>
-            <option>No</option>
+          <select id="allowSpreadsheetImports" class="form-control">
+            <option>-- Select One --</option>
+            <option value="allowImport">Yes</option>
+            <option value="no">No</option>
           </select>
         </div>
       </div>
     </div>
-    </form>
+
+    <div class="clearfix"></div>
+
+    <div id="allowImport" style="display:none;" class="allowImport">
+      <div class="col-md-6  no-left-padding">
+        <div class="form-group">
+          <div class="col-md-4">
+            <label class="control-label" for=""></label> 
+          </div>
+          <div class="col-md-6"> 
+            <span class="switch checkbox-space">
+          <input type="checkbox" class="switch" id="importCustomers">
+          <label for="importCustomers">Import Customers</label>
+        </span>
+
+         <span class="switch">
+          <input type="checkbox" class="switch" id="importTickets">
+          <label for="importTickets">Import Tickets</label>
+        </span>
+          </div>
+        </div>
+  </div><!--text field that appears when custom is chosen-->
+
+  </form>
 
 
 
-  </div><!-- end content area -->
+</div><!-- end content area -->
 </div>
 </div>
 
@@ -195,15 +235,31 @@
 <script src="scripts/datepicker.min.js"></script>
 <script src="scripts/slidedrawer.min.js"></script>
 
-    <script type="text/javascript">
-      $(function(){
-        $('.drawer').slideDrawer({
-          showDrawer: false,
+<script type="text/javascript">
+  $(function(){
+    $('.drawer').slideDrawer({
+      showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
             });
-      });
-    </script>
-  </body>
-  </html>
+  });
+</script>
+
+<script type="text/JavaScript">
+  $(function() {
+    $('#equipKnownAs').change(function(){
+      $('.customEquip').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+
+  $(function() {
+    $('#allowSpreadsheetImports').change(function(){
+      $('.allowImport').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+</script>
+</body>
+</html>
