@@ -97,11 +97,7 @@ h3 {color:#173b5c; font-size:20px;}
 
 /* -- Buttons and Call to Actions -- */
 .btn-primary {background-color:transparent; border:2px solid #3caa67; color:#373542; transition: 0.78s;}
-    .btn-primary:hover {background: #3dab64;
-background: -moz-linear-gradient(-45deg, #3dab64 0%, #0c75f0 100%);
-background: -webkit-linear-gradient(-45deg, #3dab64 0%,#0c75f0 100%);
-background: linear-gradient(135deg, #3dab64 0%,#0c75f0 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dab64', endColorstr='#0c75f0',GradientType=1 );}
+    .btn-primary:hover {background-color:#3caa67;}
     .btn-primary-icon {color:#296c40;}
 .drawer .btn-primary {color:#fff;}
 .delete-icon {color:#E74C3C;}
