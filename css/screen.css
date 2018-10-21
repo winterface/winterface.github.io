@@ -93,6 +93,7 @@
   .white {color:#fff;}
   .white:hover {color:#fff;}
   .enviro-version {color:#fff;}
+  
 
   /* -- Buttons and Call to Actions -- */
   .btn-primary {background-color:transparent; border:2px solid #3caa67; color:#373542; transition: 0.78s;}
@@ -199,6 +200,13 @@
 .spinEffect{transform: rotate(90deg);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);}
 .rotate { -moz-transition: all .5s linear;-webkit-transition: all .5s linear;transition: all .5s linear;}
 .rotate.down {-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+
+/* -- Event Scheduler -- */
+.days-field {width:40%; display:inline-block;}
+.weekly-field {width:40%; display:inline-block;}
+.event-section-headline {font-size:14px; font-weight:bold; border-bottom:1px solid #0e77eb;}
+.pattern-headline {font-size:12px; font-weight:bold; margin-top:15px; border-bottom:1px solid #eee; margin-left:15px;}
+
 
 /* -- Table Styles -- */
 tr {cursor:pointer;-webkit-transition: background 350ms ease-in;-moz-transition: background 350ms ease-in;-ms-transition: background 350ms ease-in;-o-transition: background 350ms ease-in;transition: background 300ms ease-in;}
