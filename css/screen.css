@@ -13,12 +13,12 @@
  body { font-family: 'Montserrat', sans-serif; font-size:12px; color:#373542;}
  .sub-header {padding-bottom: 10px;border-bottom: 1px solid #eee;}
  .navbar-fixed-top {border: 0;}
- .logo-bar {height:99px; background-color:#f6f6f6;}
+ .logo-bar {background-color:#f6f6f6;}
  #logo {margin-top:0px;}
- #logo img {width:75%;}
+ #logo img {width:60%;}
  .main {padding: 20px 20px 150px 20px; margin-top:80px;}
- .main .page-header {margin-top: 0;}
- .green-bar {height:20px; background: #3dab64;
+ .page-header {font-size:24px; margin:20px 0 10px 0;}
+ .green-bar {height:10px; background: #3dab64;
   background: -moz-linear-gradient(-45deg, #3dab64 0%, #0c75f0 100%);
   background: -webkit-linear-gradient(-45deg, #3dab64 0%,#0c75f0 100%);
   background: linear-gradient(135deg, #3dab64 0%,#0c75f0 100%);
@@ -64,8 +64,8 @@
 
   /* -- Left Column Navigation -- */
   .navbar-right a {font-size:24px;}
-  .navbar-right-pushdown {margin-top:32px;}
-  .navbar-right-pushdown-icons {margin-top:22px;}
+  .navbar-right-pushdown {margin-top:25px;}
+  .navbar-right-pushdown-icons {margin-top:14px;}
   .navbar-right {margin-right:0px;}
   #gear-dropdown>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {background:#fff;}
   #navbar-left .dropdown-menu>li>a {color:#428bca;font-size:14px;}
@@ -87,6 +87,8 @@
   .submenu-1 li:hover>a{color:#3dab65;}
   .submenu-2 li:hover>a{color:#3dab65;}
   .submenu-3 li:hover>a{color:#3dab65;}
+  .navbar-nav > li > .dropdown-menu {border-bottom:2px solid #0e77eb;}
+  ul.nav li.dropdown:hover > ul.dropdown-menu {display: block;}
 
 
   /* -- Text Styles -- */
