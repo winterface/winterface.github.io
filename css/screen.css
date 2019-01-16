@@ -64,7 +64,9 @@
   .main-menu-mobile {display:none;}
 
   /* -- Left Column Navigation -- */
-  .navbar-right a {font-size:24px;}
+  .navbar-right a {font-size:12px;}
+  #navbar-secondary .fa-cog {font-size:24px;}
+  #navbar-secondary .fa-envelope {font-size:24px;}
   .navbar-right-pushdown {margin-top:25px;}
   .navbar-right-pushdown-icons {margin-top:14px;}
   .navbar-right {margin-right:0px;}
