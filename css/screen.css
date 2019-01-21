@@ -31,7 +31,6 @@
   .no-left-padding {padding-left:0px;}
   hr {clear:both;}
   .spacer {margin:40px 0; clear:both;}
-  .header-search {width:50% !important;}
   .main-nav {margin-bottom:0px;}
     .main-nav .dropdown-menu > li > a {font-size:12px;}
   .thin-stripe {height:1px; width:100%; background: #3dab64;
@@ -48,6 +47,8 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dab64', endColorstr='#0c75f0',GradientType=1 );}
   .panel-heading a {color:#fff;}
     .panel-heading a:hover {color:#fff;}
+  .header-search {width:45% !important; margin-right:10px;}
+  .search-icon {margin-left:-25px !important; border:1px solid #ccc !important;}
 
   /* -- Header Navigation -- */
   .sidebar {display: none; width:10% !important;}
@@ -272,8 +273,7 @@ tr:hover {background-color:#fffee9 !important;}
 .drawer-items .title {color: #c4c4c4;font-size: 20px;line-height: 1.1;}
 .drawer p {color:#fff;}
 
-/* -- Form Elements -- */
-.header-search-bar {width:105%; margin-right:25px;}
+/* -- Form Elements -- */}
 .filter-wrapper {margin-left:250px;}
 label {font-weight:normal;}
 .dropzone-wrapper {padding-left:5px;}
