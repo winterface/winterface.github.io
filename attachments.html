@@ -25,256 +25,280 @@
     <!-- begin header -->
 
     <header>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid logo-bar">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Settings</span>
-            <span class="fas fa-cog"></span>
-          </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
-        </div>
-        <div id="navbar-secondary" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
-              <ul id="gear-dropdown" class="dropdown-menu">
-                <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right navbar-right-pushdown">
-            <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
-              <div class="input-group-btn">
-                <button class="btn btn-default btn-default" type="submit"><i class="fa fa-search"></i></button>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid logo-bar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Settings</span>
+              <span class="fas fa-cog"></span>
+            </button>
+            <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
+          </div>
+          <div id="navbar-secondary" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
+              <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+                <ul id="gear-dropdown" class="dropdown-menu">
+                  <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right navbar-right-pushdown">
+              <div class="input-group header-search-bar">
+                <input type="text" class="form-control header-search" placeholder="Search...">
+
+                <select class="form-control header-search">
+                  <option>-- Search In --</option>
+                  <option>Search Everywhere</option>
+                  <option>Customer</option>
+                  <option>Customer Phone</option>
+                  <option>Contact</option>
+                  <option>Ticket</option>
+                  <option>Serial #</option>
+                </select>
+
+                <div class="input-group-btn">
+                  <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
+        <div class="clearfix"></div>
+        <div class="container-fluid green-bar"></div>
+      </nav><!-- end header -->
+
       <div class="clearfix"></div>
-      <div class="container-fluid green-bar"></div>
-    </nav><!-- end header -->
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default main-nav">
+        <div class="">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+          </div>
+          <div id="navbar-primary" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Company</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Customers</a></li>
+                  <li><a href="#">View Leads</a></li>
+                  <li><a href="">View Qualified</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Vendors</a></li>
+                  <li><a href="#">New Purchase Order</a></li>
+                  <li><a href="">View Open Orders</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Tickets</a></li>
+                  <li><a href="#">Schedule Tickets</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Products</a></li>
+                  <li><a href="#">Low Stock Report</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Customer Maps</a></li>
+                  <li><a href="#">Branch Maps</a></li>
+                  <li><a href="#">Supplier Maps</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <div class="thin-stripe"></div>
+
+    </header>
 
     <div class="clearfix"></div>
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default main-nav">
-      <div class="">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+    <div class="col-sm-9 page-content">
+      <h1 class="page-header">Attachments</h1>
+      <p>Attach files by uploading them to the system. You can either drag the files into the designated box or use the blue upload button to find the files on your computer that you wish to upload.</p>
+
+      <section class="design-process-section" id="process-tab">
+       <div class="row">
+         <div class=""> 
+           <!-- circle icons -->
+           <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+             <li role="presentation"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+               <p>Details</p>
+             </a></li>
+             <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
+               <p>Activity Log</p>
+             </a></li>
+             <li class="active"><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+               <p>Attachments</p>
+             </a></li>
+             <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+               <p>Ship-Tos</p>
+             </a></li>
+             <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+               <p>Tickets</p>
+             </a></li>
+             <li><a href="#inventory" aria-controls="inventory" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
+               <p>Equipment</p>
+             </a></li>
+           </ul>
+           <!-- end circle icons--> 
+         </div>
+       </div>
+     </section><!--TABS-->
+
+     
+
+     <form class="form-horizontal">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Attach Files</h3>
         </div>
-        <div id="navbar-primary" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Company</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a class="green" href="#">Add New</a></li>
-                <li><a href="#">View Customers</a></li>
-                <li><a href="#">View Leads</a></li>
-                <li><a href="">View Qualified</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a class="green" href="#">Add New</a></li>
-                <li><a href="#">View Vendors</a></li>
-                <li><a href="#">New Purchase Order</a></li>
-                <li><a href="">View Open Orders</a></li>
-              </ul>
-            </li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a class="green" href="#">Add New</a></li>
-                <li><a href="#">View Tickets</a></li>
-                <li><a href="#">Schedule Tickets</a></li>
-              </ul>
-            </li>
+        <div class="form-group col-md-12">
+          <div class="col-md-2">
+            <label class="control-label" for="">Drag Files to Attach</label> 
+          </div>
+          <div class="col-md-6 dropzone-wrapper"> 
+            <div class="dropzone">-- Drag files into this box to upload -- <br /><br /><div class="btn btn-primary">Or choose files to upload</div></div>
+          </div>
+        </div><!--form group-->
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a class="green" href="#">Add New</a></li>
-                <li><a href="#">View Products</a></li>
-                <li><a href="#">Low Stock Report</a></li>
-              </ul>
-            </li>
+        <div class="clearfix"></div>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Customer Maps</a></li>
-                <li><a href="#">Branch Maps</a></li>
-                <li><a href="#">Supplier Maps</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <div class="form-group col-md-12">
+          <div class="col-md-2">
+            <label class="control-label" for="">Category</label> 
+          </div>
+          <div class="col-md-3"> 
+            <select class="form-control">
+              <option>Category 1</option>
+              <option>Category 2</option>
+            </select> 
+          </div>
+        </div><!--form group-->
+
+        <div class="clearfix"></div>
+
+        <div class="form-group col-md-12">
+          <div class="col-md-2">
+            <label class="control-label" for="">Description</label> 
+          </div>
+          <div class="col-md-6"> 
+            <input name="" type="text" id="" class="form-control" />
+          </div>
+        </div><!--form group-->
+
+        <div class="clearfix"></div>
+
+        <div class="form-group">
+          <div class="col-md-2">
+            <label class="control-label" for=""></label> 
+          </div>
+          <div class="col-md-6"> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        
+      </div><!--Panel-->
+      </form>
+     
+    
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your attached files | <span class="sub-text"><a data-toggle="modal" data-target="#filter-attachments" href=""><i class="fas fa-filter"></i> Filter by</a></span></h3>
       </div>
-    </nav>
 
-    <div class="thin-stripe"></div>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>File Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+              <th>Category <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+              <th>Date Uploaded <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+              <th>Description <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+              <th>Uploaded By</th>
+              <th>Download</th>
+              <th class="center">Delete File</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How-To-Install.pdf</td>
+              <td>Instructions</td>
+              <td>3/10/2018</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Frank Fontaine</td>
+              <td><a href="">Download</a></td>
+              <td class="center"><i class="fas fa-times delete-icon"></i></td>
+            </tr>
 
-  </header>
+            <tr>
+              <td>Specs.docx</td>
+              <td>Specs</td>
+              <td>4/5/1998</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Sander Cohen</td>
+              <td><a href="">Download</a></td>
+              <td class="center"><i class="fas fa-times delete-icon"></i></td>
+            </tr>
 
-<div class="clearfix"></div>
+            <tr>
+              <td>Equipment.xls</td>
+              <td>List</td>
+              <td>12/24/2005</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              <td>Hattie Gerst</td>
+              <td><a href="">Download</a></td>
+              <td class="center"><i class="fas fa-times delete-icon"></i></td>
+            </tr>
+          </tbody>
+        </table>
+    </div><!-- Attachments Table -->
 
-  <div class="col-sm-9">
-          <h1 class="page-header">Add A Customer</h1>
-          <p>To add a new customer to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to this screen later.</p>
+  </div><!--panel-->
+</div><!-- end content area -->
+</div>
+</div>
 
-          <section class="design-process-section" id="process-tab">
-			    <div class="row">
-			      <div class=""> 
-			        <!-- circle icons -->
-			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-			          <li role="presentation"><a href="add-customer.html" aria-controls="details" role="tab"><i class="far fa-address-card" aria-hidden="true"></i>
-			            <p>Details</p>
-			            </a></li>
-			          <li><a href="#notes" aria-controls="notes" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
-			            <p>Activity Log</p>
-			            </a></li>
-			          <li class="active"><a href="#attachments" aria-controls="attachments" role="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
-			            <p>Attachments</p>
-			            </a></li>
-			          <li><a href="shipto.html" aria-controls="checklists" role="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
-			            <p>Ship-Tos</p>
-			            </a></li>
-			          <li><a href="#subtickets" aria-controls="tickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
-			            <p>Tickets</p>
-			            </a></li>
-			          <li><a href="#inventory" aria-controls="inventory" role="tab" data-toggle="tab"><i class="fas fa-wrench" aria-hidden="true"></i>
-			            <p>Equipment</p>
-			            </a></li>
-			        </ul>
-			        <!-- end circle icons--> 
-			      </div>
-			  </div>
-			</section><!--TABS-->
-
-          <form class="form-horizontal">
-
-            <h3>Add Attachment</h3>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Drag Files to Upload</label> 
-                  </div>
-                  <div class="col-md-6 dropzone-wrapper"> 
-                      <div class="dropzone">-- Drag files into this box to upload -- <br /><br /><div class="btn btn-primary">Or choose files to upload</div>
-                  </div>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Category</label> 
-                  </div>
-                  <div class="col-md-3"> 
-                      <select class="form-control">
-                        <option>Category 1</option>
-                        <option>Category 2</option>
-                      </select> 
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for="">Description</label> 
-                  </div>
-                  <div class="col-md-6"> 
-                      <input name="" type="text" id="" class="form-control" />
-                  </div>
-              </div>
-
-              <div class="form-group">
-                  <div class="col-md-2">
-                      <label class="control-label" for=""></label> 
-                  </div>
-                  <div class="col-md-6"> 
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-              </div>
-            </form>
-              
-
-            <hr />
-
-          	<h3>Attachments <span class="sub-text">(<a data-toggle="modal" data-target="#filter-attachments" href=""><i class="fas fa-filter"></i> Filter by...</a>)</span></h3>
-
-          	<div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>File Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Category <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Date Uploaded <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Description <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                    <th>Uploaded By</th>
-                    <th>Download</th>
-                    <th class="center">Delete File</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>How-To-Install.pdf</td>
-                    <td>Instructions</td>
-                    <td>3/10/2018</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Frank Fontaine</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-
-                   <tr>
-                    <td>Specs.docx</td>
-                    <td>Specs</td>
-                    <td>4/5/1998</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Sander Cohen</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-
-                   <tr>
-                    <td>Equipment.xls</td>
-                    <td>List</td>
-                    <td>12/24/2005</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                    <td>Hattie Gerst</td>
-                    <td><a href="">Download</a></td>
-                    <td class="center"><i class="fas fa-times delete-icon"></i></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div><!-- Attachments Table -->
-            
-
-        </div><!-- end content area -->
-      </div>
-    </div>
-
-   <!-- Add Contact Modal -->
+<!-- Add Contact Modal -->
 <div class="modal fade" id="filter-attachments" tabindex="-1" role="dialog" aria-labelledby="NewContact">
  <div class="modal-dialog" role="document">
    <div class="modal-content">
@@ -285,18 +309,18 @@
      <div class="modal-body">
        <p>To filter the list of uploaded attachments, use the checkboxes to mark how you would like to filter the list of attachments.</p>
        <div class="col-md-12">
-	       <form class="form-horizontal">
-		        <div class="form-group">
-		         <input type="checkbox"> Name <br />
-		         <input type="checkbox"> Category <br />
-		         <input type="checkbox"> Date Uploaded <br />
-		         <input type="checkbox"> Description <br />
-		         <input type="checkbox"> Uploaded By <br />
-		       	</div>
-	     	</form>
- 		</div>
+        <form class="form-horizontal">
+          <div class="form-group">
+           <input type="checkbox"> Name <br />
+           <input type="checkbox"> Category <br />
+           <input type="checkbox"> Date Uploaded <br />
+           <input type="checkbox"> Description <br />
+           <input type="checkbox"> Uploaded By <br />
+         </div>
+       </form>
+     </div>
 
- 		<div class="clearfix"></div>
+     <div class="clearfix"></div>
 
 
    </div>
@@ -306,42 +330,42 @@
  </div>
 </div>
 
-    <!-- JavaScript -->
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/datepicker.min.js"></script>
-    <script src="scripts/slidedrawer.min.js"></script>
-    <script type="text/javascript">
-      $('.datepicker').datepicker();
+<!-- JavaScript -->
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/datepicker.min.js"></script>
+<script src="scripts/slidedrawer.min.js"></script>
+<script type="text/javascript">
+  $('.datepicker').datepicker();
 
-      $('.closeThem').click( function(e) {
-        $('.collapse').collapse('hide');
-      });
-    </script>
+  $('.closeThem').click( function(e) {
+    $('.collapse').collapse('hide');
+  });
+</script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     	// script for tab steps
-		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
-		        var href = $(e.target).attr('href');
-		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+        var href = $(e.target).attr('href');
+        var $curr = $(".process-model  a[href='" + href + "']").parent();
 
-		        $('.process-model li').removeClass();
+        $('.process-model li').removeClass();
 
-		        $curr.addClass("active");
-		        $curr.prevAll().addClass("visited");
-		    });
+        $curr.addClass("active");
+        $curr.prevAll().addClass("visited");
+      });
     </script>
 
     <script type="text/javascript">
       $(function(){
-          $('.drawer').slideDrawer({
-              showDrawer: false,
+        $('.drawer').slideDrawer({
+          showDrawer: false,
               // slideTimeout: true,
               slideSpeed: 600,
               slideTimeoutCount: 3000,
-          });
+            });
       });
     </script>
   </body>
-</html>
+  </html>

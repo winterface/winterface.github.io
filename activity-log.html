@@ -51,9 +51,20 @@
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
             <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text" class="form-control header-search" placeholder="Search...">
+
+              <select class="form-control header-search">
+                <option>-- Search In --</option>
+                <option>Search Everywhere</option>
+                <option>Customer</option>
+                <option>Customer Phone</option>
+                <option>Contact</option>
+                <option>Ticket</option>
+                <option>Serial #</option>
+              </select>
+
               <div class="input-group-btn">
-                <button class="btn btn-default btn-default" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </form>
@@ -137,7 +148,7 @@
 
 <div class="clearfix"></div>
 
-  <div class="col-sm-9">
+  <div class="col-sm-9 page-content">
     <h1 class="page-header">Activity Log</h1>
     <p>View the activity log to see current and past user activities.</p>
 
@@ -175,7 +186,10 @@
     </div><!--Activity Log Filters-->
 
     <br />
-
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">User Activities</h3>
+        </div>
      <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -213,18 +227,11 @@
             </tr>
           </tbody>
         </table>
-        <div id="pagination">
-            <div class="col-md-6 no-left-padding">
-              <a href=""><div class="pagination-previous"><i class="fas fa-angle-left"></i></div></a>
-              <div class="page-counter"><input class="form-control" placeholder="1" type="text"></div>
-              <a href=""><div class="pagination-next"><i class="fas fa-angle-right"></i></div></a>
-            </div>
-          </div>
-      </div>
+       
 
      <div class="clearfix"></div>
 
-
+   </div><!--panel-->
 
 </div>
 

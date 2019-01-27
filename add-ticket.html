@@ -51,9 +51,20 @@
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
             <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text" class="form-control header-search" placeholder="Search...">
+
+              <select class="form-control header-search">
+                <option>-- Search In --</option>
+                <option>Search Everywhere</option>
+                <option>Customer</option>
+                <option>Customer Phone</option>
+                <option>Contact</option>
+                <option>Ticket</option>
+                <option>Serial #</option>
+              </select>
+
               <div class="input-group-btn">
-                <button class="btn btn-default btn-default" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </form>
@@ -137,7 +148,7 @@
 
 <div class="clearfix"></div>
 
-  <div class="col-sm-9">
+  <div class="col-sm-9 page-content">
           <h1 class="page-header">Add A Ticket</h1>
           <p>To add a new ticket to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to the ticket later.</p>
 
@@ -172,24 +183,14 @@
 
           <form class="form-horizontal">
 
-            <h3>Step 1 Basic Information</h3>
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Basic Information</h3>
+        </div>
             <div class="col-md-6">
               <div class="form-group">
                 <div class="col-md-3">
                   <label class="control-label">Select Customer</label>
-                </div>
-                <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
-                </div> 
-              </div>
-            </div><!--input field -->
-
-            <div class="clearfix"></div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <div class="col-md-3">
-                  <label class="control-label">Give the Ticket a Title</label>
                 </div>
                 <div class="col-md-6">
                   <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
@@ -212,6 +213,21 @@
               </div>
             </div><!--input field -->
 
+            <div class="clearfix"></div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Give the Ticket a Title</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Ticket Title" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            
+
             <div class="col-md-6">
               <div class="form-group">
                 <div class="col-md-3">
@@ -226,11 +242,15 @@
                 </div> 
               </div>
             </div><!--input field -->
-
             <div class="clearfix"></div>
+          </div><!--panel-->
+            
             <div class="spacer"></div>
 
-            <h3>Step 2 - Priorites and Due Date</h3>
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Priorities and Due Dates</h3>
+        </div>
 
             <div class="col-md-6">
               <div class="form-group">
@@ -238,7 +258,7 @@
                   <label class="control-label">Due Date</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control datepicker" type="text"> 
+                  <input name="" id="" placeholder="Due Date" class="form-control datepicker" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
@@ -274,11 +294,15 @@
                 </div> 
               </div>
             </div><!--input field -->
-
             <div class="clearfix"></div>
+          </div><!--Panel-->
+            
             <div class="spacer"></div>
 
-            <h3>Step 3 - Requestor Information</h3>
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Requestor Information</h3>
+        </div>
 
             <div class="col-md-6">
               <div class="form-group">
@@ -286,7 +310,7 @@
                   <label class="control-label">Requested By</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Requested By" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
@@ -297,7 +321,7 @@
                   <label class="control-label">Phone</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Phone Number" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
@@ -308,15 +332,19 @@
                   <label class="control-label">Email</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Email Address" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
-
             <div class="clearfix"></div>
+          </div><!--Panel-->
+            
             <div class="spacer"></div>
 
-            <h3>Step 4 - Assignment</h3>
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Assignment</h3>
+        </div>
 
             <div class="col-md-6">
               <div class="form-group">
@@ -324,7 +352,7 @@
                   <label class="control-label">Assigned To</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Assigned To" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
@@ -335,7 +363,7 @@
                   <label class="control-label">Phone</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Phone Number" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
@@ -346,18 +374,23 @@
                   <label class="control-label">Email</label>
                 </div>
                 <div class="col-md-6">
-                  <input name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                  <input name="" id="" placeholder="Email Address" class="form-control" type="text"> 
                 </div> 
               </div>
             </div><!--input field -->
           </form>
-
           <div class="clearfix"></div>
+        </div><!--panel-->
+
+          
             <div class="spacer"></div>
 
           <!-- Start Followers Table -->
-          <h3>Followers <span class="sub-text"><a href="">( <i class="fa fa-check-square"></i> Add Follower to this Ticket)</a></span></h3>
-          <div class="table-responsive col-md-6 no-left-padding">
+          <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Followers | <a href=""><i class="fa fa-check-square"></i> Add Follower to this Ticket</a></span></h3>
+        </div>
+          <div class="table-responsive col-md-12 no-left-padding">
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -388,10 +421,11 @@
                 </tr>
               </tbody>
             </table>
+
           </div>
-          <!-- End Followers Table
-
-
+          <!-- End Followers Table -->
+          <!-- Panel-->
+          <div class="clearfix"></div>
         </div><!-- end content area -->
       </div>
     </div>
