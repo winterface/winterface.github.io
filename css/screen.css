@@ -327,6 +327,9 @@ tr:hover {background-color:#fffee9 !important;}
 .results-btn {margin-left:15px; margin-right:15px;}
 .search-results li a {font-size:14px;}
 .solo-search-results a {font-size:14px;}
+.results-heading {background:#eee !important;}
+  .results-heading a {color:#333;}
+  .results-heading a:hover {color:#000;}
 
 /* -- Slide Out Drawer -- */
 .drawer-wrapper {text-align:center; padding-top:10px;}
