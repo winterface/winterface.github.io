@@ -1,19 +1,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
 
-    <title>WERX</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/screen.css" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <title>WERX</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/screen.css" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -21,36 +22,47 @@
   </head>
 
   <body>
+    <!-- begin header -->
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid dark-blue-bar">
+    <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid logo-bar">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Settings</span>
+            <span class="fas fa-cog"></span>
           </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
+          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar-secondary" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
             <li><a href="#"><i class="fas fa-envelope"></i></a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
-            <ul id="gear-dropdown" class="dropdown-menu">
-              <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
-              <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
-            </ul>
+              <ul id="gear-dropdown" class="dropdown-menu">
+                <li><a href="#">Maintain Custom Fields</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Administration</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Add New Member</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Log Out</a></li>
+              </ul>
             </li>
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
             <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text" class="form-control header-search" placeholder="Search...">
+
+              <select class="form-control header-search">
+                <option>-- Search In --</option>
+                <option>Search Everywhere</option>
+                <option>Customer</option>
+                <option>Customer Phone</option>
+                <option>Contact</option>
+                <option>Ticket</option>
+                <option>Serial #</option>
+              </select>
+
               <div class="input-group-btn">
                 <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
               </div>
@@ -60,91 +72,127 @@
       </div>
       <div class="clearfix"></div>
       <div class="container-fluid green-bar"></div>
-    </nav>
+    </nav><!-- end header -->
 
-    
+    <div class="clearfix"></div>
 
-    <!-- begin sidebar navigation -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar main-menu">
-            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
-              <ul class="submenu-1">
-                <li><a href="add-customer.html">Add New Customers</a></li>
-                <li><a href="customer-list.html">View Customers</a></li>
-                <li><a href="">View Leads</a></li>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default main-nav">
+      <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+        </div>
+        <div id="navbar-primary" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Company</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Customers</a></li>
+                <li><a href="#">View Leads</a></li>
                 <li><a href="">View Qualified</a></li>
               </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
-              <ul class="submenu-1">
-                <li><a href="">Add New Vendors</a></li>
-                <li><a href="">View Vendors</a></li>
-                <li><a href="">New PO</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Vendors</a></li>
+                <li><a href="#">New Purchase Order</a></li>
                 <li><a href="">View Open Orders</a></li>
               </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
-               <ul class="submenu-1">
-                <li><a href="ticket-list.html">View Tickets</a></li>
-                <li><a href="add-ticket.html">Add New Ticket</a></li>
-                <li><a href="schedule.html">Schedule Tickets</a></li>
-              </ul>      
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Tickets</a></li>
+                <li><a href="#">Schedule Tickets</a></li>
+              </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
-               <ul class="submenu-1">
-                <li><a href="">View All</a></li>
-                <li><a href="">Add New Product</a></li>
-                <li><a href="">Low Stock Report</a></li>
-              </ul>      
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Products</a></li>
+                <li><a href="#">Low Stock Report</a></li>
+              </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
-               <ul class="submenu-1">
-                <li><a href="">Map Customers</a></li>
-                <li><a href="">Map Branches</a></li>
-                <li><a href="">Map Suppliers</a></li>
-              </ul>      
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Customer Maps</a></li>
+                <li><a href="#">Branch Maps</a></li>
+                <li><a href="#">Supplier Maps</a></li>
+              </ul>
             </li>
           </ul>
-        </div><!-- end sidebar navigation -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="thin-stripe"></div>
+
+  </header>
+
+<div class="clearfix"></div>
+
+  <div class="col-sm-9 page-content">
           <h1 class="page-header">Schedule A Ticket</h1>
           <p>Use the "Select a Ticket" dropdown to select an unscheduled ticket. Once a ticket has been selected, schedule options will appear below allowing you to see resources and assign them to the ticket.</p>
           <br />
-          <div class="form-group">
-             <div class="col-md-2">
-               <label class="control-label" for="">Select a Ticket</label> 
-             </div>
-             <div class="col-md-2"> 
-               <select class="form-control">
-                <option></option>
-              </select> 
-            </div>
-          </div><!--select ticket-->
+          <form class="form-horizontal">
+            <div class="col-md-6 no-left-padding">  
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Select A Ticket</label>
+                </div>
+
+                <div class="col-md-3">
+                  <select id="ticketSelect" class="form-control">
+                    <option>Select Ticket</option>
+                    <option>Ticket #09818</option>
+                    <option>Ticket #09803</option>
+                  </select>
+                </div>
+              </div><!--form group-->
+            </div><!--form wrapper-->
+          </form>
 
           <div class="clearfix"></div>
 
-          <h3>Ticket Details</h3>
-          <div class="find-first-avail pull-left">
-            <i class="fas fa-user-plus first-avail-icon"></i>
-            <p>Find First Available</p>
-          </div>
+          <div class="panel panel-primary panel-extended">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ticket Details</h3>
+            </div>
 
-          <div class="ticket-details">
+          <div class="col-md-12 ticket-details">
             <p><strong>Customer:</strong> <p><strong>Phone:</strong></p></p>
             <p><strong>Address:</strong></p>
             <p><strong>Requirements:</strong></p>
+            <div class="btn btn-primary">Find First Available Employee</div>
           </div>
+          <div class="clearfix"></div>
+        </div><!--Panel-->
 
-          <br />
-
-          <h3>View Availability and Assign Resources</h3>
+ <div class="panel panel-primary panel-extended">
+            <div class="panel-heading">
+              <h3 class="panel-title">View Availability and Assign Resources</h3>
+            </div>
 
           <div class="table-responsive bom-table">
-            <div id="day-chooser" class="pull-left">
+            <div id="day-chooser" class="pull-left col-md-6">
               <label>Choose Day of the Week</label>
               <select>
                 <option>Monday</option>
@@ -222,6 +270,7 @@
               </tbody>
             </table>
           </div>
+        </div><!--panel-->
 
         </div>
       </div>

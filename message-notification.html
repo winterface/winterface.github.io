@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>WERX</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/screen.css" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- begin header -->
+
+    <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid logo-bar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Settings</span>
+            <span class="fas fa-cog"></span>
+          </button>
+          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
+        </div>
+        <div id="navbar-secondary" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <div class="message-notification">5</div>
+            </li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+              <ul id="gear-dropdown" class="dropdown-menu">
+                <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right navbar-right-pushdown">
+            <div class="input-group header-search-bar">
+              <input type="text" class="form-control header-search" placeholder="Search...">
+
+              <select class="form-control header-search">
+                <option>-- Search In --</option>
+                <option>Search Everywhere</option>
+                <option>Customer</option>
+                <option>Customer Phone</option>
+                <option>Contact</option>
+                <option>Ticket</option>
+                <option>Serial #</option>
+              </select>
+
+              <div class="input-group-btn">
+                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="container-fluid green-bar"></div>
+    </nav><!-- end header -->
+
+    <div class="clearfix"></div>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default main-nav">
+      <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+        </div>
+        <div id="navbar-primary" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Company</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Customers</a></li>
+                <li><a href="#">View Leads</a></li>
+                <li><a href="">View Qualified</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Vendors</a></li>
+                <li><a href="#">New Purchase Order</a></li>
+                <li><a href="">View Open Orders</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Tickets</a></li>
+                <li><a href="#">Schedule Tickets</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Products</a></li>
+                <li><a href="#">Low Stock Report</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Customer Maps</a></li>
+                <li><a href="#">Branch Maps</a></li>
+                <li><a href="#">Supplier Maps</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="thin-stripe"></div>
+
+  </header>
+
+<div class="clearfix"></div>
+
+  <div class="col-sm-9 page-content">
+          <h1 class="page-header">Add A Ticket</h1>
+          <p>To add a new ticket to the system, use the form below and fill out all required fields. If you aren't ready to submit, use the save button in the actions bar to save the info you have and you can come back to the ticket later.</p>
+
+          <section class="design-process-section" id="process-tab">
+			    <div class="row">
+			      <div class=""> 
+			        <!-- circle icons -->
+			        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+			          <li role="presentation" class="active"><a href="#details" aria-controls="details" role="tab" data-toggle="tab"><i class="far fa-address-card" aria-hidden="true"></i>
+			            <p>Details</p>
+			            </a></li>
+			          <li><a href="#activity_log" aria-controls="activity_log" role="tab" data-toggle="tab"><i class="far fa-file-alt" aria-hidden="true"></i>
+			            <p>Activity Log</p>
+			            </a></li>
+			          <li><a href="#attachments" aria-controls="attachments" role="tab" data-toggle="tab"><i class="far fa-folder-open" aria-hidden="true"></i>
+			            <p>Attachments</p>
+			            </a></li>
+			          <li><a href="#checklists" aria-controls="checklists" role="tab" data-toggle="tab"><i class="far fa-list-alt" aria-hidden="true"></i>
+			            <p>Check Lists</p>
+			            </a></li>
+			          <li><a href="#subtickets" aria-controls="subtickets" role="tab" data-toggle="tab"><i class="fas fa-ticket-alt" aria-hidden="true"></i>
+			            <p>Sub-Tickets</p>
+			            </a></li>
+			          <li><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab"><i class="far fa-money-bill-alt" aria-hidden="true"></i>
+			            <p>Billing</p>
+			            </a></li>
+			        </ul>
+			        <!-- end circle icons--> 
+			      </div>
+			  </div>
+			</section><!--TABS-->
+
+          <form class="form-horizontal">
+
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Basic Information</h3>
+        </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Select Customer</label>
+                </div>
+                <div class="col-md-6">
+                  <input disabled name="" id="" placeholder="Search for Customer" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Select Category</label>
+                </div>
+                <div class="col-md-6">
+                  <select name="" id="" class="form-control"> 
+                    <option>-- Select a Category --</option>
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                  </select>
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Give the Ticket a Title</label>
+                </div>
+                <div class="col-md-6">
+                  <input disabled name="" id="" placeholder="Ticket Title" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Select a Status</label>
+                </div>
+                <div class="col-md-6">
+                  <select name="" id="" class="form-control"> 
+                    <option>-- Select a Status --</option>
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                  </select>
+                </div> 
+              </div>
+            </div><!--input field -->
+            <div class="clearfix"></div>
+          </div><!--panel-->
+            
+            <div class="spacer"></div>
+
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Priorities and Due Dates</h3>
+        </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Due Date</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Due Date" class="form-control datepicker" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Customer Priority</label>
+                </div>
+                <div class="col-md-6">
+                  <select name="" id="" class="form-control"> 
+                    <option>-- Select a Customer Priority --</option>
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                  </select> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Our Priority</label>
+                </div>
+                <div class="col-md-6">
+                  <select name="" id="" class="form-control"> 
+                    <option>-- Select Our Priority --</option>
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                  </select> 
+                </div> 
+              </div>
+            </div><!--input field -->
+            <div class="clearfix"></div>
+          </div><!--Panel-->
+            
+            <div class="spacer"></div>
+
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Requestor Information</h3>
+        </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Requested By</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Requested By" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Phone</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Phone Number" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Email</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Email Address" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+            <div class="clearfix"></div>
+          </div><!--Panel-->
+            
+            <div class="spacer"></div>
+
+            <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Assignment</h3>
+        </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Assigned To</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Assigned To" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Phone</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Phone Number" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-3">
+                  <label class="control-label">Email</label>
+                </div>
+                <div class="col-md-6">
+                  <input name="" id="" placeholder="Email Address" class="form-control" type="text"> 
+                </div> 
+              </div>
+            </div><!--input field -->
+          </form>
+          <div class="clearfix"></div>
+        </div><!--panel-->
+
+          
+            <div class="spacer"></div>
+
+          <!-- Start Followers Table -->
+          <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Followers | <span class="sub-text"><a href=""><i class="fa fa-check-square"></i> Add Follower to this Ticket</a></span></h3>
+        </div>
+          <div class="table-responsive col-md-12 no-left-padding">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Email <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Phone <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                  <th>Type <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Augustus Sinclair</td>
+                  <td>a.sinclair@microsoft.com</td>
+                  <td>800-381-1890</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Sander Cohen</td>
+                  <td>SanderCohen@gearbox.com</td>
+                  <td>983-820-1237</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Mariska Lutz</td>
+                  <td>mariska49@yahoo.com</td>
+                  <td>987-174-2370</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <!-- End Followers Table -->
+          <!-- Panel-->
+          <div class="clearfix"></div>
+        </div><!-- end content area -->
+      </div>
+    </div>
+
+    <section class="drawer">
+      <header class="clickme">Action Menu</header>
+        <div class="drawer-content">
+          <div class="container drawer-wrapper">
+            <div class="btn btn-primary">Save and Add Ticket</div>
+          </div>  
+        </div>
+    </section><!-- Action Menu -->
+
+    <!-- JavaScript -->
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/datepicker.min.js"></script>
+    <script src="scripts/slidedrawer.min.js"></script>
+    <script type="text/javascript">
+      $('.datepicker').datepicker();
+
+      $('.closeThem').click( function(e) {
+        $('.collapse').collapse('hide');
+      });
+    </script>
+
+    <script type="text/javascript">
+    	// script for tab steps
+		    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+		        var href = $(e.target).attr('href');
+		        var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+		        $('.process-model li').removeClass();
+
+		        $curr.addClass("active");
+		        $curr.prevAll().addClass("visited");
+		    });
+    </script>
+
+    <script type="text/javascript">
+      $(function(){
+          $('.drawer').slideDrawer({
+              showDrawer: false,
+              // slideTimeout: true,
+              slideSpeed: 600,
+              slideTimeoutCount: 3000,
+          });
+      });
+    </script>
+  </body>
+</html>

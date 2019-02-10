@@ -23,35 +23,46 @@
 
   <body>
     <!-- begin header -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid dark-blue-bar">
+
+    <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid logo-bar">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Settings</span>
+            <span class="fas fa-cog"></span>
           </button>
-          <a id="logo" class="navbar-brand" href="#"><img src="images/logo-trans.png" alt="WERX Logo" title="WERX Logo" /></a>
+          <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar-secondary" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
             <li><a href="#"><i class="fas fa-envelope"></i></a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
               <ul id="gear-dropdown" class="dropdown-menu">
-                <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+                <li><a href="#">Maintain Custom Fields</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+                <li><a href="#">Administration</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+                <li><a href="#">Add New Member</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+                <li><a href="#">Log Out</a></li>
               </ul>
             </li>
           </ul>
           <form class="navbar-form navbar-right navbar-right-pushdown">
             <div class="input-group header-search-bar">
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text" class="form-control header-search" placeholder="Search...">
+
+              <select class="form-control header-search">
+                <option>-- Search In --</option>
+                <option>Search Everywhere</option>
+                <option>Customer</option>
+                <option>Customer Phone</option>
+                <option>Contact</option>
+                <option>Ticket</option>
+                <option>Serial #</option>
+              </select>
+
               <div class="input-group-btn">
                 <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
               </div>
@@ -63,54 +74,81 @@
       <div class="container-fluid green-bar"></div>
     </nav><!-- end header -->
 
+    <div class="clearfix"></div>
 
-    <!-- begin sidebar navigation -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar main-menu">
-            <li><a href="#"><i class="fas fa-home"></i>Company</a></li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-users"></i>Customers</a>
-              <ul class="submenu-1">
-                <li><a href="add-customer.html">Add New Customers</a></li>
-                <li><a href="customer-list.html">View Customers</a></li>
-                <li><a href="">View Leads</a></li>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default main-nav">
+      <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+        </div>
+        <div id="navbar-primary" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Company</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Customers</a></li>
+                <li><a href="#">View Leads</a></li>
                 <li><a href="">View Qualified</a></li>
               </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-truck"></i>Vendors</a>
-              <ul class="submenu-1">
-                <li><a href="">Add New Vendors</a></li>
-                <li><a href="">View Vendors</a></li>
-                <li><a href="">New PO</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Vendors</a></li>
+                <li><a href="#">New Purchase Order</a></li>
                 <li><a href="">View Open Orders</a></li>
               </ul>
             </li>
-            <li class="contain-submenu"><a href="#"><i class="fas fa-ticket-alt"></i>Tickets</a>
-             <ul class="submenu-1">
-              <li><a href="ticket-list.html">View Tickets</a></li>
-              <li><a href="add-ticket.html">Add New Ticket</a></li>
-              <li><a href="schedule.html">Schedule Tickets</a></li>
-            </ul>      
-          </li>
-          <li class="contain-submenu"><a href="#"><i class="fas fa-cubes"></i>Products</a>
-           <ul class="submenu-1">
-            <li><a href="">View All</a></li>
-            <li><a href="">Add New Product</a></li>
-            <li><a href="">Low Stock Report</a></li>
-          </ul>      
-        </li>
-        <li class="contain-submenu"><a href="#"><i class="fas fa-map"></i>Map View</a>
-         <ul class="submenu-1">
-          <li><a href="">Map Customers</a></li>
-          <li><a href="">Map Branches</a></li>
-          <li><a href="">Map Suppliers</a></li>
-        </ul>      
-      </li>
-    </ul>
-  </div><!-- end sidebar navigation -->
 
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Tickets</a></li>
+                <li><a href="#">Schedule Tickets</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="green" href="#">Add New</a></li>
+                <li><a href="#">View Products</a></li>
+                <li><a href="#">Low Stock Report</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Customer Maps</a></li>
+                <li><a href="#">Branch Maps</a></li>
+                <li><a href="#">Supplier Maps</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="thin-stripe"></div>
+
+  </header>
+
+<div class="clearfix"></div>
+
+  <div class="col-sm-9 page-content">
     <h1 class="page-header">New vice president announced for Pacific Operations</h1>
     <p class="article-date"><strong>Posted on 5/12/2018</strong></p>
 
@@ -125,8 +163,9 @@
      <p>Aliquam mattis nisi urna, ac placerat nisl congue quis. Aliquam placerat tortor at libero suscipit, vel aliquam felis consequat. Ut eu arcu posuere leo ultricies feugiat eu in tortor. Morbi sit amet elit enim. Vivamus luctus justo sapien, vitae facilisis nisl consequat sit amet. Suspendisse pulvinar, libero non placerat rutrum, mi enim viverra tortor, in elementum tortor est vel dui. Etiam pulvinar enim sed nisi sagittis, non luctus lacus lacinia. Sed faucibus nulla orci, et vestibulum arcu tristique vel. Donec blandit at velit vestibulum imperdiet. Quisque nulla turpis, dictum vel tempus id, lobortis vitae elit. Fusce luctus porta porta. Morbi vitae eros augue. Phasellus ullamcorper consequat risus sed facilisis.</p>
 
      <p>Nam finibus faucibus arcu et venenatis. Donec quis dui ut quam vehicula hendrerit ac non felis. Nulla malesuada fermentum augue, quis auctor libero ultrices eget. Integer pellentesque auctor euismod. Quisque id ultricies tellus. Donec non semper ex. Morbi posuere lectus dui, in egestas est malesuada a. Aliquam quis aliquet libero, eget sollicitudin purus. Suspendisse finibus, purus ut sodales maximus, velit nibh tempus risus, ut varius ex velit eu diam. Aliquam ut sodales metus. Curabitur pretium maximus consequat. Quisque sagittis ante vitae luctus gravida. </p>
-      
-    <a href="news.html">< Back to all news</a>
+    
+    <br />  
+    <a href="news.html"><div class="btn btn-primary">Back to all news</div></a>
 
       
 
