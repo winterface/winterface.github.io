@@ -641,8 +641,8 @@ label {font-weight:normal;}
 }
 
 /* -- Equipment Section -- */
-.equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:20px;}
-.bom-link {background-color:#173b5c; position:absolute; bottom:0px; left:0px; width:100%; padding:10px 0; font-size:16px; color:#fff;}
+.equipment-card {padding:20px 0; border:1px solid #173b5c; text-align:center; position:relative; margin-top:10px; margin-left:15px;}
+.bom-link {background:url(../images/equip-bg.png) repeat; position:absolute; bottom:0px; left:0px; width:100%; padding:10px 0; font-size:16px; color:#fff;}
 .view-image-modal {text-align:center;}
 
 /* -- Schedule Ticket Section -- */
