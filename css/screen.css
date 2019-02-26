@@ -780,12 +780,8 @@ label {font-weight:normal;}
 /* --  Media Queries -- */
 @media (max-width: 1350px) {
   .sidebar li {font-size:12px;}
-}
-
   .page-header {font-size:18px;}
-  .process-model li i {line-height:24px; font-size:12px; height:30px; width:30px;}
-  .more-icon-preocess.process-model li p {font-size:12px;}
-  .process-model.more-icon-preocess li {width:20%;}
+  
   .navbar-brand {font-size:14px;}
   .main-menu-mobile {display:block;}
     .page-content {margin-left:0px;}
@@ -809,6 +805,9 @@ label {font-weight:normal;}
     line-height: 46px;
     width: 50px;
   }
+  .process-model li i {line-height:24px; font-size:12px; height:30px; width:30px;}
+  .more-icon-preocess.process-model li p {font-size:12px;}
+  .process-model.more-icon-preocess li {width:20%;}
   .process-model li::after {display:none;}
   .more-icon-preocess.process-model li::after {
     top: 24px;
