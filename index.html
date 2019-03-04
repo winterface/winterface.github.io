@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../../favicon.ico">
 
-  <title>WERX</title>
+  <title>Welcome to SAASPLICITY</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/screen.css" rel="stylesheet">
   <link href="css/datepicker.min.css" rel="stylesheet">
@@ -36,6 +36,7 @@
         <div id="navbar-secondary" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
             <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+            <div class="message-notification">9</div>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
               <ul id="gear-dropdown" class="dropdown-menu">
                 <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
@@ -63,7 +64,7 @@
               </select>
 
               <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default btn-primary search-square" type="submit"><i class="fa fa-search"></i></button>
               </div>
             </div>
           </form>
@@ -148,87 +149,160 @@
 <div class="clearfix"></div>
 
   <div class="col-sm-9 page-content">
-          <h1 class="page-header">Welcome to WERX</h1>
+          <h1 class="page-header">Welcome to your SAASPLICITY Dashboard</h1>
+          <p><a href=""><i class="fas fa-cog"></i> Customize your dashboard.</a></p>
 
-          <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Tickets</h3>
-                </div>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Date <img src="images/sort-icons.png" class="sort-icons" alt="Click To Sort Column" /></th>
-                  <th>Ticket ID <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Ticket Title <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Customer Name <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Assigned To <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>Due Date <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                  <th>View <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>5/24/2018</td>
-                  <td>Microsoft</td>
-                  <td>OS Installations</td>
-                  <td>Frank Fontaine</td>
-                  <td>5/24/2018</td>
-                  <td><p class="status-button red-bg">On Hold</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
-                </tr>
-                <tr>
-                  <td>10/20/2010</td>
-                  <td>Electronic Arts</td>
-                  <td>New Signage Requested for Headquarters</td>
-                  <td>Elizabeth</td>
-                  <td>5/24/2018</td>
-                  <td><p class="status-button green-bg">Closed</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
-                </tr>
-                <tr>
-                  <td>7/5/1901</td>
-                  <td>Paradox Publishing</td>
-                  <td>Need Print Equipment</td>
-                  <td>Zachary Comstock</td>
-                  <td>5/24/2018</td>
-                  <td><p class="status-button yellow-bg">Pending</p></td>
-                  <td>5/24/2018</td>
-                  <td><a href="">View</a></td>
-                </tr>
-              </tbody>
-            </table>
-            
-          </div><!-- Notifications Table -->
 
-          </div><!--panel-->
-          <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Site News</h3>
-                </div>
-          <div class="news-block col-md-12">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Holiday Schedule Updated</a></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan congue aliquet. Proin sit amet purus vitae risus dignissim finibus ut ut dui. <a href="">View News Item</a></p>
-          </div><!--News Block-->
+          <div class="col-md-10 no-left-padding">
+	          <div class="panel panel-primary">
+	                <div class="panel-heading">
+	                  <h3 class="panel-title">My Tickets</h3> 
+	                  <div class="pull-right tickets-menu"><i class="fas fa-bars"></i></div>
+	                </div>
+	          <div class="table-responsive">
+	            <table class="table table-striped">
+	              <thead>
+	                <tr>
+	                  <th>Date <img src="images/sort-icons.png" class="sort-icons" alt="Click To Sort Column" /></th>
+	                  <th>ID <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+	                  <th>Title</th>
+	                  <th>Customer <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+	                  <th>Assigned To <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+	                  <th>Status <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+	                  <th>Due <img src="images/sort-icons.png" alt="Click To Sort Column" /></th>
+	                  <th>View</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td>5/24/2019</td>
+	                  <td>Microsoft</td>
+	                  <td>OS Installations</td>
+	                  <td>Microsoft</td>
+	                  <td>Cynthia K. Melendez</td>
+	                  <td><p class="status-button red-bg">On Hold</p></td>
+	                  <td>5/24/2019</td>
+	                  <td><a href="">View</a></td>
+	                </tr>
+	                <tr>
+	                  <td>10/20/2019</td>
+	                  <td>Electronic Arts</td>
+	                  <td>New Signage Requested for Headquarters</td>
+	                  <td>Duke Power</td>
+	                  <td>Mike I. Meacham</td>
+	                  <td><p class="status-button yellow-bg">Pending</p></td>
+	                  <td>11/5/2019</td>
+	                  <td><a href="">View</a></td>
+	                </tr>
+	                <tr>
+	                  <td>7/5/2019</td>
+	                  <td>IBM</td>
+	                  <td>Need Print Equipment</td>
+	                  <td>Zachary Comstock</td>
+	                  <td>Christopher H. Burkhart</td>
+	                  <td><p class="status-button yellow-bg">Pending</p></td>
+	                  <td>7/6/2019</td>
+	                  <td><a href="">View</a></td>
+	                </tr>
+	              </tbody>
+	            </table>
+	            
+	          </div><!-- Notifications Table -->
 
-          <hr />
+	          </div><!--panel-->
 
-          <div class="news-block col-md-12">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> New Map Feature</a></p>
-            <p>Vivamus vel ligula at mi rutrum placerat. Quisque molestie in massa ut porttitor. Praesent vestibulum mollis velit, ac placerat justo tincidunt et. In hac habitasse platea dictumst. <a href="">View News Item</a></p>
-          </div><!--News Block-->
+	          <div class="panel panel-primary">
+	                <div class="panel-heading">
+	                  <h3 class="panel-title">Site News</h3>
+	                </div>
+	          <div class="news-block col-md-12">
+	            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Holiday Schedule Updated</a></p>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan congue aliquet. Proin sit amet purus vitae risus dignissim finibus ut ut dui. <a href="">View News Item</a></p>
+	          </div><!--News Block-->
 
-          <hr />
+	          <hr />
 
-          <div class="news-block col-md-12">
-            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Policy Change, Please Read</a></p>
-            <p>Nunc mattis porta nulla. Cras at aliquet magna. Vivamus faucibus rutrum velit, in lobortis sapien volutpat vel. Vivamus commodo mi magna, non pellentesque mauris condimentum non. Aenean sed sem eget magna pulvinar convallis. <a href="">View News Item</a></p>
-          </div><!--News Block-->
-          <div class="clearfix"></div>
-        </div><!-- panel-->
+	          <div class="news-block col-md-12">
+	            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> New Map Feature</a></p>
+	            <p>Vivamus vel ligula at mi rutrum placerat. Quisque molestie in massa ut porttitor. Praesent vestibulum mollis velit, ac placerat justo tincidunt et. In hac habitasse platea dictumst. <a href="">View News Item</a></p>
+	          </div><!--News Block-->
+
+	          <hr />
+
+	          <div class="news-block col-md-12">
+	            <p class="news-headline"><a href=""><i class="fa fa-bullhorn"></i> Policy Change, Please Read</a></p>
+	            <p>Nunc mattis porta nulla. Cras at aliquet magna. Vivamus faucibus rutrum velit, in lobortis sapien volutpat vel. Vivamus commodo mi magna, non pellentesque mauris condimentum non. Aenean sed sem eget magna pulvinar convallis. <a href="">View News Item</a></p>
+	          </div><!--News Block-->
+	          <div class="clearfix"></div>
+	        </div><!-- panel-->
+    	</div><!--left side-->
+
+    	<div class="col-md-2">
+    		<div class="panel panel-primary">
+	            <div class="panel-heading side-bar-panel-heading">
+	              <h3 class="panel-title">My Favorites</h3>
+	            </div>
+
+	            <div class="table-responsive">
+	            <table class="table table-striped">
+	              <thead>
+	                <tr>
+	                  <th>Type</th>
+	                  <th>Name/ID</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td><i class="fas fa-ticket-alt" aria-hidden="true"></i></td>
+	                  <td>#38039-A</td>
+	                </tr>
+	                <tr>
+	                  <td><i class="fas fa-ticket-alt" aria-hidden="true"></i></td>
+	                  <td>#893091</td>
+	                </tr>
+	                <tr>
+	                  <td><i class="far fa-address-card" aria-hidden="true"></i></td>
+	                  <td>Microsoft</td>
+	                </tr>
+	              </tbody>
+	            </table>
+	            <div class="clearfix"></div>
+	        </div>
+    		</div>
+
+    		<div class="panel panel-primary">
+	            <div class="panel-heading side-bar-panel-heading">
+	              <h3 class="panel-title">My Reminders</h3>
+	            </div>
+
+	            <div class="table-responsive">
+	            <table class="table table-striped">
+	              <thead>
+	                <tr>
+	                  <th>Date</th>
+	                  <th>View Activity</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td>4/5/2019</td>
+	                  <td><a href="">Update Status</a></td>
+	                </tr>
+	                <tr>
+	                  <td>3/28/2019</td>
+	                  <td><a href="">Assign Tickets</a></td>
+	                </tr>
+	                <tr>
+	                  <td>2/26/2019</td>
+	                  <td><a href="">Order Refills</a></td>
+	                </tr>
+	              </tbody>
+	            </table>
+	            <div class="clearfix"></div>
+	        </div>
+
+    		</div>
+    	</div><!--right side-->
         </div><!-- end content area -->
       </div>
     </div>
