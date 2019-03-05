@@ -205,6 +205,8 @@
 /* -- Homepage -- */
 .tickets-menu {margin-top:-15px;}
 .side-bar-panel-heading {margin-bottom:0px;}
+.tickets-menu li {list-style-type:none !important;}
+  #panel-dropdown li a {font-size:11px;}
 
   /* -- Pagination -- */
   .page-counter {float:left; width:50px;}
