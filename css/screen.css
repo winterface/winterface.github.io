@@ -659,6 +659,9 @@ label {font-weight:normal;}
 .first-avail-icon {font-size:34px;}
 .find-first-avail p {margin-top:10px;}
 #view-chooser {margin-right:15px;}
+.ticket-drag {overflow:scroll; overflow-x:hidden; max-height:300px;}
+	.ticket-drag .btn {margin-left:5px; cursor:all-scroll;}
+
 
 /* -- News Page -- */
 .article-summary-wrapper {margin-bottom:25px; border-bottom:1px solid #eee; padding-bottom:15px;}
