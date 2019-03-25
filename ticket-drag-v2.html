@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>WERX</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/screen.css" rel="stylesheet">
+  <link href="css/datepicker.min.css" rel="stylesheet">
+  <link href="css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- begin header -->
+
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid logo-bar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-secondary" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Settings</span>
+              <span class="fas fa-cog"></span>
+            </button>
+            <a id="logo" class="navbar-brand" href="#"><img src="images/logo.png" alt="SAASSplicity Logo" title="SAASSplicity Logo" /></a>
+          </div>
+          <div id="navbar-secondary" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right navbar-right-pushdown-icons">
+              <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+                <ul id="gear-dropdown" class="dropdown-menu">
+                  <li><a href="#"><i class="fas fa-cog"></i> Maintain Custom Fields</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-id-card"></i> Administration</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fas fa-users"></i> Add New Member</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="fa fa-external-link-alt"></i> Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right navbar-right-pushdown">
+              <div class="input-group header-search-bar">
+                <input type="text" class="form-control header-search" placeholder="Search...">
+
+                <select class="form-control header-search">
+                  <option>-- Search In --</option>
+                  <option>Search Everywhere</option>
+                  <option>Customer</option>
+                  <option>Customer Phone</option>
+                  <option>Contact</option>
+                  <option>Ticket</option>
+                  <option>Serial #</option>
+                </select>
+
+                <div class="input-group-btn">
+                  <button class="btn btn-default btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="container-fluid green-bar"></div>
+      </nav><!-- end header -->
+
+      <div class="clearfix"></div>
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default main-nav">
+        <div class="">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-primary" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand main-menu-mobile" href="#">Main Menu</a>
+          </div>
+          <div id="navbar-primary" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">Company</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Customers</a></li>
+                  <li><a href="#">View Leads</a></li>
+                  <li><a href="">View Qualified</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendors <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Vendors</a></li>
+                  <li><a href="#">New Purchase Order</a></li>
+                  <li><a href="">View Open Orders</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Tickets</a></li>
+                  <li><a href="#">Schedule Tickets</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="green" href="#">Add New</a></li>
+                  <li><a href="#">View Products</a></li>
+                  <li><a href="#">Low Stock Report</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps and Location Services <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Customer Maps</a></li>
+                  <li><a href="#">Branch Maps</a></li>
+                  <li><a href="#">Supplier Maps</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <div class="thin-stripe"></div>
+
+    </header>
+
+    <div class="clearfix"></div>
+
+    <div class="col-sm-9 page-content">
+      <h1 class="page-header">Tickets</h1>
+      <p>Use the table below to manage your tickets. To view more details or edit a ticket, click on the "View/Edit Ticket" link at the end of each row. You can also use the sort arrows in each column to sort the data.</p>
+      <br />
+
+      <a href="add-ticket.html"><div class="btn btn-primary">Create New Ticket</div></a>
+
+      <div class="clearfix"></div>
+      <br />
+
+      <div class="col-md-10 no-left-padding">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tickets</h3>
+          </div>
+          <!-- Start Customers Table -->
+          <div class="table-responsive no-left-padding">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ticket</th>
+                  <th>Title</th>
+                  <th>Customer</th>
+                  <th>Status</th>
+                  <th>Assigned</th>
+                  <th>Due</th>
+                  <th>Updated</th>
+                  <th>Files</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button red-bg">On Hold</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files" href="">View Files</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+                <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button yellow-bg">Pending</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-2" href="">View Files</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+                <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button green-bg">Closed</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-3" href="">View Files</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+
+                 <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button green-bg">Closed</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-3" href="">View Files</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+
+                 <tr>
+                  <td>#05830</td>
+                  <td>Trucks Needed for Jobsite</td>
+                  <td>Microsoft</td>
+                  <td><p class="status-button green-bg">Closed</p></td>
+                  <td>John Doe</td>
+                  <td>4/15/2018</td>
+                  <td>3/26/2018</td>
+                  <td><a data-toggle="modal" data-target="#files-3" href="">View Files</a></td>
+                  <td><a href="">View/Edit Ticket</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+          <!-- End Followers Table-->
+          <div class="clearfix"></div>
+        </div><!--Panel-->
+      </div><!--left side-->
+
+      <div class="col-md-2">
+        <div class="panel panel-primary ticket-drag">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tickets</h3>
+            <p>Click and drag to assign.</p>
+          </div>
+
+            <p><div class="btn btn-default">#32801</div></p>
+            <p><div class="btn btn-default">#83098</div></p>
+            <p><div class="btn btn-default">#39080</div></p>
+            <p><div class="btn btn-default">#09403</div></p>
+            <p><div class="btn btn-default">#39098</div></p>
+            <p><div class="btn btn-default">#68734</div></p>
+
+        </div>
+      </div><!--right side-->
+      <div class="clearfix"></div>
+    </div><!-- end content area -->
+  </div>
+</div>
+
+
+<!-- Attachments Modal -->
+<div class="modal fade" id="files" tabindex="-1" role="dialog" aria-labelledby="Files">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+     </div>
+     <div class="modal-body">
+       <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+       <ul>
+        <li><a href="">Security Guidelines</a></li>
+        <li><a href="">Equipment Sheet</a></li>
+        <li><a href="">Emergency Contacts</a></li>
+        <li><a href="">Sign Off Order</a></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+ </div>
+</div>
+</div>
+
+<!-- Attachments Modal -->
+<div class="modal fade" id="files-2" tabindex="-1" role="dialog" aria-labelledby="Files">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+     </div>
+     <div class="modal-body">
+       <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+       <ul>
+        <li><a href="">Security Guidelines</a></li>
+        <li><a href="">Equipment Sheet</a></li>
+        <li><a href="">Emergency Contacts</a></li>
+        <li><a href="">Sign Off Order</a></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+ </div>
+</div>
+</div>
+
+
+<!-- Attachments Modal -->
+<div class="modal fade" id="files-3" tabindex="-1" role="dialog" aria-labelledby="Files">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Attachments for Ticket #05830</h4>
+     </div>
+     <div class="modal-body">
+       <p>The following attachments have been uploaded for this customer. Click on an attachment name to view/download the file.</p>
+       <ul>
+        <li><a href="">Security Guidelines</a></li>
+        <li><a href="">Equipment Sheet</a></li>
+        <li><a href="">Emergency Contacts</a></li>
+        <li><a href="">Sign Off Order</a></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+ </div>
+</div>
+</div>
+
+<section class="drawer">
+  <header class="clickme">Action Menu</header>
+  <div class="drawer-content">
+    <div class="container drawer-wrapper">
+      <p>Filter table:</p>
+
+      <div class="filter-wrapper">
+       <div class="col-md-3">
+        <select class="form-control">
+         <option>-- Choose column to filter --</option>
+         <option></option>
+         <option></option>
+       </select>
+     </div>
+
+     <div class="col-md-3">
+      <select class="form-control">
+       <option>-- Choose what to filter by --</option>
+       <option></option>
+       <option></option>
+     </select>
+   </div>
+
+   <div class="col-md-2">
+    <div class="btn btn-primary">Apply my filter</div>
+  </div>
+</div><!--filter wrapper-->
+</div>  
+</div>
+</section><!-- Action Menu -->
+
+<!-- JavaScript -->
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/datepicker.min.js"></script>
+<script src="scripts/slidedrawer.min.js"></script>
+<script type="text/javascript">
+  $('.datepicker').datepicker();
+
+  $('.closeThem').click( function(e) {
+    $('.collapse').collapse('hide');
+  });
+</script>
+
+<script type="text/javascript">
+    	// script for tab steps
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+        var href = $(e.target).attr('href');
+        var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+        $('.process-model li').removeClass();
+
+        $curr.addClass("active");
+        $curr.prevAll().addClass("visited");
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(function(){
+        $('.drawer').slideDrawer({
+          showDrawer: false,
+              // slideTimeout: true,
+              slideSpeed: 600,
+              slideTimeoutCount: 3000,
+            });
+      });
+    </script>
+  </body>
+  </html>

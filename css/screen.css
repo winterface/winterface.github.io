@@ -120,6 +120,7 @@
   
 
   /* -- Buttons and Call to Actions -- */
+  .btn-smaller {font-size:10px; min-width:60px;}
   .btn-primary-icon {color:#296c40;}
   .drawer .btn-primary {color:#fff;}
   .delete-icon {color:#E74C3C;}
@@ -661,6 +662,8 @@ label {font-weight:normal;}
 #view-chooser {margin-right:15px;}
 .ticket-drag {overflow:scroll; overflow-x:hidden; max-height:300px;}
 	.ticket-drag .btn {margin-left:5px; cursor:all-scroll;}
+#day-chooser {margin-bottom:10px;}
+#day-chooser label {margin-top:7px;}
 
 
 /* -- News Page -- */
