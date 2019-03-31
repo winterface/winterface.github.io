@@ -161,12 +161,22 @@
           <div class="table-responsive bom-table">
             <div id="day-chooser" class="pull-left col-md-6 no-left-padding">
                <div class="form-group">
-                <div class="col-md-2">
-                  <label class="control-label">Choose Date</label>
+                <div class="col-md-1">
+                  <label class="control-label">Date</label>
                 </div>
                 <div class="col-md-3">
                   <input name="" id="" placeholder="xx/xx/xxxx" class="form-control datepicker" type="text"> 
                 </div> 
+
+                <div class="col-md-1">
+                  <label class="control-label">Ticket</label>
+                </div>
+                <div class="col-md-3">
+                  <select class="form-control">
+                    <option>38043</option>
+                    <option>34010</option>
+                  </select>
+                </div>
               </div> 
             </div><!--day chooser-->
 
@@ -194,7 +204,7 @@
                 <tr>
                   <td>Fred Flintstone</td>
                   <td><div class="btn btn-danger btn-smaller">N/A</div></td>
-                  <td><div data-toggle="modal" data-target="#assign-ticket" class="btn btn-success btn-smaller">Assign</div></td>
+                  <td><div class="btn btn-success btn-smaller">Assign</div></td>
                   <td><div data-toggle="modal" data-target="#modify-assignment" class="btn btn-warning btn-smaller">Ticket #30291</div></td>
                   <td><div class="btn btn-danger btn-smaller">N/A</div></td>
                   <td><div class="btn btn-danger btn-smaller">N/A</div></td>
@@ -239,34 +249,6 @@
       </div>
     </div>
 
-      <!-- Assign Ticket Modal -->
-          <div class="modal fade" id="assign-ticket" tabindex="-1" role="dialog" aria-labelledby="editCustomField">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Assign Ticket</h4>
-                </div>
-                <div class="modal-body">
-                  <p>Select a ticket from the dropdown list and use the blue "Save and Close" button to assign that ticket.</p>
-                  <br />
-                  <div class="col-md-6 no-left-padding">
-                    <select class="form-control">
-                      <option>-- Select Ticket --</option>
-                      <option>Ticket #93039</option>
-                    </select>
-                  </div>
-
-                  <div class="clearfix"></div>
-                  <br />
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Assign Ticket</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
            <!-- Modify Ticket Assignment Modal -->
           <div class="modal fade" id="modify-assignment" tabindex="-1" role="dialog" aria-labelledby="editCustomField">

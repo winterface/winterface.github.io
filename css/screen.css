@@ -117,6 +117,8 @@
   .white {color:#fff;}
   .white:hover {color:#fff;}
   .enviro-version {color:#fff;}
+
+
   
 
   /* -- Buttons and Call to Actions -- */
@@ -311,7 +313,7 @@
 
 
 /* -- Table Styles -- */
-tr {cursor:pointer;-webkit-transition: background 350ms ease-in;-moz-transition: background 350ms ease-in;-ms-transition: background 350ms ease-in;-o-transition: background 350ms ease-in;transition: background 300ms ease-in;}
+tr {-webkit-transition: background 350ms ease-in;-moz-transition: background 350ms ease-in;-ms-transition: background 350ms ease-in;-o-transition: background 350ms ease-in;transition: background 300ms ease-in;}
 tr:hover {background-color:#fffee9 !important;}
 .bom-table {margin-top:10px;}
 .not-avail {border-left:3px solid #e74b3c;}
@@ -344,9 +346,13 @@ tr:hover {background-color:#fffee9 !important;}
 /* -- Slide Out Drawer -- */
 .drawer-wrapper {text-align:center; padding-top:10px;}
 .drawer-icons {}
-.drawer {bottom: -10px;height: 140px;overflow: hidden;position: fixed;width: 100%;z-index: 5;}
-.drawer > header {background: #373542;color: #ffffff;display: block;height: 25px;line-height: 25px;margin: auto;overflow: hidden;padding: 5px;text-align: center;width: 250px;-moz-border-radius-topleft: 25px 40px;-moz-border-radius-topright: 25px 40px;border-top-left-radius: 25px 40px;border-top-right-radius: 25px 40px;}
-.drawer-content {background: #373542;border-collapse: collapse;border-top: 5px solid #373542;height: 110px;width: 100%;}
+.drawer {bottom: -5px;height: 140px;overflow: hidden;position: fixed;width: 100%;z-index: 5;}
+.drawer > header {background: #3dab64;
+  background: -moz-linear-gradient(-45deg, #3dab64 0%, #0c75f0 100%);
+  background: -webkit-linear-gradient(-45deg, #3dab64 0%,#0c75f0 100%);
+  background: linear-gradient(135deg, #3dab64 0%,#0c75f0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dab64', endColorstr='#0c75f0',GradientType=1 ); color: #ffffff;display: block;height: 25px;line-height: 17px;margin: auto;overflow: hidden;padding: 5px;text-align: center;width: 250px;-moz-border-radius-topleft: 25px 40px;-moz-border-radius-topright: 25px 40px;border-top-left-radius: 25px 40px;border-top-right-radius: 25px 40px;}
+.drawer-content {background: #373542;border-collapse: collapse;border-top: 0px solid #373542;height: 110px;width: 100%;}
 .clickme {cursor: pointer;}
 .drawer-items {margin: auto;width: 960px;}
 .drawer-items ul {margin: 0px;}
@@ -355,6 +361,10 @@ tr:hover {background-color:#fffee9 !important;}
 .drawer-items li a:hover {background: #3dab65;}
 .drawer-items .title {color: #c4c4c4;font-size: 20px;line-height: 1.1;}
 .drawer p {color:#fff;}
+
+  /* -- Stats bar -- */
+  #stats {display:block; position:absolute; top:-5px; right:0px;}
+  #stats .btn {font-size:10px; font-weight:normal; cursor:default;}
 
 /* -- Form Elements -- */}
 .filter-wrapper {margin-left:250px;}
