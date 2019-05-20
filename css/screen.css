@@ -50,6 +50,7 @@
   .header-search {width:45% !important; margin-right:10px;}
   .search-icon {margin-left:-25px !important; border:1px solid #ccc !important;}
   .panel-extended {padding-bottom:40px;}
+  .hide-on-desktop {display:none;}
 
   /* -- Header Navigation -- */
   .sidebar {display: none; width:10% !important;}
@@ -1004,9 +1005,19 @@ label {font-weight:normal;}
 @media (min-width: 768px) {
   .sidebar {position: fixed;top: 100px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;background-color: #f6f6f6;border-right: 1px solid #eee;}
   .main {padding-right: 40px;padding-left: 40px;}
-
+  .hide-on-tablet {display:none !important;}
+  #logo img {margin-left:0px;}
 }
 
+
+@media (max-width: 767px) {
+	#navbar-secondary {display:none;}
+	.hide-on-mobile {display:none;}
+	.show-on-mobile {display:block !important;}
+	#logo img {width:60%; margin:0;}
+	.logo-bar {height:55px;}
+
+}
 
 
 @media screen and (max-width: 560px) {
