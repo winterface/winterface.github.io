@@ -206,6 +206,17 @@
 .message-notification {color:#fff; position:absolute; background-color:#ff1700; text-align:center; top:5px; right:55px; border-radius:25px; padding:2px 10px; font-size:10px;}
 
 
+/* -- Inner Page Nav -- */
+.page-nav-column {margin-top:0px;}
+.page-nav-block {text-align:center; border:1px solid #acacac; margin-bottom:15px; padding:15px 0; border-radius:5px; background-color:#f5f6f7; font-size:14px;}
+.page-nav-icon {font-size:18px;}
+.active-page-nav {border:1px solid #95bad9; color:#3699dc;}
+.page-nav-block:hover {background-color:#fff; border:1px solid #95bad9; color:#3699dc; cursor:pointer;}
+
+@media screen and (min-width: 1366px) { 
+  .page-nav-column {width:11%;}
+  }
+
 /* -- Homepage -- */
 .tickets-menu {margin-top:-15px;}
 .side-bar-panel-heading {margin-bottom:0px;}
