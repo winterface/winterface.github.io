@@ -47,4 +47,5 @@ h2, h3 {font-size:20px;}
 .title-screen {padding:15px;}
 .education {padding:15px;}
 	.education ul {padding-left:15px;}
+.nav-tabs .nav-item {width:100%;}
 }
