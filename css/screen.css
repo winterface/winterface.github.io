@@ -13,6 +13,7 @@ body {background-color:#f8f9fa; font-family: 'Merriweather', serif; line-height:
 h1 {font-family: 'Montserrat', sans-serif; color:#fff;}
 h2 {font-family: 'Montserrat', sans-serif;}
 h3 {font-family: 'Montserrat', sans-serif; color:#26635e;}
+h4 {font-family: 'Montserrat', sans-serif; color:#26635e; font-size:16px;}
 a {color:#499BDE;}
 	a:hover {color:#4DCBE8;}
 .white-link {color:#fff;}
@@ -34,6 +35,10 @@ box-shadow: 1px 1px 3px 1px #4D4D4D; color:#fff; padding:3px; text-align:center;
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {border-color: #dee2e6 #dee2e6 #fff; border-bottom:5px solid #f8f9fa;}
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {border-bottom:5px solid #ffcdb2;}
 .nav-tabs .nav-item {margin-right:15px;}
+
+/* -- Contact Page -- */
+.contact-card {border:2px solid #50d1c7; text-align:center; margin:0 25px 15px 0; padding:15px;}
+	.contact-card:hover {text-decoration:none; background-color:#eee;}
 
 /* -- Media Queries -- */
 
