@@ -21,10 +21,13 @@ body {background-color:#f8f9fa; font-family: 'Merriweather', serif; line-height:
 -ms-transition: all 200ms ease-in;
 -o-transition: all 200ms ease-in;
 transition: all 200ms ease-in;}
+.port-thumb {margin:-40px auto 0px auto !important;}
 	.card img {display:block; margin:15px auto;}
 	.card-edu {margin-bottom:0px;}
 	.card-body {background-color:#fbf9f9; border-top:1px solid #ccc; color:#474646;}
 		.card-body p {color:#474646;}
+	.card-body-port {border-top:0px;}
+	.port-card-text {font-size:14px; margin-bottom:0px;}
 	.card:hover {margin-top:-15px; box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.02),
   0 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -39,11 +42,13 @@ h1 {font-family: 'Montserrat', sans-serif; color:#fff;}
 h2 {font-family: 'Montserrat', sans-serif;}
 h3 {font-family: 'Montserrat', sans-serif; color:#26635e; font-size:22px;}
 h4 {font-family: 'Montserrat', sans-serif; color:#26635e; font-size:16px;}
+h5 {font-family: 'Montserrat', sans-serif; color:#26635e; font-weight:bold;}
 a {color:#499BDE;}
 	a:hover {color:#4DCBE8;}
 .white-link {color:#fff;}
 	.white-link:hover {color:#fff;}
 ul {list-style-type:square;}
+.port-headline {margin-bottom:60px;}
 
 /* -- Images and Icons -- */
 .noaa-logo {width:50%;}
@@ -60,6 +65,8 @@ box-shadow: 1px 1px 3px 1px #4D4D4D; color:#fff; padding:3px; text-align:center;
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {border-color: #dee2e6 #dee2e6 #fff; border-bottom:5px solid #f8f9fa;}
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {border-bottom:5px solid #ffcdb2;}
 .nav-tabs .nav-item {margin-right:15px;}
+.port-card {margin-bottom:60px; min-height:350px;}
+
 
 /* -- Contact Page -- */
 .contact-card {border:2px solid #3893b9; text-align:center; margin:0 25px 15px 0; padding:15px;}
