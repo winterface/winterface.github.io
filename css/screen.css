@@ -74,12 +74,10 @@ box-shadow: 1px 1px 3px 1px #4D4D4D; color:#fff; padding:3px; text-align:center;
 .port-card {margin-bottom:60px; min-height:380px;}
 .port-content-container {background-color:#FAFAFA; padding:30px; margin-bottom:15px;}
 .skill-text {font-size:12px; color:#919192 !important;}
-.southerntide-promo {background:url(../images/southerntide-promo.jpg) no-repeat; min-height:338px;}
-.breakers-promo {background:url(../images/breakers-promo.jpg) no-repeat; min-height:338px;}
-.litchfield-promo {background:url(../images/litchfield-promo.jpg) no-repeat; min-height:338px;}
-.beachaviation-promo {background:url(../images/beachaviation-promo.jpg) no-repeat; min-height:338px;}
 .details-headline {color:#333;}
 .last-feature {margin-top:0px !important;}
+.port-promo {padding:0px; background-color:0px; border-radius:0px;}
+  .port-promo img {width:100%;}
 
 /* -- Contact Page -- */
 .social-links {margin-top:50px;}
@@ -274,6 +272,7 @@ h2, h3 {font-size:20px;}
 	.education ul {padding-left:15px;}
 .nav-tabs .nav-item {width:100%;}
 .port-card {margin-bottom:50px;}
+.featurette-divider {margin:2rem 0;}
 }
 
 @media (min-width: 40em) {
