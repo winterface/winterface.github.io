@@ -21,6 +21,7 @@ body {background-color:#f8f9fa; font-family: 'Merriweather', serif; line-height:
 -ms-transition: all 200ms ease-in;
 -o-transition: all 200ms ease-in;
 transition: all 200ms ease-in;}
+.logo-card {min-height:auto;}
 .port-thumb {margin:-40px auto 0px auto !important;}
 	.card img {display:block; margin:15px auto;}
 	.card-edu {margin-bottom:0px;}
@@ -273,6 +274,7 @@ h2, h3 {font-size:20px;}
 .nav-tabs .nav-item {width:100%;}
 .port-card {margin-bottom:50px;}
 .featurette-divider {margin:2rem 0;}
+.small-port-img {width:50%;}
 }
 
 @media (min-width: 40em) {
